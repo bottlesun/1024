@@ -1,0 +1,60 @@
+    @charset "euc-kr";
+    /* common */
+    body {min-width:1000px;}
+    body, html{width:100%;height:100%;margin:0;font-family:'Malgun Gothic', '맑은 고딕','돋움', 'dotum', sans-serif;}
+    div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, form, fieldset, p {font-family:'Malgun Gothic', '맑은 고딕','돋움', 'dotum', sans-serif;}
+    select {font-family:'Malgun Gothic', '맑은 고딕','돋움', 'dotum', sans-serif;}
+    iframe, button {border:0;cursor:pointer;}
+    caption,
+    .hide {font-size:0;text-indent:-9999em;height:0;line-height:0; }
+    .inner {position:relative;width:1200px;height:100%;margin:0 auto;}
+    * {font-family:'Malgun Gothic', '맑은 고딕','돋움', 'dotum', sans-serif;outline:0;}
+
+    #evt_wrap {overflow:hidden;position:relative;width:100%;min-width:1000px;font-family:'Malgun Gothic', '맑은 고딕','돋움', 'dotum', sans-serif;box-sizing:border-box;background-color:#048e9b;}
+    #evt_wrap * {box-sizing:border-box;}
+    #evt_wrap .logo {position:absolute;top:20px;left:0;z-index:100;}
+    #evt_wrap .logo a {display:block;width:82px;height:52px;background:url('../images/logo.png') no-repeat;text-indent:-9999em;}
+
+
+    /*��� */
+
+    .content-body .section01{position: relative;height: 780px;background:url("../images/section01.png")no-repeat center 0 ;}
+    .content-body .section02{position: relative;height: 855px;background:url("../images/section02.jpg")no-repeat center 0;}
+    .content-body .section03{position: relative; height: 975px;background:url("../images/section03.jpg")no-repeat center 0;}
+    .content-body .section04{position: relative; height: 986px;background:url("../images/section04.jpg")no-repeat center 0;}
+    .content-body .section05{position: relative; height: 979px;background:url("../images/section05.jpg")no-repeat center 0;}
+    .content-body .section06{position: relative; height: 1060px;background:url("../images/section06.jpg")no-repeat center 0;}
+    .content-body .section07{position: relative; height: 980px;background:url("../images/section07.jpg")no-repeat center 0;}
+    .content-body .section-item{position: relative; height: 270px;background:url("../images/section-item.jpg")no-repeat center 0;}
+
+    .section-item .inner {display: flex;justify-content: center;align-items: center;}
+
+    .section03 h2{padding-top:88px; font-size: 72px; line-height:100%;text-indent: -9999px;}
+    .section03 h3{margin-top:25px;  width:355px; height:50px; background:transparent;font-size: 24px; line-height:100%; display: flex;align-items: center;text-indent: -9999px;}
+    .section03 .textBox{margin-top:30px;  height: 160px; background:transparent; text-indent: -9999px;}
+    .section03 .textBox ul li{display: flex}
+    .section03 .textBox ul  li div {display: flex; flex-direction: column; background:red;}
+    .section03 .textBox ul  li div span {display: block;}
+
+    /*���� ��ġ */
+    .section03 .video {position: absolute; top:465px; left:10px;}
+    .section04 .video {position: absolute; right:10px;top:431px;}
+    .section05 .video {position: absolute; top:393px; left:10px;}
+    .section06 .video {position: absolute; right:10px;top:452px;}
+    .section07 .video {position: absolute; top:397px; left:10px;}
+    /*��ư*/
+    .btn-lastDay{position: absolute;bottom:200px;right:10px; display:block; background:transparent;width: 450px;height: 100px; }
+    .btn-lastDay a { display: block;  width: 100% ;height:100%;}
+    .bnt-item  {width: 330px;height: 120px;background:transparent;}
+    .bnt-item a {display: block; width: 100%; height:100%;}
+
+
+    /*����*/
+    .video {background:#360478;width:280px;height:270px; display: flex; justify-content: center;align-items: center}
+    .video span { color:#ffffff; font-size: 32px;}
+    .video video { position:absolute; top:0; left:0;width: 100%; height: 100%}
+    /* board, footer */
+    .event_comment {background:#fdfdfd url('../images/bbs_bg.jpg') no-repeat 50% 0;border-top:1px solid #fff;}
+    .event_comment_in {width:980px;margin:0 auto;padding:188px 0 0 0;}
+    .footer {position:relative;height:60px;background:#fdfdfd;line-height:60px;}
+    .footer_copyright {width:100%;color:#666;text-align:center;font-family:'Tahoma', 'Geneva', 'sans-serif';font-size:12px;letter-spacing:0px;}

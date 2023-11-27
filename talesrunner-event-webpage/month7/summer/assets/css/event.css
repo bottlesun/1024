@@ -1,0 +1,788 @@
+@charset "UTF-8";
+
+/* common */
+body {
+    min-height: auto !important;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Malgun Gothic",  "dotum", sans-serif;
+    background-color: #bd4c4b;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+p {
+    font-family: "Malgun Gothic", "dotum", sans-serif;
+}
+
+select {
+    font-family: "Malgun Gothic", "dotum", sans-serif;
+}
+
+iframe,
+button {
+    border: 0;
+    cursor: pointer;
+}
+iframe {
+    width: 100%;
+    height: inherit;
+}
+button {
+    background: inherit;
+}
+
+caption,
+.hide {
+    font-size: 0;
+    text-indent: -9999em;
+    height: 0;
+    line-height: 0;
+}
+
+.inner {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+* {
+    font-family: "Malgun Gothic", "dotum", "돋움", sans-serif;
+    outline: 0;
+}
+
+#evt_wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 2560px;
+    height: 1230px;
+    background: url("../images/background_1.png") no-repeat center 0;
+    background-size: cover;
+}
+
+
+#evt_wrap * {
+    box-sizing: border-box;
+}
+
+.evt-content {
+    width: 100%;
+    height: 100%;
+}
+
+/*header*/
+.evt-header {
+    width: 100%;
+}
+
+.evt-header * {
+    text-indent: -9999em;
+    z-index: 1;
+}
+
+.evt-header .logo {
+    display: block;
+    width: 123px;
+    height: 78px;
+    background: url("../images/logo.png") no-repeat;
+    text-indent: -9999em;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    z-index: 100;
+}
+
+
+.evt-header .buttons {
+    position: absolute;
+    top: 34px;
+    right: 13px;
+    display: flex;
+}
+
+.evt-header .buttons .close-again {
+    width: 134px;
+    height: 44px;
+    background: url("../images/btn_close.png") no-repeat;
+    background-size: contain;
+    margin-right: 4px;
+}
+
+.evt-header .buttons .home {
+    width: 43px;
+    height: 44px;
+    background: url("../images/btn_home.png") no-repeat;
+    background-size: contain;
+}
+
+/*content 영역*/
+
+.content-body {
+    width: 100%;
+    height: inherit;
+}
+
+.content-body .section1 {
+    width: 100%;
+    height: 100%;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 51;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+/*item 영역*/
+
+
+.section1 .item {
+    z-index: 50;
+    position: absolute;
+}
+
+.section1 .item.update:before {
+    content: "";
+    width: 106px;
+    height: 35px;
+    background: url("../images/update.png") no-repeat center 0;
+    position: absolute;
+    text-indent: -9999em;
+    z-index: 51;
+}
+
+.section1 .item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-size: contain;
+    opacity: 0;
+}
+
+.section1 .item:hover:after {
+    opacity: 1;
+}
+
+.section1 .item1 {
+    width: 270px;
+    height: 83px;
+    top: 375px;
+    left: 67px;
+}
+
+.section1 .item1:after {
+    background: url("../images/item1_over.png") no-repeat;
+}
+
+.section1 .item1.update:before {
+    top: -16px;
+    right: 35px;
+}
+
+.section1 .item2 {
+    width: 293px;
+    height: 84px;
+    top: 454px;
+    left: 3px;
+}
+
+.section1 .item2:after {
+    background: url("../images/item2_over.png") no-repeat;
+}
+
+.section1 .item2.update:before {
+    top: -6px;
+    right: -5px;
+}
+
+.section1 .item3 {
+    width: 265px;
+    height: 98px;
+    top: 523px;
+    left: 88px;
+}
+
+.section1 .item3:after {
+    background: url("../images/item3_over.png") no-repeat;
+}
+
+.section1 .item4 {
+    width: 251px;
+    height: 91px;
+    top: 599px;
+    left: 14px;
+}
+
+.section1 .item4:after {
+    background: url("../images/item4_over.png") no-repeat;
+}
+
+.section1 .item5 {
+    width: 270px;
+    height: 84px;
+    top: 684px;
+    left: 68px;
+}
+
+.section1 .item5:after {
+    background: url("../images/item5_over.png") no-repeat;
+}
+
+.section1 .item5.update:before {
+    top: -11px;
+    right: 36px;
+}
+
+.section1 .item6 {
+    width: 314px;
+    height: 251px;
+    top: 492px;
+    right: 66px;
+    z-index: 52;
+}
+
+.section1 .item6:after {
+    background: url("../images/item6_over.png") no-repeat;
+}
+
+/*popup*/
+.popup {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    position: fixed;
+    top: 1280px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: -110000000;
+    height: 0;
+}
+
+.popup,
+.popup * {
+    box-sizing: border-box;
+    font-family: Pretendard, malgun gothic, dotum, sans-serif;
+    letter-spacing: -0.05em;
+}
+
+.popup.show {
+    z-index: 110000000;
+    opacity: 1;
+    height: auto;
+    top: 0;
+}
+
+.popup .popup-inner {
+    text-align: center;
+    margin: 0 auto 0;
+    position: relative;
+    box-sizing: border-box;
+    transform: scale(0);
+    transition: all 0.2s ease;
+    width: 1200px;
+}
+
+.popup.show .popup-inner {
+    transform: scale(1);
+    flex-shrink: 0;
+}
+
+.popup .popup-close {
+    width: 145px;
+    height: 39px;
+    position: absolute;
+    top: 76px;
+    right: 16px;
+    background: url("../images/btn_back.png") no-repeat center 0;
+    z-index: 1;
+}
+
+/*item1  바우 하우스*/
+
+[data-popup-id="item1"] .popup-image {
+    width: 100%;
+    height: 753px;
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    background: url("../images/popup_item1.png") no-repeat;
+    background-size: cover;
+}
+
+[data-popup-id="item1"] .iframe {
+    width: 512px;
+    height: 288px;
+    position: absolute;
+    top: 336px;
+    left: 35px;
+}
+
+
+/*item2  나비 기차 */
+
+[data-popup-id="item2"] .popup-image {
+    width: 100%;
+    height: 753px;
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    background: url("../images/popup_item2.png") no-repeat;
+    background-size: cover;
+}
+
+[data-popup-id="item2"] .iframe {
+    width: 512px;
+    height: 288px;
+    position: absolute;
+    top: 336px;
+    left: 35px;
+}
+
+
+/*item3  아일랜드 인포메이션 */
+
+[data-popup-id="item3"] .popup-image {
+    width: 1167px;
+    height: 774px;
+    position: absolute;
+    top: 77px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    background: url("../images/popup_item3.png") no-repeat center 0;
+    background-size: cover;
+}
+
+[data-popup-id="item3"] .item-btn {
+    width: 92px;
+    height: 31px;
+    position: absolute;
+    text-indent: -9999em;
+    top: 448px;
+}
+
+[data-popup-id="item3"] .item-btn-1 {
+    left: 200px;
+}
+
+[data-popup-id="item3"] .item-btn-2 {
+    left: 453px;
+}
+
+[data-popup-id="item3"] .item-btn-3 {
+    left: 710px;
+}
+[data-popup-id="item3"] .item-btn-4 {
+    left: 965px;
+}
+
+/*item4 바우나비 어트렉션*/
+[data-popup-id="item4"] .popup-image {
+    width: 1167px;
+    height: 750px;
+    position: absolute;
+    top: 63px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    background: url("../images/item4/item4_image.png") no-repeat center 0;
+}
+/* 이미지 */
+[data-popup-id="item4"] .popup-image .img {
+    width: 423px;
+    height: 216px;
+    position: absolute;
+    left: 24px;
+}
+
+[data-popup-id="item4"] .popup-image .img1 {
+    bottom: 272px;
+}
+
+[data-popup-id="item4"] .popup-image .img2 {
+    bottom: 28px;
+}
+
+[data-popup-id="item4"] .popup-image .img img {
+    width: 100%;
+    height: inherit;
+}
+
+
+
+/* 텍스트 */
+[data-popup-id="item4"] .popup-image .txt {
+    position: absolute;
+    text-indent: -99999em;
+    width: 647px;
+    height: 158px;
+    right: 33px;
+    top: 279px;
+    object-fit: contain;
+    object-position: left;
+}
+
+/*TR 라이브러리에서 맵 자세히보기*/
+
+[data-popup-id="item4"] .popup-image .btn {
+    width: 268px;
+    height: 52px;
+    position: absolute;
+    right: 236px;
+    bottom: 244px;
+    text-indent: -9999em;
+
+}
+
+[data-popup-id="item4"] .popup-image .btn:before,
+[data-popup-id="item4"] .popup-image .btn:after{
+    content: "";
+    width: 268px;
+    height: 52px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+[data-popup-id="item4"] .popup-image .btn:before {
+    background: url("../images/item4/item4_btn.png") no-repeat center 0;
+    opacity: 1;
+}
+
+[data-popup-id="item4"] .popup-image .btn:after {
+    background: url("../images/item4/item4_btn_over.png") no-repeat center 0;
+    opacity: 0;
+}
+[data-popup-id="item4"] .popup-image .btn:hover:before {
+    opacity: 0;
+}
+
+[data-popup-id="item4"] .popup-image .btn:hover:after {
+    opacity: 1;
+}
+
+/*메뉴 컨테이너*/
+
+[data-popup-id="item4"]  .menu-container {
+    width: 704px;
+    height: 146px;
+    position: absolute;
+    bottom: 42px;
+    right: 8px;
+}
+
+
+[data-popup-id="item4"]  .menu-container .control-btn {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-indent: -9999em;
+}
+
+[data-popup-id="item4"]  .menu-container .control-btn:disabled{
+    cursor: default;
+}
+
+[data-popup-id="item4"]  .menu-container .control-btn.left-btn {
+    background: url("../images/item4/left-btn.png") no-repeat center 0;
+    left: 0;
+}
+
+[data-popup-id="item4"]  .menu-container .control-btn.right-btn {
+    background: url("../images/item4/right-btn.png") no-repeat center 0;
+    right: 0;
+}
+
+/* 메뉴 버튼 커밍순*/
+[data-popup-id="item4"]  .menu-container .content-item.coming_soon {
+    background: url("../images/item4/coming_soon.png") no-repeat center 0 !important;
+    cursor: default;
+}
+
+/* 메뉴 버튼 new*/
+[data-popup-id="item4"]  .menu-container .content-item.new:before {
+    content: "";
+    width: 90px;
+    height: 21px;
+    position: absolute;
+    left: 50%;
+    top: -4px;
+    transform: translateX(-50%);
+    background: url("../images/item4/icon_new.png") no-repeat;
+}
+
+
+[data-popup-id="item4"] .menu-container .item-container {
+    width: 616px;
+    height: 142px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+[data-popup-id="item4"] .item-container .content-item {
+    width: 149px;
+    height: inherit;
+    text-indent: -9999em;
+    background-image: url("../images/item4/content_group.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+[data-popup-id="item4"] .item-container .content-item.active {
+    background-image: url("../images/item4/content_group_over.png");
+}
+[data-popup-id="item4"] .item-container .content-item-1 {
+    background-position: 0px 0px;
+}
+[data-popup-id="item4"] .item-container .content-item-2 {
+    background-position: -155px 0px;
+}
+[data-popup-id="item4"] .item-container .content-item-3 {
+    background-position: -310px 0px;
+}
+[data-popup-id="item4"] .item-container .content-item-4 {
+    background-position: -468px 0px;
+}
+
+
+
+
+/*item5 메모리얼 스테이션*/
+[data-popup-id="item5"] .popup-image {
+    width: 1179px;
+    height: 767px;
+    position: absolute;
+    top: 63px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    background: url("../images/item5/popup_item5.png") no-repeat center 0;
+    background-size: cover;
+}
+
+[data-popup-id="item5"] .tr-btn {
+    width: 266px;
+    height: 51px;
+    position: absolute;
+    text-indent: -9999em;
+    right: 145px;
+    top: 688px;
+}
+
+[data-popup-id="item5"] .popup-image .tr-btn:before,
+[data-popup-id="item5"] .popup-image .tr-btn:after {
+    content: "";
+    width: 266px;
+    height: 51px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+[data-popup-id="item5"] .popup-image .tr-btn:before {
+    background: url("../images/item5/item5_btn.png") no-repeat center 0;
+    opacity: 1;
+}
+
+[data-popup-id="item5"] .popup-image .tr-btn:after {
+    background: url("../images/item5/item5_btn_over.png") no-repeat center 0;
+    opacity: 0;
+}
+
+[data-popup-id="item5"] .tr-btn:hover:before {
+    opacity: 0;
+}
+
+[data-popup-id="item5"] .tr-btn:hover:after {
+    opacity: 1;
+}
+
+[data-popup-id="item5"] .item5-webtoon {
+    width: 611px;
+    height: 467px;
+    position: absolute;
+    left: 32px;
+    bottom: 14px;
+    background: url("../images/item5/item5_webtoon.png") no-repeat center 0;
+    display: none;
+}
+
+[data-popup-id="item5"] .item5-webtoon .webtoon-container {
+    width: 570px;
+    height: 430px;
+    position: absolute;
+    left: 22px;
+    bottom: 20px;
+    overflow-y: auto;
+}
+
+[data-popup-id="item5"] .item5-webtoon .webtoon-container:after {
+    content: "";
+    width: 226px;
+    height: 50px;
+    background: url("../images/item5/item5_txt.png") no-repeat center 0;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+}
+
+ img {
+    width: 100%;
+    height: auto;
+}
+
+[data-popup-id="item5"] .item5-movie {
+    width: 611px;
+    height: 467px;
+    position: absolute;
+    left: 32px;
+    bottom: 14px;
+    background: url("../images/item5/item5_movie.png") no-repeat center 0;
+    display: none;
+}
+
+[data-popup-id="item5"] .item5-movie .movie-iframe {
+    width: 560px;
+    height: 315px;
+    position: absolute;
+    left: 26px;
+    bottom: 78px;
+}
+
+[data-popup-id="item5"] .item5-menu {
+    width: 475px;
+    height: 360px;
+    position: absolute;
+    right: 42px;
+    bottom: 104px;
+    overflow-y: scroll;
+}
+
+
+[data-popup-id="item5"] .item5-menu  .menu-button {
+    width: 437px;
+    height: 66px;
+    margin-bottom: 7px;
+    background: url("../images/item5/item5_menu.png") no-repeat center 0;
+    position: relative;
+}
+
+[data-popup-id="item5"] .item5-menu  .menu-button.new:before{
+    content: "";
+    width: 39px;
+    height: 25px;
+    position: absolute;
+    background: url("../images/item5/new.png") no-repeat center 0;
+    left: 24px;
+    top: -6px;
+}
+
+[data-popup-id="item5"] .item5-menu  .menu-button.active {
+    background: url("../images/item5/item5_menu_active.png");
+}
+
+[data-popup-id="item5"] .item5-menu  .menu-button:nth-child(1) {
+    background-position: 0px 0px;
+}
+
+[data-popup-id="item5"] .item5-menu  .menu-button:nth-child(2) {
+    background-position: 0px -73px;
+}
+
+[data-popup-id="item5"] .item5-menu  .menu-button:nth-child(3) {
+    background-position: 0px -144px;
+}
+[data-popup-id="item5"] .item5-menu  .menu-button:nth-child(4) {
+    background-position: 0px -217px;
+}
+
+[data-popup-id="item5"] .item5-menu  .coming-soon {
+    width: 437px;
+    height: 68px;
+    background: url("../images/item5/coming_soon_small.png") no-repeat;
+    background-size: cover;
+    transform: translateX(12px);
+    text-indent: -99999em;
+}
+
+/*item6 영상 다시보기 */
+[data-popup-id="item6"] {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+[data-popup-id="item6"] .play-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: -9999em;
+    top: 236px;
+    right: 225px;
+    background: url("../images/play_close.png") no-repeat center 0;
+}
+
+[data-popup-id="item6"] .play-again {
+    width: 186px;
+    height: 29px;
+    position: absolute;
+    text-indent: -9999em;
+    top: 786px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../images/play_again.png") no-repeat center 0;
+}
+
+[data-popup-id="item6"] .iframe {
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 294px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+@media (max-width: 1200px) {
+    body.active {
+        overflow: hidden;
+    }
+}

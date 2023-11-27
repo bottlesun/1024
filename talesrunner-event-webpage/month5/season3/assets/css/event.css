@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/*
+* @version 1.0.0
+* @update 2023.05.22
+* */
+
+/* reset */
+*, *:before, *:after {margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;word-break:break-word;outline:0;}
+html, body {width:100%;min-width:1240px;height:100%;letter-spacing:-0.05em;font-size:12px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button {margin:0;padding:0;}
+body, h1, h2, h3, h4, input, button {font-family:'malgun gothic','dotum',sans-serif;}
+body {background-color:#fff;word-break:break-all;-ms-word-break:break-all;min-height:auto !important;}
+img, fieldset, iframe {border:0 none;}
+li {list-style:none;}
+input, select, button {vertical-align:middle;}
+img {vertical-align:top;}
+i, em, address {font-style:normal;}
+label, button {cursor:pointer;}
+button {margin:0;padding:0;border:0;outline:none;}
+a {color:#333;text-decoration:none;}
+a:hover {color:#333;text-decoration:none;}
+button * {position:relative;}
+hr {display:none;}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input::-ms-clear {display:none;}
+legend, caption {overflow:hidden;height:0;text-indent:-9999em;font-size:0;line-height:0;}
+.hide {height:0;text-indent:-9999em;font-size:0;line-height:0;}
+
+
+#evt_wrap {position: relative; width: 100%; height: 100%; background:url("../images/bg.png")no-repeat center; background-size: cover; overflow:hidden;}
+#evt_wrap .logo {position:absolute;top:-2vh;left:0;z-index:100;}
+#evt_wrap .logo a {display:block;width:82px;height:52px;background:url('../images/logo.png') no-repeat;text-indent:-9999em;}
+/*헤더 부분을 삭제해주시면됩니다~*/
+header {background:rgba(255,255,255,.9); height: 50px;}
+.inner {position:relative;width:1200px;height:100%;margin:0 auto;}
+
+
+/*css*/
+
+.inner .contents {position: relative;height:100vh;left:50%; transform: translateX(-50%)}
+/*<<<<<<< HEAD*/
+/*!*css*!*/
+
+/*.inner .contents {position: relative;height:100vh;left:50%; transform: translateX(-50%)}*/
+/*!*.inner .contents h1{width:500px;height: 15vh; background:url("../images/title.png")no-repeat center;margin:5vh auto 0; text-indent: -9999px; background-size: contain;}*!*/
+/*!*.inner .contents .video-wrap{position: relative; width:74vh; height: 40vh; background:url("../images/frame.png")no-repeat center; margin:6vh auto 0; background-size: cover; }*!*/
+/*!*.inner .contents .video-wrap .video{position: absolute; top:2vh; left:5.5vh; width:65vh;height:36vh; background:url("../images/mp4.png")no-repeat center; background-size: cover; }*!*/
+/*!*=======*!*/
+.inner .contents h1{position:relative; left:1vh; width:50vh;height: 17vh; background:url("../images/title.png")no-repeat center;margin:4vh auto 0; text-indent: -9999px; background-size: cover;}
+.inner .contents .video-wrap{position: relative; width:82vh; height: 45vh; background:url("../images/frame.png")no-repeat center; margin:5vh auto 0; background-size: cover; }
+.inner .contents .video-wrap .video{position: absolute; top:2.75vh; left:7vh; width:70.75vh;height:39.8vh; background:#000000;  background-size: cover; }
+/*>>>>>>> development*/
+.inner .contents .video-wrap .video video{width:100%;height: 100%}
+.inner .contents .btn-wrap {margin:2vh auto;text-align: center}
+.inner .contents .btn-wrap button{display:inline-block; width:25vh;height: 6vh;margin-left: 4.5vh; text-indent: -9999px;}
+.inner .contents .btn-wrap .btn-create{ background:url("../images/btn-createc.png")no-repeat center; background-size: cover;}
+.inner .contents .btn-wrap .btn-create:hover {background:url("../images/btn-create-over.png")no-repeat center; background-size: cover;}
+.inner .contents .btn-wrap .btn-detail{ background:url("../images/btn-detail.png")no-repeat center; background-size: cover;}
+.inner .contents .btn-wrap .btn-detail:hover {background:url("../images/btn-detail-over.png")no-repeat center; background-size: cover;}
+.inner .contents .btn-close{ width: 25vh; height: 4vh; text-align: center; margin:10vh auto 4vh; }
+.inner .contents .btn-close button{display: inline-block; width: 100%;height: 100%; background:url("../images/btn-close.png")no-repeat center; text-indent:-9999px; background-size: cover;}
+.inner .contents .btn-close button:hover {background:url("../images/btn-close-over.png")no-repeat center; background-size: cover;}
+.footer{margin:2vh auto 1vh; text-align: center;}
+
+
+/*팝업*/
+.popup{ display:none; position:fixed;  top:0; left:0 ;width:100%;height: 100%; background:rgba(0,0,0,.8); z-index: 1000;}
+
+.popup-contents {position: absolute; width: 820px; height: 420px; background:url("../images/popup.png"); top:50%;left:50%; transform: translate(-50%,-50%);}
+/* 팝업닫기버튼입니다*/
+.popup-contents .popup-close {position: absolute; width:40px; height: 40px; background:transparent; right:20px; top:0; text-indent: -9999px;}

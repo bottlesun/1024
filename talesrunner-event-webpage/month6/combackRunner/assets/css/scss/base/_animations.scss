@@ -1,0 +1,8 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+/* keyframes */
+@keyframes loading {
+	0%, 39%, 100% {opacity:.22;}
+	40% {opacity:1;transform:scale(2);} 
+}

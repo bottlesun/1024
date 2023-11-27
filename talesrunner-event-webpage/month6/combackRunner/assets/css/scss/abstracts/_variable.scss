@@ -1,0 +1,31 @@
+//rem 변환 $value = 디자인px
+@function toRem($value) {
+	$remValue: ($value / 16) + rem; 
+	@return $remValue;
+}
+//vw 변환 $value = 디자인px
+@function toVw($value) {
+	$vwValue: (calc($value / $rootWidth) * 100) + vw;
+	@return $vwValue;
+}
+
+$minWidth: 1200px; //가로 최소사이즈(pc일 경우)
+$rootWidth: 720; //화면 사이즈(mobile일 경우)
+$random1: random();
+$random2: random();
+$ver: calc($random1 * $random2);
+$bgColor-body: #f7fcff;
+$bgColor-b8: rgba(0,0,0,.8);
+$bgColor-w8: rgba(255,255,255,.8);
+$commonIco: '../images/ico_spr.png?ver=#{$ver}';
+$htmlFontSize: 13px;
+$fontColor: #454545;
+$fontFamily: 'Noto Sans KR','malgun gothic','dotum',sans-serif;
+
+/* popup  z-index - default:110000000 / 알럿&컨펌:130000000
+	dimded z-index - default dimmed:100000000 / modal dimmed:120000000
+*/
+$popupIdx: 110000000;
+$popupDimmedIdx: 100000000;
+$modalIdx: 130000000;
+$modalDimmedIdx: 120000000;

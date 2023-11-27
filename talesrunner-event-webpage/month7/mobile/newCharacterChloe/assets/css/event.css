@@ -1,0 +1,290 @@
+@charset "UTF-8";
+@import url('https://tr-image.game.onstove.com/event/fonts/NotoSansKR/NotoSansKR.css');
+@import url('https://tr-image.game.onstove.com/event/fonts/NanumSquare/NanumSquare.css');
+
+/*
+* @version 1.0.0
+* @update 2023.06.12 수정
+* */
+
+/* reset */
+*, *:before, *:after {margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;word-break:break-word;outline:0;}
+html, body {width:100%;letter-spacing:-0.05em;font-size:10px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button {margin:0;padding:0;}
+body, h1, h2, h3, h4, input, button {font-family:'Pretendard','malgun gothic','dotum',sans-serif;}
+body {background-color:#fff;word-break:break-all;-ms-word-break:break-all;}
+img, fieldset, iframe {border:0 none;}
+li {list-style:none;}
+input, select, button {vertical-align:middle;}
+img {vertical-align:top;}
+i, em, address {font-style:normal;}
+label, button {cursor:pointer;}
+button {margin:0;padding:0;border:0;outline:none;}
+a {color:#333;text-decoration:none;}
+a:hover {color:#333;text-decoration:none;}
+button * {position:relative;}
+hr {display:none;}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input::-ms-clear {display:none;}
+legend, caption {overflow:hidden;height:0;text-indent:-9999em;font-size:0;line-height:0;}
+.hide {height:0;text-indent:-9999em;font-size:0;line-height:0;}
+
+body{
+    background: #377be8;
+}
+
+/* event_nav.css style 강제 초기화 */
+body {min-height:auto !important;}
+#sideEvtNav *, #sideEvtNav *:before, #sideEvtNav *:after {box-sizing:content-box;}
+
+/* common layout */
+#evt_wrap {overflow:hidden;position:relative;width:100%;;max-width: 720px; height:100vh;box-sizing:border-box;background: url(../images/main-bg.jpg) no-repeat bottom;margin: 0 auto;background-size:cover}
+#evt_wrap * {box-sizing:border-box;font-family:'Pretendard','Malgun Gothic','dotum', sans-serif; font-weight: 300;}
+
+#evt_wrap .evt-content {position:relative;width:100%;text-align:center;line-height:1.2; height: 68.2vh;}
+#evt_wrap .content-body {position:relative;}
+.inner {margin: 0 20px;height: 100%;max-width: 720px}
+
+/* board, footer */
+/*.event_comment {background:#fafafa url('../images/bbs_bg.jpg') no-repeat 50% 0;}*/
+/*.event_comment_in {width:980px;margin:0 auto;padding:150px 0 0 0;}*/
+.footer {position: relative;padding:20px 0;width: 100%;line-height:10px;bottom: 0;}
+.footer_copyright {width:100%;color:#ffffff;text-align:center;font-family:'Tahoma','Geneva','sans-serif';font-size:4.3vw;letter-spacing:0;}
+/*6월 21일 수정*/
+
+.footer {
+    text-align: center;
+}
+
+
+.footer .pc-button{
+    height: 100%;
+    margin: 0px auto ;
+}
+.footer .pc-button a{
+    display: inline-block;
+    background:url("../images/pc-button.png") no-repeat center center;
+    background-size: cover;
+    padding: 11%;
+    max-width: 266px;
+    width: 100%;
+
+}
+
+/*evt-header*/
+
+/* content layout */
+.evt-header {position:relative; background: rgba(0,0,0,45%);width: 100%;max-width: 720px;height: 15vw;
+    min-height: 64px;max-height: 94px;}
+.evt-header .inner {display: flex;align-items: center;justify-content: space-between;}
+.evt-header .inner .nav-left{display: flex;align-items: center;justify-content: space-between;gap: 6vw}
+.evt-header .inner a{display: block;width: 5vw;height:5vw;max-width: 50px;max-height: 50px;min-width: 30px;min-height: 30px; }
+.evt-header .inner .nav-left a:nth-child(1){background: url("../images/ico-home.png") no-repeat;background-size: cover;}
+.evt-header .inner .nav-left a:nth-child(2){background: url("../images/ico-youtube.png") no-repeat;background-size: cover;}
+.evt-header .inner .nav-left a:nth-child(3){background: url("../images/ico-facebook.png") no-repeat;background-size: cover}
+
+.evt-header .inner .nav-right a{background:url("../images/ico-close.png") no-repeat; display: block;background-size: cover }
+
+.evt-content .content-body .inner h2{
+    background: url("../images/title1.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 27%;
+    margin-top: 10vw;
+}
+
+@media screen and (max-width: 380px) {
+    .evt-content .content-body .inner h2{
+        margin-top: 0vw !important;
+    }
+
+}
+@media screen and (min-width: 600px) {
+    .evt-content .content-body .inner h2 {
+        position: absolute;
+        top: -300px;
+        left: 0;
+        background: url("../images/title1.png") no-repeat center center;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        padding: 18%;
+        margin-top: 10vw;
+    }
+
+}
+
+
+
+
+/* popup  z-index - default:110000000 / 알럿&컨펌:130000000
+   dimded z-index - default dimmed:100000000 / modal dimmed:120000000
+*/
+body.dimmed {width:100%;height:100%;}
+body.dimmed:before {z-index:100000000;content:'';display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.9);}
+body.modal {overflow:hidden;width:100%;height:100%;}
+body.modal:after {z-index:120000000;content:'';display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.1);}
+body.dimmed #evt_wrap {position:relative;top:0;}
+
+.popup {z-index:110000000;box-sizing:border-box;position:absolute;top:0;left:50%;opacity:0;transform:scale(0);transition:transform 0.2s ease;line-height:1.2;}
+.popup * {box-sizing:border-box;font-family:'Pretendard','Malgun Gothic','dotum', sans-serif;letter-spacing:-0.05em;}
+.popup.show {transform:translate(-50%,0) scale(1);opacity:1;}
+
+/*6월21일수정*/
+.popup .btn-close {    position: absolute;
+    right: 10px;
+    top: 0;
+    max-width: 44px;
+    max-height: 44px;
+    width: 7.4vw;
+    height: 7.4vw;
+    background: url(../images/btn_close.png) no-repeat;
+    background-size: cover;
+    text-indent: -9999em;
+    cursor: pointer;
+}
+.popup .btn-area {position:absolute;left:0;bottom:38px;right:0;text-align:center;}
+
+/* buttons */
+.ico, .btn {display:inline-block;text-indent:-9999em;}
+
+.play-button{
+    width: 100%;
+    height: 100%;
+    padding: 12% 50px 12%;
+}
+.play-button a{
+    display: inline-block;
+    width: 100%;
+    max-width: 110px;
+    height: 100%;
+    max-height:314px ;
+    overflow: hidden;
+}
+.play-button a img{
+    height: 15vw;
+    max-height: 110px;
+    min-height: 70px;
+}
+
+
+/*youtube 팝업*/
+[data-popup-id='youtube']{
+    width: 100%;
+    max-width: 720px;
+    height: 530px;
+}
+
+[data-popup-id='youtube'] .popup-inner{
+    max-height: 408px;
+    height: 60vw;
+    background: #000;
+}
+[data-popup-id='youtube'] .popup-inner .iframe{
+    height: 100%;
+}
+[data-popup-id='youtube'] .popup-header{
+    position: relative;
+}
+/*6/21 수정 */
+[data-popup-id='youtube'] .popup-header h3{
+    background: url("../images/popup/popup-youtube-title1.png") no-repeat center center;
+    max-width: 473px;
+    width: 70vw;
+    background-size: cover;
+    /*max-height: 69px;*/
+    height: 40vw;
+    margin: 0 auto 1.4%;
+}
+[data-popup-id='youtube'] .popup-header .btn-close{
+    bottom:0
+}
+
+[data-popup-id='youtube'] .popup-bottom{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+[data-popup-id='youtube'] .popup-bottom .check-box-item{
+    display: flex;
+    align-items: center;
+    margin: 15px auto 0;
+    gap: 15px;
+}
+#youtube-check-box + label{
+    font-size: 22px;
+    color:#fff;
+}
+
+
+
+
+
+/*체크박스 커스텀*/
+input[type="checkbox"]  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff;
+    display: inline-block;
+    width: 6vw;
+    max-width:22px;
+    height: 6vw;
+    max-height: 22px;
+    cursor: pointer;
+    border: 2px solid #1ea7fe;
+}
+input[type="checkbox"]::after {
+
+    background-image:url("../images/input-check.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: none;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+input[type="checkbox"]:checked::after {display: block;}
+
+
+@media screen and (max-width: 720px) {
+    html,body{font-size: 12px}
+    .bus-img{
+        bottom: -63%;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    html,body{font-size: 10px;}
+
+
+    #evt_wrap{
+        background-size: cover;
+        background-position: 35% 70%;
+    }
+    .evt-content .content-body .inner .play-button a img{
+        height: 5vw;
+    }
+    #youtube-check-box + label{
+        font-size: 14px;
+        color:#fff;
+    }
+    .footer_copyright{
+        line-height:18px
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    html,body{font-size: 7px;}
+
+    .footer_copyright{
+        line-height:20px
+    }
+}

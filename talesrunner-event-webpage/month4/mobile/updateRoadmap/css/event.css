@@ -1,0 +1,259 @@
+@charset "euc-kr";
+@import url('https://tr-image.game.onstove.com/event/fonts/NotoSansKR/NotoSansKR.css');
+@import url('https://tr-image.game.onstove.com/event/fonts/NanumSquare/NanumSquare.css');
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url('fonts/woff2/Pretendard-Regular.woff2') format('woff2'), url('fonts/woff/Pretendard-Regular.woff') format('woff');
+}
+
+/* reset */
+*, *:before, *:after {margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;word-break:break-word;outline:0;}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button {margin:0;padding:0; font-family: 'Pretendard';}
+body, h1, h2, h3, h4, input, button {font-family:'malgun gothic','dotum',sans-serif;}
+body {background-color:#fff;word-break:break-all;-ms-word-break:break-all;}
+img, fieldset, iframe {border:0 none;}
+li {list-style:none;}
+input, select, button {vertical-align:middle;}
+img {vertical-align:top;}
+i, em, address {font-style:normal;}
+label, button {cursor:pointer;}
+button {margin:0;padding:0;border:0;outline:none;}
+a {color:#333;text-decoration:none;}
+a:hover {color:#333;text-decoration:none;}
+button * {position:relative;}
+hr {display:none;}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input::-ms-clear {display:none;}
+legend, caption {overflow:hidden;height:0;text-indent:-9999em;font-size:0;line-height:0;}
+.hide {height:0;text-indent:-9999em;font-size:0;line-height:0;}
+
+body{background: #3ac0fe}
+#evt_wrap{background: #3ac0fe;width: 100vw;max-width: 720px; height:100%;margin:0 auto;}
+
+header{position:relative; width:100%; height: 15vw;  max-height: 125px; padding:0 40px; }
+header .gnb{padding-top:50px; display: flex; width:100%; justify-content: space-between;}
+header .gnb .left{}
+header .gnb .left img {max-width: 70px; width:10vw; }
+header .gnb .right{display: flex; gap:15px; }
+header .gnb .right img {width:10vw; max-width: 70px;}
+header .home a {display: block; width: 100%;height: 100%; }
+header .youtube a {display: block; width: 100%;height: 100%; }
+header .facebook a {display: block; width: 100%;height: 100%; }
+
+/*반응형 헤더 */
+@media screen and (max-width: 768px) {
+    #evt_wrap{max-width: 100%}
+}
+@media screen and (max-width: 768px) {
+    header{padding:0 5vw;}
+    header .gnb {padding-top:4vw;}
+    header .gnb .right{ gap:2vw; }
+}
+
+
+/*body 부분 시작 */
+.content-body .title{ height:350px;background:url("../images/title.png")no-repeat center;}
+
+/*공통*/
+
+.title-three {margin-top:50px;background:url("../images/three-title.png")no-repeat -1vw center; height: 850px; background-size: contain; text-indent: -99999px;}
+.updateWrap{height: 50px}
+.update {text-indent: -9999px;}
+.update1 {  height:100%; background:url("../images/updateBtn1.png")no-repeat -2px 0; background-size: cover; text-indent: -99999px; }
+.update2 {  height:100%; background:url("../images/updateBtn2.png")no-repeat -2px 0; background-size: cover; text-indent: -99999px; }
+.update3 {  height:100%; background:url("../images/updateBtn.png")no-repeat -2px 0; background-size: cover; text-indent: -99999px; }
+.thumbnail { position:relative; width: 100%; }
+li .textBox {padding:10px 30px 0;}
+li .textBox .subText{padding-top:5px;}
+li .textBox .subText span {display: block; font-size: 22px; line-height: 1.3; color:#0d253d; font-weight: 500;}
+/*날짜별 컨텐츠*/
+.may{ padding:0 40px;}
+.may h4{height: 80px; background:url("../images/may/may.png")no-repeat center center;  background-size: cover; text-indent: -9999px;}
+.may .may_list {margin-top:40px; display: flex; flex-direction: column; gap:35px;}
+.may .may_list li .collabo {background:url("../images/may/tub1.png")no-repeat center;  background-size: contain; height: 370px;}
+.may .may_list li .textBox .subText .last {padding-top:10px; width: 220px; height: 20px; }
+.may .may_list li .textBox .subText .last img{width: 100%; object-fit: cover;}
+/*.may .may_list li .character { position: absolute; right:-40px;bottom:40px; width:200px;height: 220px; background:url("../images/may/char.png")no-repeat 15px center;}*/
+
+
+/*5월 개발자 페스티벌 */
+.may .may_list li .festival {background:url("../images/may/tub1-2.png")no-repeat center; background-size: cover; height:300px;}
+.may .may_list li .festival-character{position: absolute; right:0;bottom:0; width:230px;height: 270px; background:url("../images/may/festival-char.png")no-repeat center; background-size: contain}
+
+
+/*6월*/
+section{ padding:0 40px;}
+.june h4{margin-top:50px;height: 100px; background:url("../images/june/june.png")no-repeat center center;  background-size: contain; text-indent: -9999px;}
+.june .june_list{padding-top:40px; display: flex; flex-direction: column; gap:35px;}
+.june .june_list .change{background:url("../images/june/tub2.png")no-repeat center;  background-size: cover; height: 338px;}
+.june .june_list .direct {background:url("../images/june/tub-2.png")no-repeat center ;background-size:cover; height: 370px;}
+.june .june_list .direct-character {position:absolute; right:-40px;top:20px; width:350px;height: 350px; background:url("../images/june/direct-char.png")no-repeat center; background-size: cover}
+
+
+/*7월*/
+.july{padding:0 40px;}
+.july h4{margin-top:50px;height: 100px; background:url("../images/july/july.png")no-repeat center center;  background-size: contain; text-indent: -9999px;}
+.july .july_list {padding-top:40px; display: flex; flex-direction: column; gap:35px;}
+.july .july_list .Ireland {background:url("../images/july/iland.png")no-repeat center ;background-size:cover; height:370px; }
+.july .july_list .girl {background:url("../images/july/girl.png")no-repeat center ;background-size:cover; height:370px; }
+.july .july_list .runnerMap {background:url("../images/july/newRunnerMap.png")no-repeat center ;background-size:cover; height:370px; }
+.july .july_list .system {background:url("../images/july/system.png")no-repeat center ;background-size:cover; height:370px; }
+.july .july_list .auto {background:url("../images/july/auto.png")no-repeat center ;background-size:cover; height:370px; }
+.july .july_list .together {background:url("../images/july/together.png")no-repeat center ;background-size:cover; height:338px; }
+.july .july_list .ireland-char {position: absolute;  width:280px;height:250px;right:-40px; top:50px; background:url("../images/july/ireland-char.png")no-repeat; background-size:cover;}
+.july .july_list .girl-character {position: absolute;  width:300px;height:370px;right:-20px; top:0; background:url("../images/july/girl-char.png")no-repeat; background-size:cover;}
+/*8월*/
+.aug {padding:0 40px;}
+.aug h4{margin-top:50px;height: 100px;background:url("../images/aug/aug.png")no-repeat center center;  background-size: contain;text-indent: -9999px;}
+
+.aug .aug_list {margin-top: 40px; display: flex; flex-direction: column; gap:35px;}
+.aug .aug_list .newRunner{background:url("../images/aug/aug-newRunner.png")no-repeat center ;background-size:cover; height:370px;}
+.aug .aug_list .track{background:url("../images/aug/aug-track.png")no-repeat center ;background-size:cover; height:370px;}
+.aug .aug_list .augFestival{background:url("../images/aug/aug-festival.png")no-repeat center ;background-size:cover; height:370px;}
+
+
+/*9월*/
+.sep {padding:0 40px;}
+.sep h4{margin-top:50px;height: 100px; background:url("../images/sep/sep.png")no-repeat center center;  background-size: contain;text-indent: -9999px;}
+.sep .sep_list {margin-top: 40px; display: flex; flex-direction: column; gap:35px;}
+.sep .sep_list .autumn{background:url("../images/sep/sep-autumn.png")no-repeat center ;background-size:cover; height:370px;}
+.sep .sep_list .sepRunner{background:url("../images/sep/sep-runner.png")no-repeat center ;background-size:cover; height:338px;}
+.sep .sep_list .autumn-char {position: absolute;  width:400px;height:350px;right:-40px; top:-50px; background:url("../images/sep/bird.png")no-repeat; background-size:cover;}
+
+/*10월*/
+.oct {padding:0 40px;}
+.oct h4{margin-top:50px;height: 100px; background:url("../images/oct/oct.png")no-repeat center center;  background-size: contain;text-indent: -9999px;}
+.oct .oct_list{margin-top: 40px; display: flex; flex-direction: column; gap:35px;}
+.oct .oct_list .survival{background:url("../images/oct/oct-survival.png")no-repeat center ;background-size:cover; height:370px;}
+/*11월*/
+.nov {padding:0 40px;}
+.nov h4{margin-top:50px;height: 100px; background:url("../images/nov/nov.png")no-repeat center center;  background-size: contain;text-indent: -9999px;}
+.nov .nov_list{margin-top:40px; display: flex; flex-direction: column; gap:35px;}
+.nov .nov_list .craft{background:url("../images/nov/nov-craft.png")no-repeat center ;background-size:cover; height:370px;}
+.nov .nov_list .bit64{background:url("../images/nov/nov-64bit.png")no-repeat center ;background-size:cover; height:370px;}
+.nov .nov_list .craft-char {position: absolute;  width:350px;height:410px;right:-40px; top:-40px; background:url("../images/nov/nov-char.png")no-repeat 32px 0; background-size:cover;}
+
+/*반응형 바디*/
+@media screen and (max-width: 768px) {
+    .content-body .title{height: 48vw;background-size: contain;}
+    .may .may_list li .festival-character{position: absolute; right:0;bottom:0; width:32vw;height: 38vw;  background-size: cover;}
+}
+/*공통 */
+@media  screen and (max-width: 768px) {
+    .updateWrap{height: 7vw;}
+    .update1 {  height:100%; background:url("../images/updateBtn1.png")no-repeat -2px 0; background-size: contain; text-indent: -99999px; }
+    .update2 {  height:100%; background:url("../images/updateBtn2.png")no-repeat -2px 0; background-size: contain; text-indent: -99999px; }
+    li .textBox { padding:0 4.2vw;}
+    li .textBox .subText span { font-size: 3vw; line-height: 1.3;}
+    .title-three {margin-top:10vw;background:url("../images/three-title.png")no-repeat -1vw center; height: 122vw; background-size: contain; text-indent: -99999px;}
+}
+/*월별 반응형*/
+@media screen and (max-width: 768px) {
+    .may {padding:0 5vw; }
+    .may .may_list {margin-top: 5.5vw; gap:5vw;}
+    .may .may_list li .collabo {height:51vw;}
+    .may .may_list li .textBox .subText .last {padding-top:1.4vw; width: 32vw; height: 3vw; }
+    .may li .textBox h5 img { width: 45vw; height: 6vw;}
+    .may .may_list li .festival { height:41vw; background-size: cover;}
+    .may h4{height: 11.2vw; background:url("../images/may/may.png")no-repeat center center;  background-size: cover;}
+}
+
+
+@media  screen and (max-width: 768px) {
+    .june {padding:0 5vw;}
+    .june h4{margin-top:5vw;height: 13vw; background:url("../images/june/june.png")no-repeat center center;  background-size: cover;}
+    .june .june_list {padding-top:5.5vw; display: flex; flex-direction: column; gap:4vw;}
+    .june .june_list .change{height: 41vw; }
+    .june li .textBox h5 img { width: 45vw; height: 6vw;}
+    .june .june_list .direct{height:51vw; }
+    .june .june_list .direct-character {position:absolute; right:-5vw;top:1vw; width:50vw;height: 50vw; background:url("../images/june/direct-char.png")no-repeat center; background-size: cover}
+}
+
+@media screen and (max-width: 768px) {
+
+    .july{padding:0 5vw;}
+    .july h4{margin-top:5vw; height: 13vw; background:url("../images/july/july.png")no-repeat center center;  background-size: cover;text-indent: -9999px;}
+    .july .july_list { padding-top: 5.5vw; display: flex; flex-direction: column; gap:4vw;}
+    .july .july_list .Ireland {background:url("../images/july/iland.png")no-repeat center ;background-size:cover; height:51vw; }
+    .july .july_list .Ireland .textBox h5 img {width:100%;!important; height: 7vw; object-fit: contain;}
+    .july .july_list .girl {background:url("../images/july/girl.png")no-repeat center ;background-size:cover; height:51vw; }
+    .july .july_list .girl  .textBox h5 img {width: 45vw; height: 7vw; object-fit: contain;}
+    .july .july_list .runnerMap {background:url("../images/july/newRunnerMap.png")no-repeat center ;background-size:cover; height:51vw; }
+    .july .july_list .runnerMap .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+    .july .july_list .auto {background:url("../images/july/auto.png")no-repeat center ;background-size:cover; height:51vw; }
+    .july .july_list .auto .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+    .july .july_list .system {background:url("../images/july/system.png")no-repeat center ;background-size:cover; height:51vw; }
+    .july .july_list .system .textBox h5 img {width: 26vw;height: 7vw; object-fit: contain;}
+    .july .july_list .together {background:url("../images/july/together.png")no-repeat center ;background-size:cover; height:41vw; }
+    .july .july_list .together .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+    .july .july_list .ireland-char {position: absolute;  width:38vw;height:34vw;right:-5vw; top:7vw; background:url("../images/july/ireland-char.png")no-repeat; background-size:cover;}
+    .july .july_list .girl-character {position: absolute;  width:43vw;height:51vw;right:-3.2vw; top:0; background:url("../images/july/girl-char.png")no-repeat; background-size:cover;}
+}
+
+@media screen and (max-width: 768px) {
+    .aug {padding:0 5vw;}
+    .aug .aug_list  .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+    .aug h4{margin-top:5vw; height: 13vw; background:url("../images/aug/aug.png")no-repeat center center;  background-size: cover;text-indent: -9999px;}
+    .aug .aug_list {margin-top: 5.5vw; display: flex; flex-direction: column; gap:4vw;}
+    .aug .aug_list .newRunner{background:url("../images/aug/aug-newRunner.png")no-repeat center ;background-size:cover; height:51vw;}
+    .aug .aug_list .track{background:url("../images/aug/aug-track.png")no-repeat center ;background-size:cover; height:51vw;}
+    .aug .aug_list .augFestival{background:url("../images/aug/aug-festival.png")no-repeat center ;background-size:cover; height:51vw;}
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .sep {padding:0 5vw;}
+    .sep h4{margin-top:5vw; height: 13vw; background:url("../images/sep/sep.png")no-repeat center center;  background-size: cover;text-indent: -9999px;}
+    .sep li .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+    .sep .sep_list {margin-top:5.5vw; display: flex; flex-direction: column; gap:4vw;}
+    .sep .sep_list .autumn{background:url("../images/sep/sep-autumn.png")no-repeat center ;background-size:cover; height:51vw;}
+    .sep .sep_list .sepRunner{background:url("../images/sep/sep-runner.png")no-repeat center ;background-size:cover; height:41vw;}
+    .sep .sep_list .autumn-char {position: absolute;  width:55.5vw;height:50vw;right:-5vw; top:-7vw; background:url("../images/sep/bird.png")no-repeat; background-size:cover;}
+}
+
+@media screen and (max-width: 768px) {
+    .oct {padding:0 5vw;}
+    .oct h4{margin-top:5vw; height: 13vw; background:url("../images/oct/oct.png")no-repeat center center;  background-size: cover;text-indent: -9999px;}
+    .oct .oct_list{margin-top:5.5vw; display: flex; flex-direction: column; gap:4vw;}
+    .oct .oct_list .survival{background:url("../images/oct/oct-survival.png")no-repeat center ;background-size:cover; height:51vw;}
+    .oct li .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+}
+
+@media screen and (max-width: 768px) {
+    .nov {padding:0 5vw;}
+    .nov h4{margin-top:5vw; height: 13vw; background:url("../images/nov/nov.png")no-repeat center center;  background-size: cover;text-indent: -9999px;}
+    .nov .nov_list{margin-top: 5.5vw; display: flex; flex-direction: column; gap:4vw;}
+    .nov li .textBox h5 img {width: 45vw;height: 7vw; object-fit: contain;}
+    .nov .nov_list .craft{background:url("../images/nov/nov-craft.png")no-repeat center ;background-size:cover; height:51vw;}
+    .nov .nov_list .bit64{background:url("../images/nov/nov-64bit.png")no-repeat center ;background-size:cover; height:51vw;}
+    .nov .nov_list .craft-char {position: absolute;  width:50vw;height:58vw;right:-5vw; top:-5vw; background:url("../images/nov/nov-char.png")no-repeat 4vw 0; background-size:cover;}
+}
+
+
+
+
+
+
+
+
+
+.btn { margin-top:10px; display:block; width: 100%; height: 75px; text-indent: -9999px; background: url("../images/more-Btn.png")no-repeat center center; background-size: cover;}
+.btn a {display:block; width: 100%;height: 100%;}
+
+
+/*버튼 반응형 */
+@media screen and (max-width: 768px) {
+    .btn { margin-top:1.4vw; display:block; width: 100%; height: 11.5vw; text-indent: -9999px;}
+}
+
+footer {height: 200px}
+footer .footer {height: 100%;}
+footer p {display: flex; justify-content: center; align-items: center; height: 100%; color:#0d253d;}
+
+@media screen and (max-width: 768px) {
+    footer{height: 27vw;}
+}

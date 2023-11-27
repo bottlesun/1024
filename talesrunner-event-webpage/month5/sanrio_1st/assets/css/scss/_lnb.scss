@@ -1,0 +1,138 @@
+@use "abstracts/variable" as *;
+@use "abstracts/mixins" as *;
+
+#evt_wrap {
+    .evt-lnb {
+        position: fixed;
+        top: 0;
+        left: -306px;
+        bottom: 0;
+        width: 310px;
+        border-right: 4px solid #643bc5;
+        background: #946bf3;
+        z-index: 111000000;
+        transition: all 0.2s ease-in-out;
+        &.open {
+            .btn-control::before {
+                width: 23px;
+                height: 24px;
+                background-position-x: -138px;
+            }
+        }
+        .btn-control {
+            position: absolute;
+            top: 0;
+            right: -54px;
+            width: 50px;
+            height: 50px;
+            border-radius: 0 50px 50px 0;
+            background-color: #643bc5;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 21px;
+                height: 16px;
+                background: url(../images/lnb/ico_lnb.png) no-repeat -171px 0;
+                transform: translate(calc(-50% - 4px), -50%);
+            }
+        }
+        .lnb-data {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .lnb-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 0 13px;
+            a {
+                width: 36px;
+                height: 35px;
+                margin: 0 5px;
+                background: url(../images/lnb/ico_lnb.png) no-repeat 0 0;
+                @for $index from 1 through 3 {
+                    &:nth-of-type(#{$index}) {
+                        background-position-x: calc(-46px * ($index - 1));
+                    }
+                }
+            }
+        }
+        .lnb-list {
+            overflow-y: auto;
+            height: 100%;
+            .scrollbar-track {
+                background-color: transparent;
+            }
+            .scrollbar-thumb {
+                background-color: #7656c2;
+            }
+            ul {
+                padding-top: 11px;
+                background: url(../images/lnb/bg_lnb_line.png) no-repeat 50% 0;
+            }
+            li {
+                position: relative;
+                @for $index from 1 through 5 {
+                    &:nth-of-type(#{$index}) {
+                        &.new::after {
+                            background-position-x: -56px * ($index - 1);
+                        }
+                        .lnb-item {
+                            background-position-y: -142px * ($index - 1);
+                        }
+                    }
+                }
+                & + li {
+                    margin-top: 11px;
+                }
+                &.new {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 11px;
+                        left: 30px;
+                        width: 46px;
+                        height: 31px;
+                        background: url('../images/lnb/lnb_new.png?ver=#{$ver}') no-repeat 0 0;
+                        background-size: auto 100%;
+                    }
+                }
+            }
+            .active {
+                a {
+                    &.lnb-item {
+                        background-position-x: -604px !important;
+                    }
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+            a.lnb-item:hover {
+                background-position-x: -302px;
+            }
+            .lnb-item {
+                position: relative;
+                display: block;
+                height: 131px;
+                background: url(../images/lnb/bg_lnb_text.png) no-repeat 0 0;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    bottom: 4px;
+                    left: 23px;
+                    right: 23px;
+                    border-radius: 10px;
+                    background-color: #6a40cb;
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}

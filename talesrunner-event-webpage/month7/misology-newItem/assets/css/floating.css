@@ -1,0 +1,91 @@
+.floating-button {
+    background-size: cover;
+    height: 385px;
+    width: 190px;
+    position: absolute;
+    transform: translateY(220px);
+    left: 50px;
+    z-index: 999;
+    padding: 70px 0 0;
+    transition: 0.4s;
+}
+
+.floating-button li {
+    margin-top: 12px;
+}
+
+.floating-button li a {
+    display: block;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    position: relative;
+    /*text-indent: -99999em;*/
+}
+
+.floating-button li:last-child a {
+    width: 70px;
+    height: 70px;
+    transform: rotate(45deg);
+    left: 60px;
+}
+.floating-button .floating-section01 a {
+    /*background-image: url("../images/floating-button/floating-item01.png");*/
+}
+
+
+.floating-button .floating-section01.active a {
+    /*background: url("../images/floating-button/floating-item-active.png") no-repeat center center;*/
+    height: 35px;
+    background-position-y: -5px;
+    z-index: -1;
+}
+
+.floating-button .floating-section02 a {
+    /*background-image: url("../images/floating-button/floating-item02.png");*/
+    background-position-x: 0px;
+}
+
+.floating-button .floating-section02.active a {
+    /*background: url("../images/floating-button/floating-item-active.png") no-repeat center center;*/
+    height: 35px;
+    background-position-y: -45px;
+    z-index: -1;
+}
+
+.floating-button .floating-section03 a {
+    /*background-image: url("../images/floating-button/floating-item03.png");*/
+    background-position-x: -10px;
+}
+
+.floating-button .floating-section03.active a {
+    /*background: url("../images/floating-button/floating-item-active.png") no-repeat center center;*/
+    height: 35px;
+    background-position-y: -88px;
+    z-index: -1;
+}
+
+.floating-button .floating-section04 a {
+    /*background-image: url("../images/floating-button/floating-item04.png");*/
+    background-position-x: 0px;
+}
+
+.floating-button .floating-section04.active a {
+    /*background: url("../images/floating-button/floating-item-active.png") no-repeat center center;*/
+    height: 35px;
+    background-position-y: -130px;
+    z-index: -1;
+}
+
+.floating-button .floating-section05 a {
+    /*background-image: url("../images/floating-button/floating-item05.png");*/
+    background-position-x: -10px;
+}
+
+.floating-button .floating-section05.active a {
+    /*background: url("../images/floating-button/floating-item-active.png") no-repeat center center;*/
+    height: 35px;
+    background-position-y: -172px;
+    z-index: -1;
+}

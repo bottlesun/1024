@@ -1,0 +1,483 @@
+@charset "UTF-8";
+
+#evt_wrap{min-height: 8446px;margin: 0 auto; }
+#evt_wrap #evt-inner{height: 7824px;background: url("../images/main_bg.jpg") no-repeat center top}
+
+/*header - top button*/
+#evt-inner .header-top-button{position:absolute;top:30px;right:0;z-index:95;width: 198px;height: 43px;display: flex;justify-content: space-between;gap: 4px;}
+#evt-inner .header-top-button li a {display: block;background: url("../images/top_button.png") no-repeat; height: 43px}
+#evt-inner .header-top-button .show-again a{width: 155px;background-position-x: 0;}
+#evt-inner .header-top-button .home a{width: 44px;background-position-x:-157px;}
+
+/* board, footer */
+.evt_comment {background:#fdfdfd;height: 622px}
+.evt_comment_title{width:100%;height:222px;background:#fdfdfd url('../images/bbs_title.png') no-repeat center 90px}
+.evt_comment_in {width:980px;margin:0 auto}
+.evt_comment_background_block{
+    background: #f3f3f3;
+    border-radius: 10px;
+    display: block;
+    width: 980px;
+    height: 58px;
+    position: absolute;
+    top: -5px;
+    z-index: 0;
+}
+
+
+
+.footer {position:relative;height:60px;background:#fdfdfd;line-height:60px;}
+.footer_copyright {width:100%;color:#666;text-align:center;font-family:'Tahoma','Geneva','sans-serif';font-size:12px;letter-spacing:0px;}
+
+
+/* buttons */
+/*.ico, .btn {display:inline-block;background:url('../images/ico_spr.png') no-repeat -9999em 0;text-indent:-9999em;}*/
+.ico, .btn {display:inline-block;text-indent:-9999em;}
+.btn-caution {width:200px;height:50px;background-color:#fff;text-indent:0;}
+
+/* content layout */
+.evt-header {position:relative;height:1250px;}
+.content-body .section01 {position:relative;height:1660px;}
+.content-body .section02 {position:relative;height:1570px;}
+.content-body .section03 {position:relative;height:2570px;}
+.content-body .section04 {position:relative;height:774px;}
+
+/* contents */
+.evt-header .header-title{
+    height: calc(415px + 45px);
+    width: 994px;
+    margin: 0 auto;
+    padding-top: 45px;
+    position: relative;
+}
+.evt-header .header-title span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.evt-header .anniversary-18th{
+    display: block;
+    background: url("../images/header/18th.png") no-repeat center center;
+    height: 136px;
+    width: 282px;
+    transform: translate(274px, 46px);
+    --x: 274px;
+    --y: 46px;
+    --rotate: -2deg;
+    --rotate2: 0deg;
+    --upDownY: 50px;
+    animation: rotateDown 8s infinite ease-in-out;
+    transition: all 3.0s
+}
+.evt-header .commemorative{
+    display: block;
+    background: url("../images/header/commemorative.png") no-repeat center center;
+    height: 104px;
+    width: 183px;
+    transform: translate(554px, 65px);
+    --x: 554px;
+    --y: 65px;
+    --rotate: 3deg;
+    --rotate2: 0deg;
+    --upDownY: 55px;
+    animation: rotateDown 8s infinite ease-in-out;
+    transition: all 2.5s
+}
+.evt-header .t{
+    display: block;
+    background: url("../images/header/title01.png") no-repeat center center;
+    height: 273px;
+    width: 275px;
+    transform: translate(-1px, 170px);
+    --x: -1px;
+    --y: 170px;
+    --rotate: 2deg;
+    --rotate2: -4deg;
+    --upDownY: 160px;
+    animation: rotateDown 6s infinite ease-in-out;
+    transition: all 3.0s
+}
+.evt-header .r{
+    display: block;
+    background: url("../images/header/title02.png") no-repeat center center;
+    height: 272px;
+    width: 279px;
+    transform: translate(238px, 189px);
+    --x: 238px;
+    --y: 189px;
+    --rotate: 4deg;
+    --rotate2: 0deg;
+    --upDownY: 200px;
+    animation: rotateDown 8s infinite ease-in-out;
+    transition: all 2.5s
+}
+.evt-header .d{
+    display: block;
+    background: url("../images/header/title03.png") no-repeat center center;
+    height: 271px;
+    width: 274px;
+    transform: translate(476px, 165px);
+    --x: 476px;
+    --y: 175px;
+    --rotate: -2deg;
+    --rotate2: 6deg;
+    --upDownY: 160px;
+    animation: rotateDown 8s infinite ease-in-out;
+    transition: all 3s
+}
+.evt-header .y{
+    display: block;
+    background: url("../images/header/title04.png") no-repeat center center;
+    height: 255px;
+    width: 308px;
+    transform: translate(684px, 187px);
+    --x: 684px;
+    --y: 187px;
+    --rotate: 2deg;
+    --rotate2: -6deg;
+    --upDownY: 192px;
+    animation: rotateDown 6s infinite ease-in-out;
+    transition: all 2.5s
+
+}
+
+
+/*section01 인기투표*/
+.section01 .item-content .item-title {
+    background: url("../images/section01/section01-title.png") no-repeat center center;
+    height: 193px;
+    width: 100%;
+}
+
+.section01 .item-box {
+    position: relative;
+    background: url("../images/section01/section01-content-bg.png") no-repeat center bottom;
+    height: calc(1362px + 25px);
+}
+
+.section01 .item-box:after{
+    content: '';
+    position: absolute;
+    width: 1255px;
+    height: 749px;
+    left: -20px;
+    top:-94px;
+    background: url("../images/section01/section01-character.png") no-repeat center top;
+}
+
+.section01 .item-box .item-box-inner {
+    width: 100%;
+    height: 100%;
+    padding: 70px 80px;
+}
+
+.section01 .item-box .item-box-inner .item-vote-table-wrap {
+    width: 677px;
+    height: 582px;
+    margin: 30px auto 0;
+    position: relative;
+    z-index: 3;
+}
+
+
+.section01 .item-box .item-box-inner .item-vote-status {
+    height: 45px;
+    margin: 0 auto;
+    background: #ebedf2;
+    border-radius: 9999px;
+    font-family: 'Malgun Gothic', '맑은 고딕', '돋움', 'dotum', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    line-height: 45px;
+    letter-spacing: 0;
+    display: none;
+}
+
+.section01 .item-box .item-box-inner .item-vote-status .btn-login {
+    color: #dc0091;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.section01 .item-box .item-box-inner .item-vote-status span {color: #dc0091;}
+
+/*로그인*/
+.section01 .item-box .item-box-inner .login [data-loginStatus="login"] {display: block;}
+
+.section01 .item-box .item-box-inner .no-character [data-loginStatus="no-character"] {display: block;}
+
+.section01 .item-box .item-box-inner .no-login [data-loginStatus="no-login"] {display: block;}
+
+
+/*table*/
+.item-vote-table table {table-layout: fixed;margin-top: 15px}
+
+.item-vote-table thead tr th:first-child, .item-vote-table thead tr th:last-child {width: 68px;}
+
+.item-vote-table thead tr th:nth-child(2) {width: 92px;}
+
+.item-vote-table thead tr th:nth-child(4) {width: 115px;}
+
+/*테이블 헤더*/
+.section01 .item-box .item-box-inner .item-vote-table thead tr {
+    height: 62px;
+    background: url("../images/section01/section01-table-header.png") no-repeat;
+}
+
+/*테이블 바디*/
+.section01 .item-box .item-box-inner .item-vote-table tbody {background: #fafafb;}
+
+.section01 .item-box .item-box-inner .item-vote-table tbody tr {height: 50px;}
+
+.section01 .item-box .item-box-inner .item-vote-table tbody tr:nth-child(even) {background: #ebedf2;}
+
+.section01 .item-box .item-box-inner .item-vote-table tr td,.section01 .item-box .item-box-inner .item-vote-table tr td * {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: -0.8px;
+}
+
+.section01 .item-box .item-box-inner .item-vote-table tr:nth-child(even) td:first-child {border-radius: 10px 0 0 10px;}
+
+.section01 .item-box .item-box-inner .item-vote-table tr:nth-child(even) td:last-child {border-radius: 0 10px 10px 0;}
+.section01 .item-box .item-box-inner .item-vote-table tr .pierrot-list{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:10px
+}
+.section01 .item-box .item-box-inner .item-vote-table tr .pierrot-list{
+    padding-left: 65px;
+}
+.section01 .item-box .item-box-inner .item-vote-table tr .pierrot-list span{
+    display: block;
+    background-image: url("../images/section01/section01-pierrot-list.png");
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    height: 50px;
+    width: 35px;
+}
+.section01 .item-box .item-box-inner .item-vote-table .yellow-pierrot .pierrot-list span{
+    background-position:0 -50px ;
+}
+.section01 .item-box .item-box-inner .item-vote-table .orange-pierrot .pierrot-list span{
+    background-position:0 -100px ;
+}
+.section01 .item-box .item-box-inner .item-vote-table .green-pierrot .pierrot-list span{
+    background-position:0 -150px ;
+}
+.section01 .item-box .item-box-inner .item-vote-table .blue-pierrot .pierrot-list span{
+    background-position:0 -200px ;
+}
+.section01 .item-box .item-box-inner .item-vote-table .purple-pierrot .pierrot-list span{
+    background-position:0 -250px ;
+}
+.section01 .item-box .item-box-inner .item-vote-table .dark-pierrot .pierrot-list span{
+    background-position:0 -300px ;
+}
+
+.section01 input[type="radio"] {
+    display:none;
+}
+
+.section01 input[type="radio"] + label .round{
+    display:inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/section01/section01-vote-check-box.png');
+    background-repeat: no-repeat;
+    background-position: 2px 0;
+    cursor:pointer;
+}
+.section01 input[type="radio"]:checked + label .round{
+    background-position: -36px 0;
+}
+
+.section01 .vote-button{
+    margin-top: 30px;
+    background: url('../images/section01/section01-vote-button.png') no-repeat center center;
+    height: 83px;
+    width: 233px;
+}
+.section01 .vote-button.disabled{
+    background: url('../images/section01/section01-vote-button-disabled.png') no-repeat center center;
+    pointer-events: none;
+}
+
+/*투표 보상*/
+.section01 .item-vote-gift-box-wrap{
+   width: 1040px;
+   height: 512px;
+   margin: 0 auto;
+   display: flex;
+   align-items: end;
+   justify-content: space-between;
+}
+.section01 .item-vote-gift-box-wrap .item-vote-gift-box{
+    width: 510px;
+    height: 453px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.section01 .item-vote-gift-box .content-box{
+    width: 100%;
+    height: 364px;
+}
+.section01 .item-vote-gift-box .button-wrap{
+    height: 90px;
+    width: 100%;
+}
+.section01 .item-vote-gift-box .button-wrap .gift-button{
+    all:unset;
+    width: 162px;
+    height:63px;
+    background-image: url('../images/section01/section01-gift-box-button.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+.section01 .item-vote-gift-box .button-wrap .gift-button.complete{
+    background-position: -163px 0;
+    cursor: default;
+    pointer-events: none;
+}
+
+.section01 .item-vote-gift-box-wrap .item-vote-left-gift{
+    background-image: url('../images/section01/section01-gift-box-left.png');
+}
+.section01 .item-vote-gift-box-wrap .item-vote-right-gift{
+    background-image: url('../images/section01/section01-gift-box-right.png');
+}
+.section01 .item-vote-gift-box-wrap .item-vote-right-gift .button-wrap.disabled{
+    background: url('../images/section01/section01-gift-notice.png') no-repeat center center;
+}
+.section01 .item-vote-gift-box-wrap .item-vote-right-gift .button-wrap.disabled button{
+    display: none;
+}
+.item-vote-notice{
+    padding-top: 30px;
+}
+.item-vote-notice li{
+    font-size: 12px;
+    color:#333;
+    line-height:22px;
+    letter-spacing: -0.8px;
+}
+.item-vote-notice li.bold-text{
+    font-weight: bold;
+}
+.item-vote-notice li span{
+    margin-right: 5px;
+}
+
+
+/*section02 달리기 핫타임 안내*/
+.section02 .item-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.section02 .item-content .running .item-title{
+    width: 100%;
+    height: 95px;
+    margin-bottom: 30px;
+    background: url('../images/section02/section02-running-pierrot-title.png') no-repeat center center;
+}
+
+.section02 .item-content  .running  .item-running-box{
+    width: 100%;
+    height: 517px;
+    background: url('../images/section02/section02-running-pierrot-box.png') no-repeat center center;
+    position: relative;
+}
+.section02 .item-content  .running  .item-running-box::before{
+    content: "";
+    position: absolute;
+    width: 1235px;
+    height: 383px;
+    background: url('../images/section02/section02-running-pierrot-character.png') no-repeat center center;
+    left: 25px;
+    top: 40px;
+}
+
+.section02 .item-content .hot-time , .section02 .item-content .running{
+    width: 100%;
+}
+.section02 .item-content .hot-time .item-title{
+    width: 100%;
+    height: 149px;
+    margin-bottom: 30px;
+    background: url('../images/section02/section02-hottime-title.png') no-repeat center center;
+}
+.section02 .item-content .hot-time .item-hot-time-box{
+    width: 100%;
+    height: 677px;
+    background: url('../images/section02/section02-hottime-content.jpg') no-repeat center center;
+}
+
+/*section03 접속보상 매일 매일 5종 미션*/
+.section03 .item-content .access .item-title{
+    width: 100%;
+    height: 94px;
+    background: url('../images/section03/section03-access-title.png') no-repeat center center;
+}
+.section03 .item-content .access .item-box{
+    width: 100%;
+    height: 560px;
+    background: url('../images/section03/section03-access-content.jpg') no-repeat center center;
+}
+.section03 .item-content .mission .item-title{
+    width: 100%;
+    height: 186px;
+    background: url('../images/section03/section03-mission-title.png') no-repeat center center;
+}
+.section03 .item-content .mission .item-box{
+    margin-top: 10px;
+    width: 100%;
+    height: 1720px;
+    background: url('../images/section03/section03-mission-cotnent.png') no-repeat center center;
+}
+
+/*section04 테런데이 기념 할인 상점 안내*/
+.section04 .item-content .item-title{
+    width: 100%;
+    height: 130px;
+    background: url('../images/section04/section04-title.png') no-repeat center center;
+}
+.section04 .item-content .item-box{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 491px;
+    background: url('../images/section04/section04-content.png') no-repeat center center;
+}
+.section04 .item-content .item-box a{
+    position: absolute;
+    display: block;
+    width: 501px;
+    height: 95px;
+    transform: translate(370px, 315px);
+}
+/*animate*/
+
+@keyframes rotateDown {
+    0% {
+        transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+    }
+    50% {
+        transform: translate(var(--x), var(--upDownY)) rotate(var(--rotate2));
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+    }
+}
+

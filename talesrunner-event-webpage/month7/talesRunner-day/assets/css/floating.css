@@ -1,0 +1,76 @@
+/*floating button*/
+.floating-button {
+    background: url(../images/floating-button/floating-button.png) no-repeat center;
+    background-size: cover;
+    height: 334px;
+    width: 150px;
+    position: absolute;
+    transform: translateY(480px);
+    left: 50px;
+    z-index: 999;
+    padding: 62px 0 0;
+    transition: 0.4s;
+}
+
+.floating-button li {
+    width: 122px;
+    height: 34px;
+    margin:0 auto 1px;
+}
+
+.floating-button li a {
+    display: block;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-image: url("../images/floating-button/floating-button-text.png");
+    position: relative;
+}
+
+.floating-button li:last-child {
+    height: 50px;
+    left: 60px;
+    background-image:none;
+}
+.floating-button li:last-child a{
+    background-image:none;
+    height: 50px;
+}
+
+.floating-button li.active a {
+    background-position-x: -122px ;
+}
+
+.floating-button li:hover a {
+    background-position-x: -122px ;
+}
+
+
+.floating-button .floating-section03 , .floating-button .floating-section03 a , .floating-button .floating-section04 , .floating-button .floating-section04 a{
+    height: 54px
+}
+
+/*.floating-button li.active a:after {*/
+/*    content: "";*/
+/*    width: 135px;*/
+/*    background: url("../images/floating-button/floating-item-active.png") no-repeat center center;*/
+/*    z-index: 2;*/
+/*    position: absolute;*/
+/*    height: 214px;*/
+/*    left: 50%;*/
+/*    top: -8px;*/
+/*    transform: translateX(-50%);*/
+/*}*/
+
+.floating-button .floating-section02 a {
+    background-position-y : -35px;
+}
+
+.floating-button .floating-section03 a {
+    background-position-y : -70px;
+}
+.floating-button .floating-section04 a {
+    background-position-y : -124px;
+}
+.floating-button .floating-section05 a {
+    background-position-y : -178px;
+}

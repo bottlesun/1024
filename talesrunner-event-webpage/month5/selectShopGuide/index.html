@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <!-- web font -->
+  <link rel="stylesheet" href="https://tr-image.game.onstove.com/event/fonts/NotoSansKR/NotoSansKR.css">
+  <!-- page import files -->
+  <!-- [ajax 연동 시 중복 호출되므로 실제 파일에서는 삭제] -->
+  <script type="text/javascript" charset="utf-8" src="https://tr-image.game.onstove.com/webapp/common/js/librarys.js"></script>
+  <script type="text/javascript" charset="utf-8" src="https://tr-image.game.onstove.com/webapp/pc/archive/assets/js/jquery.nanoscroller.js"></script>
+  <script type="text/javascript" charset="utf-8" src="https://tr-image.game.onstove.com/webapp/pc/archive/assets/js/ui.js"></script>
+  <script>
+    if (isMobile.any()){
+      loadFile("https://tr-image.game.onstove.com/webapp/pc/archive/assets/css/style_mobile.css", 'css')
+    } else {
+      loadFile("https://tr-image.game.onstove.com/webapp/pc/archive/assets/css/style.css", 'css');
+    }
+  </script>
+
+</head>
+<body id="container" class="guide" style="overflow:initial;padding:0">
+<div class="inner"><div class="contents guide-area" style="margin:0;">
+  <!-- 이전까지 제외 태그 -->
+
+  <!-- 실제로 등록되는 컨텐츠 영역 -->
+  <div class="anchorlist">
+    <button type="button" class="anchorlist-header open">목차</button>
+    <div class="anchorlist-body">
+      <ul>
+        <li><button type="button" data-href="#anchor1">1. 셀렉트샵 안내</button></li>
+        <li><button type="button" data-href="#anchor2">2. 셀렉트샵 이용 방법 안내</button></li>
+        <li><button type="button" data-href="#anchor3">3. 셀렉트샵 거래 결과 아이템 안내</button></li>
+
+      </ul>
+    </div>
+  </div>
+
+  <h4 id="anchor1" class="tit">셀렉트샵 안내</h4>
+  <p class="txt">테일즈런너에서의 기록들을 테일즈북을 통해 확인할 수 있습니다.</p>
+  <div class="img">
+    <img src="assets/images/img01.jpg" alt="" width="600" >
+  </div>
+  <p class="txt">- 보유하고 있는 재료 아이템을 교환하여 새로운 아이템을 랜덤 획득할 수 있습니다.</p>
+  <p class="txt">- 남은 기간, 횟수 제한, 필수 재료 등 조건을 충족하면 셀렉트샵을 이용할 수 있습니다.</p>
+  <p class="txt">- 선택한 재료 아이템의 포인트합에 따라 거래 이용 횟수, 결과 아이템, 결과 아이템 개수가 증가합니다.</p>
+  <p class="txt">- 셀렉트샵에서 획득한 아이템 중 선물 아이콘이 있는 아이템은 선물, 보관이 가능합니다.</p>
+  <p class="txt">- 거래 결과 아이템 개수가 0인 상태, 또는 재료 부족 시 경우 거래가 불가능합니다.</p>
+
+  <h4 id="anchor2" class="tit">셀렉트샵 이용 방법 안내</h4>
+  <div class="img">
+    <img src="assets/images/img01.jpg" alt="" width="600" >
+  </div>
+  <p class="txt">1. [거래 목록]에서 필요한 비용, 횟수 제한, 진행 기간을 확인할 수 있으며</p>
+  <p class="txt">2. 착용하고 있는 복장 정보 공개를 on/off 할 수 있습니다.</p>
+  <p class="txt">3. 현재 선택하고 있는 [거래 목록]이 안내됩니다. [거래 진행] 클릭시 셀렉트샵을 이용할 수 있습니다.</p>
+  <p class="txt">4. ☆ 원하는 [거래 목록]은 즐겨찾기를 이용할 수 있습니다.</p>
+
+  <div class="tip">
+    <p>- 누적 포인트에 따라 거래 혜택이 달라집니다.</p>
+  </div>
+
+  <h4 id="anchor3" class="tit">셀렉트샵 거래 결과 아이템 안내</h4>
+  <div class="img">
+    <img src="assets/images/img03.png" alt="" width="600">
+  </div>
+  <p class="txt">- 거래 방식에 따라 획득할 수 있는 아이템의 타입은 3종 입니다.</p>
+  <p class="txt">1) 거래 타입에 따라서 초기화되는 타입(퍼스널)</p>
+  <p class="txt">2) 복주머니 타입(초기화 및 차감 x) </p>
+  <p class="txt">3) 남은 개수 차감되는 타입</p>
+
+  <!-- //실제로 등록되는 컨텐츠 영역 -->
+
+  <!-- 이후부터 제외 태그 -->
+</div></div>
+</body>
+</html>

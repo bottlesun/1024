@@ -1,0 +1,13 @@
+
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixins' as *;
+
+/* common style */
+.ir,.blind {@include ir;}
+.inner {position: relative;}
+.flex {@include flex;}
+.flex-between {@include flex(space-between);}
+.flex-center {@include flex(center);}
+.flex-end-center {@include flex(flex-end);}
+.flex-wrap {flex-wrap:wrap;}
+.full-wh {width:100%;height:100%;}

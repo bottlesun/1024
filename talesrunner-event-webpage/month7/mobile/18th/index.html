@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <meta name="keywords" content="테일즈런너, 18주년, 출석이벤트, 추억, 추억소환"/>
+    <meta name="description" content="18주년 기념! 매일매일 18분 출석 이벤트와 함께 다양한 경품에 응모까지! 추억의 사진첩도 잊지 마세요!"/>
+
+
+    <link rel="apple-touch-icon" href="https://tr-image.game.onstove.com/mobile/g/favicon.png"/>
+    <link rel="shortcut icon" href="https://tr-image.game.onstove.com/web2012/global/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://tr.game.onstove.com/Common/Css/common.css"/>
+    <script type="text/javascript" src="https://tr.game.onstove.com/Common/Js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://tr.game.onstove.com/common/js/jquery-1.7.2.js"></script>
+
+
+    <!-- og tag 정책 (facebook, kakaotalk) -->
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="18주년 기념! 런너와 함께하면 매일매일 추억이 된다."/>
+    <meta property="og:description" content="18주년 기념! 매일매일 18분 출석 이벤트와 함께 다양한 경품에 응모까지! 추억의 사진첩도 잊지 마세요!"/>
+    <meta property="og:image" content="./assets/images/img_share_800.png"/>
+    <!--// og tag 정책 (facebook, kakaotalk) -->
+    <!-- twitter tag 정책 -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="18주년 기념! 런너와 함께하면 매일매일 추억이 된다."/>
+    <meta name="twitter:description" content="18주년 기념! 매일매일 18분 출석 이벤트와 함께 다양한 경품에 응모까지! 추억의 사진첩도 잊지 마세요!"/>
+    <meta name="twitter:image" content="./assets/images/img_share_800.png"/>
+    <!--// twitter tag 정책 -->
+
+    <title>테일즈런너 - 신규 캐릭터 클로에 정식 출시 기념 이벤트</title>
+
+    <!-- 이벤트용 https://tr-image.game.onstove.com/event/yyyymm/dd_이벤트명 -->
+    <link rel="stylesheet" type="text/css"
+          href="https://tr-image.game.onstove.com/event/fonts/Pretendard/Pretendard.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/event.css"/>
+
+    <script type="text/javascript" src="https://tr-image.game.onstove.com/event/common/js/librarys.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./assets/js/ui.js"></script>
+</head>
+<body>
+<!-- 2023-06-21 수정-->
+
+<div id="evt_wrap">
+
+    <div class="evt-header">
+        <div class="inner">
+            <div class="nav-left">
+                <a href="/index.asp" title="홈으로 가기"></a>
+                <a href="https://www.youtube.com/@TalesRunner" title="youtube 바로가기"></a>
+                <a href="https://www.facebook.com/talesrunner.kr" title="facebook 바로가기"></a>
+            </div>
+            <div class="nav-right">
+                <a href="#" title="닫기"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="evt-content">
+        <div class="content-body">
+            <div class="inner">
+                <button class="play-button" onclick="popup('[data-popup-id=youtube]',popupYoutubeId)"></button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 푸터 -->
+    <div class="footer">
+        <div class="pc-button">
+            <!-- 2023-06-21 수정-->
+
+            <a href="/index.asp" title="홈으로 가기"></a>
+        </div>
+        <p class="footer_copyright">&copy; Smilegate. All Rights Reserved.<br/> RHAON Entertainment. All Rights
+            Reserved.
+        </p>
+    </div>
+    <!--// 푸터 -->
+</div>
+
+<div class="popup " data-popup-id="youtube">
+    <div class="popup-inner">
+        <div class="contents">
+            <div class="title">
+                <img src="./assets/images/popup/title.png" alt="">
+            </div>
+            <div class="iframe">
+
+            </div>
+            <div class="close-again">
+                <a href="#">
+                    <img src="./assets/images/popup/close-again.png" alt="">
+                </a>
+            </div>
+        </div>
+        <button type="button" class="btn-close" data-popup-type="event" onclick="popupClose(this);"><span
+                class="blind">X</span></button>
+    </div>
+</div>
+<script>
+    // [D] 개발 시 이미지 절대 경로로 수정 필요합니다. / 경로 참고: ${imageUrl}/assets/images/bg_section01.jpg
+    var imageUrl = "./";
+
+    //[D] 유튜브 팝업 다시 열지 않기 버튼 클릭시 notToday=true로 값 세팅
+    var popupYoutubeId = "RT60LHSBvv8";
+
+    $(function () {
+        //[D] 팝업 호출 함수
+        popup('[data-popup-id=youtube]', popupYoutubeId);
+    });
+</script>
+
+</body>
+</html>

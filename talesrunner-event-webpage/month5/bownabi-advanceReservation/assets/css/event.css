@@ -1,0 +1,849 @@
+@charset "UTF-8";
+@import url('https://tr-image.game.onstove.com/event/fonts/NotoSansKR/NotoSansKR.css');
+@import url('https://tr-image.game.onstove.com/event/fonts/NanumSquare/NanumSquare.css');
+@import url('./nanumsquare-ac-font/nanumsquare.css'); /*2023-05-31 추가*/
+
+/*
+* @version 1.0.0
+* @update 2023.06.13
+* */
+
+/* reset */
+*, *:before, *:after {margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;word-break:break-word;outline:0;}
+html, body {width:100%;min-width:1240px;height:100%;letter-spacing:-0.05em;font-size:12px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button {margin:0;padding:0;}
+body, h1, h2, h3, h4, input, button {font-family:'Pretendard','malgun gothic','dotum',sans-serif;}
+body {background-color:#fff;word-break:break-all;-ms-word-break:break-all;}
+img, fieldset, iframe {border:0 none;}
+li {list-style:none;}
+input, select, button {vertical-align:middle;}
+img {vertical-align:top;}
+i, em, address {font-style:normal;}
+label, button {cursor:pointer;}
+button {margin:0;padding:0;border:0;outline:none;}
+a {color:#333;text-decoration:none;}
+a:hover {color:#333;text-decoration:none;}
+button * {position:relative;}
+hr {display:none;}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input::-ms-clear {display:none;}
+legend, caption {overflow:hidden;height:0;text-indent:-9999em;font-size:0;line-height:0;}
+.hide {height:0;text-indent:-9999em;font-size:0;line-height:0;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* event_nav.css style 강제 초기화 */
+body {min-height:auto !important;}
+#sideEvtNav *, #sideEvtNav *:before, #sideEvtNav *:after {box-sizing:content-box;}
+
+#evt_wrap{width: 100%;height: 100%;min-height: 5200px;}
+
+/* common layout */
+#evt-inner-wrap{
+    position: relative;
+    min-width: 1920px;
+    max-width:2560px ;
+    margin: 0 auto;
+}
+#evt-inner {position:relative;width:100%;min-width: 1920px;min-height: 5200px;box-sizing:border-box;margin: 0 auto;background: url(../images/main_bg.jpg) no-repeat center 0;}
+#evt-inner * {box-sizing:border-box;font-family:'Pretendard','Malgun Gothic','dotum', sans-serif;}
+#evt-inner .logo {position:absolute;top:30px;left:0;z-index:100;}
+#evt-inner .logo a {display:block;width:82px;height:52px;background:url('../images/logo.png') no-repeat;text-indent:-9999em;}
+#evt-inner .evt-content {position:relative;width:100%;text-align:center;line-height:1.2;}
+#evt-inner .content-body {position:relative;}
+.inner {position:relative;width:1240px;height:100%;margin:0 auto;}
+
+/* board, footer */
+/*.event_comment {background:#fafafa url('../images/bbs_bg.jpg') no-repeat 50% 0;}*/
+/*.event_comment_in {width:980px;margin:0 auto;padding:150px 0 0 0;}*/
+.footer {position:absolute;width: 100%;height:140px;line-height:140px;bottom: 0;}
+.footer_copyright {width:100%;color:#666;text-align:center;font-family:'Tahoma','Geneva','sans-serif';font-size:20px;letter-spacing:0;}
+
+/*floating button*/
+.floating-button{
+    background: url("../images/floating-button/floating-button.png") no-repeat;
+    height: 372px;
+    width: 267px;
+    position: absolute;
+    transform: translateY(990px);
+    left: 0;
+    z-index: 999;
+    padding: 84px 5px 0;
+    transition: 0.4s;
+}
+.floating-button li{margin-bottom: 25px}
+.floating-button li:nth-child(4){height: 22px }
+.floating-button li a{
+    display: block;
+    height: 30px;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+}
+.floating-button li:last-child a{height: 35px }
+
+.floating-button .floating-gift01 a{
+    background-image: url("../images/floating-button/floating-item01.png") ;
+}
+.floating-button .floating-gift02 a{
+    background-image: url("../images/floating-button/floating-item02.png") ;
+}
+.floating-button .floating-gift03 a{
+    background-image: url("../images/floating-button/floating-item03.png") ;
+}
+.floating-button .floating-gift04 a{
+    background-image: url("../images/floating-button/floating-item04.png") ;
+}
+
+.floating-button .floating-gift01.active a{
+    background-image: url("../images/floating-button/floating-item01-active.png") ;
+}
+.floating-button .floating-gift02.active a{
+    background-image: url("../images/floating-button/floating-item02-active.png") ;
+}
+.floating-button .floating-gift03.active a{
+    background-image: url("../images/floating-button/floating-item03-active.png") ;
+}
+.floating-button .floating-gift04.active a{
+    background-image: url("../images/floating-button/floating-item04-active.png") ;
+}
+
+/*header - top button*/
+#evt-inner .header-top-button{position:absolute;top:30px;right:0;z-index:95;width: 276px;height: 43px;display: flex;justify-content: space-between;gap: 4px;}
+#evt-inner .header-top-button li a {display: block;background: url("../images/top_button.png") no-repeat; height: 43px}
+#evt-inner .header-top-button .youtube-popup a{width: 43px;}
+#evt-inner .header-top-button .url-copy a{width: 43px;background-position-x: -47px;}
+#evt-inner .header-top-button .show-again a{width: 133px;background-position-x: -96px;}
+#evt-inner .header-top-button .home a{width: 43px;background-position-x: -233px;}
+
+/*header - title & 사전예약 버튼*/
+.evt-header .inner {padding-top: 40px;}
+.evt-header .header-title{background: url('../images/header_title.png') no-repeat top center;width: 878px;height: 394px;margin:0 auto;}
+.evt-header .advance-reservation{width: 100%;height: 168px;margin: 210px auto 0;text-align: center}
+.evt-header .advance-reservation .advance-reservation-button{background: url('../images/header_button.png') no-repeat top center;width: 570px;height: 168px;}
+
+/* content layout */
+.evt-header {position:relative;height:990px;}
+.content-body .section01 {position:relative;height:720px;}
+.content-body .section02 {position:relative;height:850px;}
+.content-body .section03 {position:relative;height:1370px;}
+.content-body .section04 {position:relative;height:1115px;}
+
+
+/* contents */
+/*common*/
+.content-body .content-title{
+    width: 100%;
+    height: 212px;
+}
+
+.content-body .content-caution{
+    color: #704d33;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+}
+.content-body .content-caution ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content-body .content-caution ul li{
+    position: relative;
+    display:inline-block;
+    color:#704d33;
+    font-weight: 700;
+    font-family:'NanumSquareAc','Pretendard', sans-serif !important;
+}
+.content-body .content-caution ul li:before{
+    content: url("../images/ico_start.png");
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content-body .content-caution ul li:after{
+    content: url("../images/ico_start.png");
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content-body .complete button{cursor: unset;pointer-events: none;}
+
+/*section01 선물 1*/
+.content-body .section01 .section01-title{
+    background: url("../images/section01/section01-title.png") no-repeat top center;
+}
+.content-body .section01 .content-item{
+    background: url("../images/section01/section01-item.png") no-repeat top center;
+    width: 100%;height: 341px;
+    margin-top: 10px
+}
+.content-body .section01 .content-item.complete{
+    background: url("../images/section01/section01-item-complete.png") no-repeat top center;
+}
+.content-body .section01 .section01-character{
+    background: url("../images/section01/miho.png") no-repeat top center;
+    width: 409px;
+    height: 492px;
+    position: absolute;
+    top: 130px;
+    right: -244px;
+}
+
+/*section02 선물 2*/
+.content-body .section02 .content-title{
+    background: url("../images/section02/section02-title.png") no-repeat top center;
+}
+.content-body .section02 .content-item{
+    background: url("../images/section02/section02-item.png") no-repeat top center;
+    width: 100%;height: 544px;
+    margin-top: -96px;
+    position: relative;
+}
+.content-body .section02 .content-item .gift-item{
+    background: url("../images/section02/section02-item-gift.png") no-repeat;
+    position: absolute;
+    width: 565px;
+    height: 439px;
+    right: -32px;
+    top: 86px;
+}
+/*section03 선물 3*/
+.content-body .section03 .content-title{
+    margin-top:8px;
+    background: url("../images/section03/section03-title.png") no-repeat top center;
+}
+.content-body .section03 .content-item{
+    height: 930px;
+    margin-top: -10px;
+    position: relative;
+}
+/*로그인 해주세요*/
+.content-body .section03 .content-item.login:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: url("../images/section03/section03-item-login.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+/*캐릭터 생성 후*/
+.content-body .section03 .content-item.character:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: url("../images/section03/section03-item-character.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.login-link{display: none;}
+.content-body .section03 .login .login-link{display: block;width: 100%;height: 100%;position: absolute;z-index: 3}
+
+/*프로그래스 바*/
+.content-body .section03 .content-item .day-progress-bar{
+    background: url("../images/section03/section03-progress-bar.png") no-repeat center bottom;
+    height: 90px;
+    width: 994px;
+    margin: 0 auto;
+    position: relative;
+}
+.content-body .section03 .content-item .day-progress-bar .pointer{
+    display: block;
+    position: absolute;
+    background: url("../images/section03/section03-progress-pointer.png");
+    width: 51px;
+    height: 61px;
+    top: -4px;
+}
+
+.content-body .section03 .content-item .cumulative-compensation{
+    padding:22px 22px 0;display: flex;justify-content: space-between;align-items: center;
+}
+.content-body .section03 .content-item .cumulative-compensation li{
+width: 234px;height: 775px;position: relative;
+}
+.content-body .section03 .content-item .cumulative-compensation button{
+    width: 230px;height: 76px;position: absolute;bottom: 0;left: 0;background: transparent;
+}
+
+/*아이템*/
+.content-body .section03 .content-item .cumulative-compensation .get-day-1 {
+    background: url("../images/section03/section03-item01.png") no-repeat;
+}
+.content-body .section03 .content-item .cumulative-compensation .get-day-5 {
+    background: url("../images/section03/section03-item02.png") no-repeat;
+}
+.content-body .section03 .content-item .cumulative-compensation .get-day-10 {
+    background: url("../images/section03/section03-item03.png") no-repeat;
+}
+.content-body .section03 .content-item .cumulative-compensation .get-day-15 {
+    background: url("../images/section03/section03-item04.png") no-repeat;
+}
+.content-body .section03 .content-item .cumulative-compensation .get-day-20 {
+    background: url("../images/section03/section03-item05.png") no-repeat;
+}
+
+/*보상완료*/
+.content-body .section03 .content-item .cumulative-compensation li.complete{filter:grayscale(100)}
+.content-body .section03 .content-item .cumulative-compensation li.complete:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/section03/section03-item-complete.png") no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+.content-body .section03 .content-caution{margin-top: 12px;}
+
+/*section04 선물 4*/
+.content-body .section04 .content-title{
+    margin-top:8px;
+    background: url("../images/section04/section04-title.png") no-repeat top center;
+}
+.content-body .section04 .content-item{
+    height: 560px;
+    position: relative;
+    margin-top: 60px;
+}
+.content-body .section04 .content-item .add-compensation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.content-body .section04 .content-item .add-compensation li{
+    width: 290px;
+    height: 559px;
+    position: relative;
+}
+.content-body .section04 .content-item .add-compensation button{
+    width: 260px;height: 66px;position: absolute;bottom: 14px;left: 16px;background: transparent;
+}
+
+
+.content-body .section04 .content-item .add-compensation .add-gift-01{
+    background: url("../images/section04/section04-item01.png") no-repeat;
+}
+.content-body .section04 .content-item .add-compensation .add-gift-02{
+    background: url("../images/section04/section04-item02.png") no-repeat;
+}
+.content-body .section04 .content-item .add-compensation .add-gift-03{
+    background: url("../images/section04/section04-item03.png") no-repeat;
+}
+.content-body .section04 .content-item .add-compensation .add-gift-04{
+    background: url("../images/section04/section04-item04.png") no-repeat;
+}
+
+/*보상완료*/
+.content-body .section04 .content-item .add-compensation li.complete{filter:grayscale(100)}
+.content-body .section04 .content-item .add-compensation li.complete:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/section04/section04-item-complete.png") no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+
+.content-body .section04 .content-caution{margin-top: 42px}
+
+
+
+/* buttons */
+.ico, .btn {display:inline-block;text-indent:-9999em;}
+.btn-caution {width:200px;height:50px;text-indent:0;}
+
+/* popup  z-index - default:110000000 / 알럿&컨펌:130000000
+   dimded z-index - default dimmed:100000000 / modal dimmed:120000000
+*/
+body.dimmed {width:100%;height:100%;}
+body.dimmed:before {z-index:100000000;content:'';display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.9);}
+body.modal {overflow:hidden;width:100%;height:100%;}
+body.modal:after {z-index:120000000;content:'';display:block;position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.1);}
+body.dimmed #evt_wrap {position:relative;top:0;}
+
+.popup {z-index:110000000;box-sizing:border-box;position:absolute;top:0;left:50%;opacity:0;transform:scale(0);transition:transform 0.2s ease;line-height:1.2;}
+.popup * {box-sizing:border-box;font-family:'Pretendard','Malgun Gothic','dotum', sans-serif;letter-spacing:-0.05em;}
+.popup.show {transform:translate(-50%,0) scale(1);opacity:1;}
+
+.popup .btn-close {position:absolute;right:20px;top:15px;width:44px;height:44px;background:url('../images/btn_close.png') no-repeat;text-indent:-9999em;cursor: pointer}
+.popup .btn-area {position:absolute;left:0;bottom:38px;right:0;text-align:center;}
+
+/*[data-popup-id="caution"] {width:950px;padding:40px 90px 40px 50px;background:#fff;font-family:'Pretendard','Malgun Gothic','dotum', sans-serif;letter-spacing:-0.05em;}*/
+/*[data-popup-id="caution"] .btn-close {right:30px;top:30px;width:32px;height:32px;background-position:100% 0;}*/
+/*[data-popup-id="caution"] h3 {height:36px;margin-bottom:20px;padding-bottom:10px;font-size:24px;color:#252525;font-weight:bold;border-bottom:1px solid #a4a4a4;}*/
+/*[data-popup-id="caution"] h3:not(:first-of-type) {margin-top:30px;}*/
+/*[data-popup-id="caution"] h3::before {display:inline-block;margin-right:8px;width:5px;height:5px;background-color:#252525;content:'';vertical-align:6px;}*/
+/*[data-popup-id="caution"] li {padding:5px 0;padding-left:8px;text-indent:-8px;font-size:15px;color:#434343;letter-spacing:-0.05em;line-height:22px;}*/
+/*[data-popup-id="caution"] li em {color:#ff5000;font-weight:normal;}*/
+
+/*사전예약*/
+.reservation-form{display: none}
+.age-limit{display: none}
+.reservation-complete{display: none}
+
+
+[ data-popup-status='form'] .reservation-form{display: block}
+[ data-popup-status='age'] .age-limit{display: block}
+[ data-popup-status='complete'] .reservation-complete{display: block}
+
+
+[data-popup-id='reservation'] *{
+    font-family:'NanumSquareAc','Pretendard', sans-serif !important;
+    font-weight: 700;
+}
+.reservation-popup{
+    background: url("../images/popup/popup-wrap.png") no-repeat;
+    width: 730px;height: 939px;
+    padding: 233px 52px 32px;
+    letter-spacing: -0.8px;
+}
+.reservation-popup[data-popup-id="consentInfo"]{
+    background: url("../images/popup/popup-wrap-consent-info.png") no-repeat;
+    width: 730px;height: 939px;
+    padding: 135px 52px 32px;
+    letter-spacing: -0.8px;
+}
+.reservation-popup.complete-popup{ background: url("../images/popup/popup-wrap-complete.png") no-repeat; }
+
+
+[data-popup-id='reservation'] .pw-20{
+    padding: 0 20px ;
+}
+
+/*reservation-form 폼*/
+/*1. 약관에 동의 해주세요.*/
+[data-popup-id='reservation'] .reservation-form .terms h2{
+    background: url("../images/popup/popup-item01-title01.png") no-repeat;
+    height: 26px;
+}
+[data-popup-id='reservation'] .reservation-form .terms p{
+    font-size: 24px;
+    letter-spacing: -0.8px;
+    margin-top: 20px;
+    color: #4c4645;
+}
+[data-popup-id='reservation'] .reservation-form .terms .check-box-wrap{
+    width: 575px;
+    height: 65px;
+    background: #e6e3e0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 23px;
+    padding-right: 17px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+[data-popup-id='reservation'] .reservation-form .terms .check-box-wrap .check-box-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+[data-popup-id='reservation'] .reservation-form .terms .check-box-wrap .notice-button a{
+    font-size: 22px;
+    color:#857e7c;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+}
+[data-popup-id='reservation'] .reservation-form .terms .check-box-wrap .notice-button a span{
+    background: url("../images/popup/popup-arrow.png") no-repeat;
+    width: 7px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+/*체크박스 커스텀*/
+input[type="checkbox"]  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    border: 2px solid #c0c0c0;
+}
+input[type="checkbox"]::after {
+    border: solid #c96a54;
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: none;
+    height: 50%;
+    left: 30%;
+    position: relative;
+    top: 16%;
+    transform: rotate(45deg);
+    width: 40%;
+}
+input[type="checkbox"]:checked::after {display: block;}
+input[type="checkbox"] + label{
+    font-size: 22px;
+    color:#857e7c;
+}
+
+/*2. 사전 예약 신청을 계속 진행해 주세요.*/
+[data-popup-id='reservation'] .reservation-form .certification-number{margin-top:40px}
+[data-popup-id='reservation'] .reservation-form .certification-number h2{
+    background: url("../images/popup/popup-item01-title02.png") no-repeat;
+    width: 430px;
+    height: 26px;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number .input-items{
+    height: 70px;
+    width: 582px;
+    margin-top: 18px;
+    margin-left: 20px;
+    position: relative;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #cec8c2;
+    border-radius: 5px;
+    padding : 20px 0 20px 36px;
+    font-size: 24px;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number input::placeholder{
+    font-size: 24px;
+    color: #857e7c;
+    letter-spacing: -0.8px;
+    opacity: 0.6;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number .phone-number-input button{
+    position: absolute;
+    background:#9b968e;
+    border-radius: 8px;
+    color: #e1e0dd;
+    font-size: 18px;
+    width: 144px;
+    height: 54px;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+/*2023-06-09 추가*/
+[data-popup-id='reservation'] .reservation-form .certification-number.click-certification-number .count-number{
+    display: inline-block!important;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number.click-certification-number [data-certification-number="0"] {
+    display: none!important;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number.click-certification-number [data-certification-number="1"] {
+    display: block!important;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number [data-certification-number="0"] {
+    display: block!important;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number [data-certification-number="1"] {
+    display: none!important;
+}
+
+[data-popup-id='reservation'] .reservation-form .certification-number.click-certification-number .certification-number-input {
+    display: flex;
+}
+
+[data-popup-id='reservation'] .reservation-form .certification-number .certification-number-input{
+    width: 500px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    display: none;
+}
+
+
+[data-popup-id='reservation'] .reservation-form .certification-number ~ .reservation-button-wrap {
+    margin-top: 120px;
+}
+
+[data-popup-id='reservation'] .reservation-form .certification-number.click-certification-number ~ .reservation-button-wrap {
+    margin-top: 45px;
+}
+
+[data-popup-id='reservation'] .reservation-form .certification-number .certification-number-input .count-number{
+    display: none;
+    color: #f88065;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-family:'NanumSquareAc','Pretendard', sans-serif !important;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number .certification-number-input input{
+    width: 425px;
+}
+[data-popup-id='reservation'] .reservation-form .certification-number .certification-number-input label{
+    display: none;
+}
+
+/*reservation-form 팝업 notice*/
+[data-popup-id='reservation'] .reservation-form .reservation-notice{
+    margin-top: 20px;
+    color: #857e7c;
+    font-size: 20px;
+    line-height: 26px;
+}
+[data-popup-id='reservation'] .reservation-form .reservation-notice p.point{
+    color : #f88065;
+}
+[data-popup-id='reservation'] .reservation-form .reservation-notice p.point span{
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    background: url("../images/ico_start_red.png") no-repeat;
+    margin-right: 5px;
+}
+
+/*팝업 인증번호 받지 못하셨나요?*/
+[data-popup-id='reservation'] .reservation-form .re-number-notice{
+    margin-top: 26px;
+    text-align: center;
+}
+[data-popup-id='reservation'] .reservation-form .re-number-notice a{
+    color: #857e7c;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+[data-popup-id='reservation'] .reservation-form .re-number-notice a:before{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #857e7c;
+    content: "";
+    bottom: 1px;
+}
+
+[data-popup-id='reservation'] .reservation-form .reservation-button-wrap{
+    width: 100%;
+    height: 122px;
+    margin-top: 45px;
+    background: url("../images/popup/popup-item01-button.png") no-repeat center top;
+    position: relative;
+}
+[data-popup-id='reservation'] .reservation-form .reservation-button-wrap button{
+    width: 388px;
+    height: 90px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+[data-popup-id='reservation'] .age-limit h2{
+    background: url("../images/popup/popup-item02-title.png") no-repeat top center;
+    width: 100%;
+    height: 27px;
+    margin: 0 0 40px;
+}
+
+[data-popup-id='reservation'] .age-limit .age-limit-notice{
+    background: url("../images/popup/popup-age-limit.png") no-repeat;
+    width: 575px;
+    height: 475px;
+    margin: 0 auto;
+}
+
+[data-popup-id='reservation'] .age-limit .age-limit-button-wrap{
+    width: 100%;
+    height: 122px;
+    background: url("../images/popup/popup-item01-button.png") no-repeat center top;
+    position: relative;
+}
+[data-popup-id='reservation'] .age-limit .age-limit-button-wrap button{
+    width: 388px;
+    height: 90px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*reservation-complete 사전예약 완료*/
+[data-popup-id='reservation'] .reservation-complete-item{
+    background: url("../images/popup/popup-reservation-complete-content.png") no-repeat top center;
+    width: 536px;
+    height: 448px;
+    margin: 0 auto;
+}
+[data-popup-id='reservation'] .reservation-complete-notice{
+    margin-top: 35px;
+    font-size: 20px;
+    color: #857e7c;
+    text-align: center;
+    line-height: 26px;
+}
+
+[data-popup-id='reservation'] .reservation-complete-notice .real-time{
+    display: block;
+    font-size: 20px;
+    color: #857e7c;
+    text-align: center;
+}
+
+[data-popup-id='reservation'] .reservation-complete .complete-button-wrap{
+    width: 100%;
+    height: 70px;
+    background: url("../images/popup/popup-close-button.png") no-repeat center top;
+    position: relative;
+    margin-top: 35px;
+}
+[data-popup-id='reservation'] .reservation-complete .complete-button-wrap button{
+    width: 311px;
+    height: 70px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*consent-info 약관 동의 내용*/
+[data-popup-id='consentInfo'] .consent-info-item{
+    background: url("../images/popup/popup-consent-info-content.png") no-repeat top center;
+    width: 594px;
+    height: 581px;
+    margin: 0 auto;
+}
+[data-popup-id='consentInfo'] .consent-info .consent-info-button-wrap{
+    width: 100%;
+    height: 70px;
+    background: url("../images/popup/popup-close-button.png") no-repeat center top;
+    position: relative;
+    margin-top: 106px;
+}
+[data-popup-id='consentInfo'] .consent-info .consent-info-button-wrap button{
+    width: 311px;
+    height: 70px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*youtube 팝업*/
+[data-popup-id='youtube'] {
+    width: 1040px;
+    height: 730px;
+}
+
+[data-popup-id='youtube'] .popup-inner{
+    height: 584px;
+    background: #000;
+}
+[data-popup-id='youtube'] .popup-inner .iframe{
+    height: 100%;
+}
+[data-popup-id='youtube'] .popup-header h3{
+    background: url("../images/popup/popup-youtube-title.png") no-repeat center center;
+    width: 605px;
+    height: 89px;
+    margin: 0 auto 14px;
+}
+[data-popup-id='youtube'] .popup-header .btn-close{
+    top: 40px;
+}
+
+[data-popup-id='youtube'] .popup-bottom{
+    width: 160px;
+    margin: 0 auto;
+}
+[data-popup-id='youtube'] .popup-bottom .check-box-item{
+    display: flex;
+    align-items: center;
+    margin: 15px auto 0;
+    gap: 15px;
+}
+#youtube-check-box + label{
+    font-size: 22px;
+    color:#fff;
+
+}
+
+/*data-day-percentage 일수에 따른 위치 변경*/
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '0'] .pointer{
+    left: calc(0% - 8px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '1'] .pointer{
+    left: calc(0% - 8px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '2'] .pointer{
+    left: calc(6% - 2px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '3'] .pointer{
+    left: calc(12% - 4px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '4'] .pointer{
+    left: calc(18% - 6px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '5'] .pointer{
+    left: calc(25% - 16px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '6'] .pointer{
+    left: calc(30% - 18px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '7'] .pointer{
+    left: calc(35% - 20px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '8'] .pointer{
+    left: calc(40% - 20px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '9'] .pointer{
+    left: calc(45% - 22px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '10'] .pointer{
+    left: calc(50% - 26px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '11'] .pointer{
+    left: calc(55% - 27px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '12'] .pointer{
+    left: calc(60% - 28px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '13'] .pointer{
+    left: calc(65% - 30px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '14'] .pointer{
+    left: calc(70% - 34px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '15'] .pointer{
+    left: calc(75% - 36px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '16'] .pointer{
+    left: calc(80% - 36px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '17'] .pointer{
+    left: calc(85% - 38px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '18'] .pointer{
+    left: calc(90% - 40px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '19'] .pointer{
+    left: calc(95% - 42px)
+}
+.content-body .section03 .content-item .day-progress-bar[data-day-percentage = '20'] .pointer{
+    left: calc(100% - 46px)
+}
+
+
+/*@media screen and (min-width: 1921px) {*/
+/*    .floating-button{display: none}*/
+/*}*/

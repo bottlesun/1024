@@ -1,0 +1,727 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+  <script language="javascript" type="text/javascript" charset="utf-8" src="/common/js/jquery-1.7.2.js"></script>
+
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/global/common/js/global.js?202303161709"></script>
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/global/common/js/common.js?202303161709"></script>
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/global/common/js/billing.js?202303161709"></script>
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/common/js/common.js?202303161709"></script>
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/common/js/commonUtil.js?202303161709"></script>
+
+  <script type="text/javascript" src="https://www.hangame.com/common/js/hanlogin.js"></script>
+  <script type="text/javascript" src="https://www.hangame.com/common/js/common.js"></script>
+  <script type="text/javascript" src="https://hangame-images.toastoven.net/hangame/gnb/reform/js/hangame_gnb.js"></script>
+  <!--<script type="text/javascript" src="https://www.hangame.com/common/js/informalheader.js"></script>-->
+
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/common/js/menu.js?202303161709"></script><!--추가-->
+  <script language="javascript" type="text/javascript" charset="euc-kr" src="/common/js/jquery.slides.min.js?202303161709"></script><!--추가-->
+  <script type="text/javascript" charset="euc-kr" src="/common/js/rhinoslider.js?202303161709"></script><!-- 2014-10-07 추가 -->
+  <script type="text/javascript" charset="euc-kr" src="/common/js/mousewheel.js?202303161709"></script><!-- 2014-10-07 추가 -->
+  <script type="text/javascript" charset="euc-kr" src="/common/js/main.js?202303161709"></script><!-- 2016-09-19 추가 -->
+
+  <script type="text/javascript" src="/common/js/protocolcheckGameExecute.js?202303161709"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="//tr-image.game.onstove.com/web2012/global/favicon.ico"/>
+  <link rel="apple-touch-icon" href="//tr-image.game.onstove.com/mobile/g/favicon.png" />
+
+  <link rel="stylesheet" type="text/css" href="/common/css/common.css?202303161709" />
+  <link rel="stylesheet" type="text/css" href="/common/css/layout.css?202303161709" />
+
+  <!-- GNB Header -->
+  <script type="text/javascript" src="//member-ch.tr.hangame.com/trhangame/header"></script>
+  <!-- //GNB Header -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120741624-1"></script>
+  <script type="text/javascript">
+    if (navigator.userAgent.indexOf('MSIE') !== -1) {
+      var rv = 0;
+      var ua = navigator.userAgent;
+      var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+
+      if (re.exec(ua) != null) rv = parseFloat(RegExp.$1);
+      if (document.location.href.indexOf('browsercampaign') == -1) {
+        if (rv != 0 && rv <= 10) {
+          //if (WEB_DOMAIN != "playnetwork.co.kr") {
+          document.location.href = Common.Http.Portal + "/browsercampaign.asp";
+          //}
+
+        }
+      }
+    }
+    var agent = window.navigator.userAgent.toLowerCase();
+    var appName = window.navigator.appName.toLowerCase();
+
+    if ((appName === 'netscape' && agent.indexOf('trident') !== -1)) {
+
+      document.location.href = Common.Http.Portal + "/browsercampaign.asp";
+
+    }
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-120741624-1');
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYHL9V4TYF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KYHL9V4TYF');
+  </script>
+
+
+
+  <!-- og tag 정책 (facebook, kakaotalk) -->
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="런너의 옷장 - ACE & April Fools' Day">
+  <meta property="og:description" content="락테아 크라운 / 바스켓 프로그 / 샤이니/다크 드림캐처 / 만우절 액세서리">
+  <meta property="og:image" content="//tr-image.game.onstove.com/event/202303/22_runners_closet_ace_april/images/img_share_800.jpg">
+  <!--// og tag 정책 (facebook, kakaotalk) -->
+  <!-- twitter tag 정책 -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="런너의 옷장 - ACE & April Fools' Day">
+  <meta name="twitter:description" content="락테아 크라운 / 바스켓 프로그 / 샤이니/다크 드림캐처 / 만우절 액세서리">
+  <meta name="twitter:image" content="//tr-image.game.onstove.com/event/202303/22_runners_closet_ace_april/images/img_share_800.jpg">
+  <!--// twitter tag 정책 -->
+  <title>런너의 옷장 - ACE & April Fools' Day | 뛰어놀자 테일즈런너</title>
+
+  <link rel="stylesheet" type="text/css" href="//tr-image.game.onstove.com/event/202303/22_runners_closet_ace_april/css/event.css" />
+</head>
+
+<body>
+
+<!-- Nopp GNB -->
+<!-- Hangame GNB -->
+<!--<script type="text/javascript">    setTopMenu();</script>-->
+<script type="text/javascript">loadHangameChannelingGNB();</script>
+
+
+<!-- //Hangame GNB -->
+<!-- event -->
+<div id="evt_wrap">
+  <!-- EvtNavi -->
+
+  <!-- Navi -->
+  <link rel="stylesheet" type="text/css" href="//tr-image.game.onstove.com/event/201904/evt_navigation/css/event_nav.css" />
+  <script type="text/javascript" src="//tr-image.game.onstove.com/event/201904/evt_navigation/js/mCustomScrollbar.min.js?201915141820"></script>
+  <script type="text/javascript" src="//tr-image.game.onstove.com/event/201904/evt_navigation/js/sideEvtNav.js?202205110959"></script>
+  <script src="//dvudc0gwzz5wc.cloudfront.net/v3.1/live/svc_81plug.min.js"></script>
+  <script>
+
+
+    var identityInfo = {
+      'app_id' : 'STOVE_TR',
+      'member_no' : '0',
+      'log_source_type': 'pcweb',
+      'channeling_cd': 'SO'
+    }
+
+
+    svcLog.identity(identityInfo);
+  </script>
+
+  <script type="text/javascript">
+    $(function () {
+      //채널사별 인수 삽입
+      navTopInit('c' + '2');
+      /*
+      스토브 : stoveHeight 1,
+      넥슨 : nexonHeight 18,
+      다음 : daumHeight 7,
+      한게임 : hangameHeight 2,
+      카툰네트웍스 : cartoonHeight 17,
+      네이버게임 : playnetHeight 13
+      */
+    });
+  </script>
+  <!-- //Navi -->
+  <script type="text/javascript">
+    function launcherLayerShow() {
+      document.getElementById("gameStartLayer").style.display = "block";
+    }
+    function launcherLayerHide() {
+      document.getElementById("gameStartLayer").style.display = "none";
+    }
+    // 20170124 add
+    function layerHide(target) {
+      document.getElementById(target).style.display = "none";
+    }
+    function launcherLayerShow_time() {
+      document.getElementById("gameStartLayer").style.display = "block";
+      setTimeout(function () { launcherLayerHide(); }, 5000);
+    }
+    function fnGameDown() {
+      if ("https://dl.onstove.com/game/lcs/CHSTOVESetup_Live.exe" != "") {
+        fnStoveLogClick('SUB', 'NAVI_DOWNLOAD_1_BTN', 'https://dl.onstove.com/game/lcs/CHSTOVESetup_Live.exe', window.event);
+        top.location.href = "https://dl.onstove.com/game/lcs/CHSTOVESetup_Live.exe"
+        setTimeout(function () { launcherLayerHide(); }, 1000);
+      }
+      else {
+        alert("게임 다운로드에 실패하였습니다. 고객센터에 문의해주십시요");
+      }
+    }
+    function fnmainGameStart() {
+
+      fnStartBadUserCheck(); // 게임 시작 전 배드유저 체크로 수정 20160919
+    }
+
+    var isClickChk = false;
+    var isClickChkSet = function () { isClickChk = false; };
+
+    function fnStartBadUserCheck() {
+      if (readCookie(COOKIE) == null) {
+        fnLogin();
+        return;
+      }
+
+      if (isClickChk === true) return;
+      isClickChk = true;
+
+      $.post("/main/BadUserCheck.asp", "",
+        function (jResult) {
+          if (jResult != "") {
+
+            isClickChkSet();
+
+            var strResult = jResult.Result;
+            var statusComment = jResult.statusComment;
+            var reasonComment = jResult.reasonComment;
+            var blockStDt = jResult.start_dt;
+            var blockEdDt = jResult.end_dt;
+            if (parseInt(strResult) == 2) {
+              window.open('/common/popup/useLimited.asp?blockReason=' + statusComment + '&blockReasonComment=' + reasonComment + '&blockStDt=' + blockStDt + '&blockEdDt=' + blockEdDt, 'useLimited', 'width=455, height=287, resizable=no, scrollbars=no, status=no;');
+              return;
+            } else {
+              fnGameStarter();
+              return;
+            }
+          } else {
+            alert("네트워크 상태가 원할 하지 않습니다.\n잠시 후 다시 이용 해주세요![1]");
+            isClickChkSet();
+            return;
+          }
+        }, "json").error(function (a, b, c) {
+        alert("네트워크 상태가 원할 하지 않습니다.\n잠시 후 다시 이용 해주세요![0]");
+        isClickChkSet();
+        return;
+      });
+    }
+  </script>
+  <!-- 이벤트 네비게이션 -->
+  <!-- [D] 플레이넷 예외 처리 : playnet 클래스 삽입 -->
+  <!-- [D] PC방 접속 여부 : pcbang-on / pcbang-off 클래스 제어 -->
+  <!-- [D] 타겟팅 상태 여부 : 클래스 제어
+          (디폴트) cond-default
+          (참여가능) cond-join
+          (추천) cond-recommend -->
+
+  <div id="sideEvtNav" class="pcbang-off cond-default no-drag">
+
+
+    <div class="side-inner">
+      <div class="nav-close"><a href="javascript:void(0);">닫기</a></div>
+      <div class="sen-inner">
+        <!-- 게임스타트 -->
+        <div class="game-start">
+          <span class="chk-pcbang">PC방 혜택 ON/OFF</span>
+
+          <a href="#n" onclick="fnLogin();" class="btn-gameStart">
+
+            <em>게임시작</em>
+          </a>
+          <div class="problem">
+            <p><a href="https://help.onstove.com/web/faq/faqDetail/page?search_key=%EA%B2%8C%EC%9E%84&amp;service_no=2017090030&amp;parent_classification_no=2017090030&amp;category=&amp;section=&amp;live_yn=Y&amp;current_page=1&amp;list_size=10&amp;pathname=%2Fweb%2Ffaq%2FfaqSvcList%2Fpage&amp;seq_no=1803280008&amp;faq_dtl_no=1803280015" onclick="gtag('event', '게임시작불가', { 'event_category': '이벤트네비게이션'});" target="_blank" title="새창">게임을 시작하실 수 없나요?</a></p><!-- 20190514 수정 -->
+            <div class="p-layer" id="gameStartLayer">
+              <p>게임을 시작하기 위해선<br>먼저 테일즈런너 클라이언트 설치가<br>되어 있어야 합니다.</p>
+              <a href="#" onclick="fnGameDown()"  class="button btnInstall"><span>테일즈런너 클라이언트 설치</span></a>
+              <a href="javascript:void(0);" class="button btnX"><span>닫기</span></a>
+            </div>
+          </div>
+        </div>
+        <!--// 게임스타트 -->
+
+        <div class="links-btn">
+          <a href="/index.asp" onclick="gtag('event', '공식홈페이지', { 'event_category': '이벤트네비게이션'});" class="home">홈</a>
+          <a href="https://www.youtube.com/channel/UCuj3jmAgWCxF_Go10OluE0g/" onclick="gtag('event', '유튜브채널', { 'event_category': '이벤트네비게이션'});" class="youtube" target="_blank" >유튜브</a><!-- 20190418 수정 -->
+        </div>
+
+        <!-- 타겟팅 영역 -->
+        <div class="evt-condition">
+          <div class="desc default">진행 중인<br />이벤트를 놓치지 말고<br />확인해보자!</div>
+          <div class="desc join"><strong></strong><br />오늘 참여할 수 있는<br />이벤트가 있어!</div>
+          <div class="desc recommend"><strong></strong>에게<br />딱 맞는 이벤트를<br />찾았어!</div>
+        </div>
+        <!--// 타겟팅 영역 -->
+
+        <!-- 이벤트 리스트 -->
+        <!-- [D] 리스트(li) 상태 체크
+                (참여가능) chk-join / (추천) chk-recommend -->
+        <div class="evt-lists" data-mcs-theme="Default scrollbar">
+          <ul>
+
+            <li class="">
+
+              <a href="/event/magicbox/event.asp" onclick="gtag('event', '마법상자 제작소', { 'event_category': '이벤트네비게이션', 'event_label': '참여알림여부 / 2'})" >
+
+
+                <img src="https://tr-image.game.onstove.com/web/Files/banner/20230322/638150651993881780.jpg" alt="이벤트">
+                <span class="name">마법상자 제작소</span>
+                <div class="info">
+                  <span class="date">2023-03-22 ~ 2023-04-18</span>
+
+                  <span class="state-en" data-state="s01"></span>
+
+                  <span class="state-en" data-state="s03"></span>
+
+
+                </div>
+              </a>
+            </li>
+
+            <li class="">
+
+              <a href="/event/2023/03/08_birthday/event.asp" onclick="gtag('event', '테일즈 버스데이', { 'event_category': '이벤트네비게이션', 'event_label': '참여알림여부 / 2'})" >
+
+
+                <img src="https://tr-image.game.onstove.com/web/Files/banner/20230308/638138508441026726.jpg" alt="이벤트">
+                <span class="name">테일즈 버스데이</span>
+                <div class="info">
+                  <span class="date">2023-03-08 ~ 2023-03-31</span>
+
+                  <span class="state-en" data-state="s01"></span>
+
+                  <span class="state-en" data-state="s04"></span>
+
+
+                </div>
+              </a>
+            </li>
+
+            <li class="">
+
+              <a href="/event/2023/03/22_runners_closet_ace_april/event.asp" onclick="gtag('event', '런너의 옷장', { 'event_category': '이벤트네비게이션', 'event_label': '참여알림여부 / N'})" >
+
+
+                <img src="https://tr-image.game.onstove.com/web/Files/banner/20230322/638150574984912593.jpg" alt="이벤트">
+                <span class="name">런너의 옷장</span>
+                <div class="info">
+                  <span class="date">2023-03-22 ~ 2023-04-05</span>
+
+                  <span class="state-en" data-state="s03"></span>
+
+                  <span class="state-en" data-state="s04"></span>
+
+
+                </div>
+              </a>
+            </li>
+
+            <li class="">
+
+              <a href="/event/VIP/event.asp" onclick="gtag('event', 'VIP 멤버쉽', { 'event_category': '이벤트네비게이션', 'event_label': '참여알림여부 / N'})" >
+
+
+                <img src="https://tr-image.game.onstove.com/web/Files/banner/20220608/637902811752954724.jpg" alt="이벤트">
+                <span class="name">VIP 멤버쉽</span>
+                <div class="info">
+                  <span class="date">2023-01-04 ~ 2023-12-31</span>
+
+                  <span class="state-en" data-state="s04"></span>
+
+
+                </div>
+              </a>
+            </li>
+
+            <li class="">
+
+              <a href="/event/2023/01/04_comeback_runner/event.asp" onclick="gtag('event', '복귀 혜택 이벤트', { 'event_category': '이벤트네비게이션', 'event_label': '참여알림여부 / N'})" >
+
+
+                <img src="https://tr-image.game.onstove.com/web/Files/banner/20230104/638084207722595103.jpg" alt="이벤트">
+                <span class="name">복귀 혜택 이벤트</span>
+                <div class="info">
+                  <span class="date">2023-01-04 ~ 2023-12-31</span>
+
+                  <span class="state-en" data-state="s01"></span>
+
+                  <span class="state-en" data-state="s04"></span>
+
+
+                </div>
+              </a>
+            </li>
+
+            <li class="">
+
+              <a href="/event/2023/01/04_new_runner/event.asp" onclick="gtag('event', '신규 혜택 이벤트', { 'event_category': '이벤트네비게이션', 'event_label': '참여알림여부 / N'})" >
+
+
+                <img src="https://tr-image.game.onstove.com/web/Files/banner/20230104/638084207544260393.jpg" alt="이벤트">
+                <span class="name">신규 혜택 이벤트</span>
+                <div class="info">
+                  <span class="date">2023-01-04 ~ 2023-12-31</span>
+
+                  <span class="state-en" data-state="s01"></span>
+
+                  <span class="state-en" data-state="s04"></span>
+
+
+                </div>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+        <!--// 이벤트 리스트 -->
+
+        <a href="/news/event.asp" onclick="gtag('event', '이벤트전체보기', { 'event_category': '이벤트네비게이션'});"  target="_blank" class="more-evt">이벤트 전체보기</a>
+      </div>
+    </div>
+    <iframe id="luncher_iframe" name="luncher_iframe" width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+  </div>
+
+
+  <!--// 이벤트 네비게이션 -->
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="테일즈런너, VVIP혜택, 노블레스런너즈, 상위500명, 특별혜택">
+    <meta name="description" content="매출 상위 500명에게만 주어지는 특별한 혜택!">
+
+    <!-- og tag 정책 (facebook, kakaotalk) -->
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="[테일즈런너] 노블레스 런너즈 혜택 안내">
+    <meta property="og:description" content="매출 상위 500명에게만 주어지는 특별한 혜택!">
+    <meta property="og:image" content="./assets/images/img_share_800.jpg">
+    <!--// og tag 정책 (facebook, kakaotalk) -->
+    <!-- twitter tag 정책 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="[테일즈런너] 노블레스 런너즈 혜택 안내">
+    <meta name="twitter:description" content="매출 상위 500명에게만 주어지는 특별한 혜택!">
+    <meta name="twitter:image" content="./assets/images/img_share_800.jpg">
+    <!--// twitter tag 정책 -->
+
+    <link rel="apple-touch-icon" href="https://tr-image.game.onstove.com/mobile/g/favicon.png"/>
+    <link rel="shortcut icon" href="https://tr-image.game.onstove.com/web2012/global/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://tr.game.onstove.com/Common/Css/common.css"/>
+    <script type="text/javascript" src="https://tr.game.onstove.com/Common/Js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://tr.game.onstove.com/common/js/jquery-1.7.2.js"></script>
+
+    <title>노블레스 런너즈 | 뛰어놀자 테일즈런너</title>
+
+    <!-- 이벤트용 https://tr-image.game.onstove.com/event/yyyymm/dd_이벤트명 -->
+    <link rel="stylesheet" type="text/css" href="https://tr-image.game.onstove.com/event/fonts/NotoSansKR/NotoSansKR.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/event.css"/>
+    <script type="text/javascript" src="https://tr-image.game.onstove.com/event/common/js/librarys.js"></script>
+    <script type="text/javascript" charset="utf-8" src="assets/js/ui.js"></script>
+
+    <script type="text/javascript" src="assets/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/gsap/gsap.min.js"></script>
+    <script type="text/javascript" src="assets/js/gsap/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="assets/js/gsap/ScrollToPlugin.min.js"></script>
+  </head>
+  <body>
+  <div id="evt_wrap" >
+    <div class="evt-header">
+      <div class="inner">
+        <h1 class="hide">노블레스 런너즈</h1>
+      </div>
+    </div>
+    <div class="evt-content swiper evt-swiper">
+      <div class="content-body swiper-wrapper">
+        <div class="section00 swiper-slide" >
+          <div class="inner ">
+            <div class="logo"><a href="/index.asp" title="테일즈런너 홈으로">테일즈런너</a></div>
+            <h1 class="hide">노블레스 런너즈</h1>
+            <div class="motion">
+              <div class="logo-wrap">
+                <div class="main-logo">
+                  <h1 class="hide"> NOBLESSE RUNNERS 노블레스 런너즈</h1>
+                  <span></span>
+                </div>
+                <div class="event-words">
+                  <p class="hide">오직 노블레스 런너즈만이 누릴 수 있는 특별한 혜택</p>
+                  <span></span>
+                </div>
+                <div class="event-scroll-arrow">
+                  <img src="assets/images/scroll-arrow.png" alt="하단 화살표">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section01 swiper-slide">
+          <div class="inner ">
+            <div class="section01-text-wrap content-text-wrap">
+              <div class="left-side-text duration">
+                <img src="assets/images/noblesserunners-left-side-text.png" alt="noblesserunners">
+              </div>
+              <div class="section01-top-text">
+                <div class="section01-icon"><span></span></div>
+                <div class="section01-text-01">
+                  <p class="hide">NOBLESSE RUNNERS만을 위한 특별한 커뮤니티 공간 </p><span></span></div>
+                <div class="section01-title">
+                  <h2 class="hide">노블레스라운지</h2><span></span>
+                </div>
+                <div class="section01-text-02">
+                  <p class="hide">
+                    또 다른 NOBLESSE RUNNERS 와 교류하며 차별화된 서비스를 경험할 기회를 누려보세요.
+                  </p><span></span>
+                </div>
+              </div>
+              <div class="section01-md-text">
+                <p class="hide">
+                  오직 NOBLESSE RUNNERS만 입장 가능한 전용 라운지가 제공됩니다.
+                </p>
+                <span></span>
+              </div>
+              <div class="section01-bottom-text">
+                <ul>
+                  <li><p class="hide">전용 낚시터 히든 물고기 등장 확률 소폭 상향 낚시 코인 획득</p></li>
+                  <li><p class="hide">전용 버프 1일 1회 ‘드립 커피’ 아이템 제공</p></li>
+                </ul>
+              </div>
+              <!--section01-text-wrap-->
+            </div>
+            <div class="section01-img-wrap">
+              <div class="section01-img-bg">
+                <span class="section01-polygon-item01 duration"></span>
+                <span class="section01-polygon-item02 "></span>
+                <span class="section01-polygon-item03 "></span>
+                <span class="section01-polygon-item04 "></span>
+                <span class="section01-polygon-item05 "></span>
+                <span class="section01-alphabet-b"></span>
+                <span class="section01-alphabet-n01"></span>
+                <span class="section01-alphabet-n02"></span>
+                <span class="section01-alphabet-r"></span>
+              </div>
+            </div>
+            <!--section01-->
+            <!-- 이벤트 내용 삽입 -->
+          </div>
+        </div>
+        <div class="section02 swiper-slide">
+          <div class="inner">
+            <div class="section02-text-wrap content-text-wrap">
+              <div class="section02-top-text">
+                <div class="section02-icon"><span ></span></div>
+                <div class="section02-text-01">
+                  <p class="hide">NOBLESSE RUNNERS만이 누릴 수 있는 </p>
+                  <span >
+                  <img src="assets/images/section02/section02-top-text01.png" alt="NOBLESSE RUNNERS만이 누릴 수 있는">
+                </span>
+                </div>
+                <div class="section02-title">
+                  <h2 class="hide">다양한 혜택</h2>
+                  <span>
+                  <img src="assets/images/section02/section02-top-title.png" alt="다양한 혜택">
+                </span>
+                </div>
+                <div class="section02-text-02">
+                  <p class="hide">
+                    전용 게임 아이템인 말풍선, 테일즈북 스킨, 닉네임 컬러, 전용 칭호, 전용 소품 및 히든 재료 교환 티켓까지 다양한 혜택을 누려보세요! </p>
+                  <span>
+                  <img src="assets/images/section02/section02-top-text02.png" alt="전용 게임 아이템인 말풍선, 테일즈북 스킨, 닉네임 컬러, 전용 칭호, 전용 소품 및 히든 재료 교환 티켓까지 다양한 혜택을 누려보세요!">
+                </span>
+                </div>
+              </div>
+              <div class="section02-md-text">
+                <p class="section02-bottom-text-line"></p>
+                <span class="section02-bottom-text-img">
+                <img src="assets/images/section02/section02-md-text.png" alt="전용게임아이템이 지급됩니다.">
+              </span>
+              </div>
+              <div class="section02-bottom-text">
+              <span >
+                <img src="assets/images/section02/section02-bottom-text.png" alt="section02-bottom-text item">
+`             </span>
+                <div class="section02-circle"> <span></span></div>
+                <ul class="hide">
+                  <li>전용 말풍선(기간제90일)</li>
+                  <li>전용닉네임컬러(기간제90일)</li>
+                  <li>전용칭호(기간제90일)</li>
+                  <li>전용모션(기간제90일)</li>
+                  <li>히든재료교환티켓</li>
+                </ul>
+              </div>
+              <div class="section02-big-text">
+                <span></span>
+              </div>
+            </div>
+            <!--section02-->
+            <!-- 이벤트 내용 삽입 -->
+          </div>
+        </div>
+        <div class="section03 swiper-slide">
+          <div class="inner">
+            <div class="section03-img-wrap">
+              <div class="section03-img-bg">
+                <img src="assets/images/section03/section03-item.png" alt="굿즈 패키지">
+              </div>
+            </div>
+            <div class="section03-text-wrap content-text-wrap">
+              <div class="section03-top-text">
+                <div class="section03-icon"><span></span></div>
+                <div class="section03-text-01">
+                  <p class="hide">NOBLESSE RUNNERS만을 위한</p>
+                  <span>
+                  <img src="assets/images/section03/section03-top-text01.png" alt="NOBLESSE RUNNERS만을 위한">
+                </span>
+                </div>
+                <div class="section03-title">
+                <span>
+                  <img src="assets/images/section03/section03-top-title.png" alt="노블레스 런너즈 굿즈패키지">
+                </span>
+                  <h2 class="hide">노블레스 런너즈 굿즈패키지.</h2>
+                </div>
+              </div>
+              <div class="section03-bottom-text">
+              <span>
+                <img src="assets/images/section03/section03-bottom-text.png" alt="bottom-text">
+              </span>
+                <ul class="hide">
+                  <li>해당 패키지 상품은 선정된 500분에게만 발송됩니다.</li>
+                  <li>상품 이미지는 실제와 다를 수 있으며, 상황에 따라 사전 고지 후 변경될 수 있습니다.</li>
+                  <li>선정된 런너님들은 상품발송을 위한 주소지 입력 등 개인정보 수집이 필요합니다.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 이벤트 내용 삽입 -->
+          </div>
+        </div>
+        <div class="section04 swiper-slide">
+          <div class="bg1"></div>
+          <div class="bg2"></div>
+          <div class="bg3"></div>
+          <div class="inner">
+            <div class="section04-text-wrap content-text-wrap">
+              <div class="section04-top-text">
+                <div class="section04-text-01">
+                  <p class="hide">NOBLESSE RUNNERS는 매출 상위 500분을 시즌 별로 선정하며,</p>
+                  <span></span>
+                </div>
+                <div class="section04-title">
+                  <h3 class="hide">1차 대상자 발표는 4월 12일 공식 홈페이지를 통해 개별 안내 예정입니다.</h3>
+                  <span></span>
+                </div>
+              </div>
+              <ul class="section04-md-item">
+                <li>
+                  <p class="item-box-text">
+                    <strong>1차 대상자 선정기간</strong>
+                    2023.01.01 ~ 2023.03.31
+                    <span>혜택 기간</span>
+                    4월 2차 업데이트 후 <br/>~ 7월 2차 업데이트 전
+                  </p>
+                </li>
+                <li>
+                  <p class="item-box-text">
+                    <strong>2차 대상자 선정기간</strong>
+                    2023.04.01 ~ 2023.06.30
+                    <span>혜택 기간</span>
+                    7월 2차 업데이트 후 <br/>~ 10월 2차 업데이트 전
+                  </p>
+                </li>
+                <li>
+                  <p class="item-box-text">
+                    <strong>3차 대상자 선정기간</strong>
+                    2023.07.01 ~ 2023.09.30
+                    <span>혜택 기간</span>
+                    10월 2차 업데이트 후 <br/>~ 1월 2차 업데이트 전
+                  </p>
+                </li>
+                <li>
+                  <p class="item-box-text">
+                    <strong>4차 대상자 선정기간</strong>
+                    2023.10.01 ~ 2023.12.31
+                    <span>혜택 기간</span>
+                    1월 2차 업데이트 후 <br/>
+                    ~ 4월 2차 업데이트 전
+                  </p>
+                </li>
+              </ul>
+              <div class="section04-bottom-text">
+                <span></span>
+              </div>
+            </div>
+            <!-- 이벤트 내용 삽입 -->
+          </div>
+        </div>
+        <div class="section05 swiper-slide">
+          <div class="inner">
+            <div class="section05-text-wrap content-text-wrap">
+              <div class="section05-title">
+                <h3 class="hide">NOBLESSE RUNNERS 노블레스 런너즈</h3>
+                <span></span>
+              </div>
+              <div class="section05-text">
+                <span></span>
+                <p class="hide">앞으로도 테일즈런너에 많은 관심과 사랑 부탁드립니다. 감사합니다.</p>
+              </div>
+            </div>
+            <!-- 이벤트 내용 삽입 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 푸터 -->
+    <div class="footer hides">
+      <p class="footer_copyright">&copy; Smilegate. All Rights Reserved. RHAON Entertainment. All Rights Reserved.</p>
+    </div>
+    <!--// 푸터 -->
+  </div>
+
+  <script type="text/javascript" src="assets/js/pull-page-scroll.js" ></script>
+  <script type="text/javascript" src="assets/js/scroll-motion.js" ></script>
+
+  </body>
+  </html>
+
+
+</div>
+
+<script src="//dvudc0gwzz5wc.cloudfront.net/v3.1/live/svc_81plug.min.js"></script>
+<script>
+
+  var identityInfo = {
+    'app_id': 'STOVE_TR',
+    'member_no': '0',
+    'log_source_type': 'pcweb',
+    'channeling_cd': 'TR_HANGAME',
+  }
+
+  var action_info = {'action_type' : 'view',
+    'action_param':{'view_type':'event',
+      'view_area':'test'},
+    'marketing_info': { 'marketing_code': '',
+      'device_type': '',
+      'media_type': '',
+      'media_page': ''}
+  }
+
+
+  svcLog.identity(identityInfo);
+  svcLog.action(action_info);
+
+</script>
+</body>
+</html>

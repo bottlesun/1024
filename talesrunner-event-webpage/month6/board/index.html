@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
+    <link rel="apple-touch-icon" href="https://tr-image.game.onstove.com/mobile/g/favicon.png"/>
+    <link rel="shortcut icon" href="https://tr-image.game.onstove.com/web2012/global/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://tr.game.onstove.com/Common/Css/common.css"/>
+    <script type="text/javascript" src="https://tr.game.onstove.com/Common/Js/common.js"></script>
+    <script type="text/javascript" src="https://tr.game.onstove.com/common/js/commonUtil.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://tr.game.onstove.com/common/js/jquery-1.7.2.js"></script>
+
+    <!-- 이벤트용  https://tr-image.game.onstove.com/event/202107/07_ingame_bbs/ -->
+    <link rel="stylesheet" type="text/css" href="css/event.css"/>
+
+    <script type="text/javascript">
+
+        function messageWrite() {
+            var m_txt = encodeURI($('#txtMessage').val());
+
+            if (m_txt.length <= 0) {
+                dialogMessage('메시지를 입력해 주세요');
+            }
+            $.post(
+                "./request/messageWrite.asp",
+                {Message: m_txt, teamCod: "14"},
+                function (data) {
+
+                    var result = data.result;
+                    var eventMsg = data.eventMsg;
+
+                    if (result == 0) {
+                        location.reload();
+                    } else if (result == -1) {
+                        dialogMessage(eventMsg);
+                    } else if (result == -2) {
+                        dialogMessage(eventMsg);
+                    } else if (result == -3) {
+                        dialogMessage(eventMsg);
+                    }
+                },
+                "json"
+            );
+        }
+
+        function messageDelete(seq) {
+            $.post(
+                "./request/messageDelete.asp",
+                {seq: seq, teamCod: "14"},
+                function (data) {
+
+                    var result = data.result;
+                    var eventMsg = data.eventMsg;
+
+                    if (result == 0) {
+                        location.reload();
+                    } else if (result == -1) {
+                        dialogMessage(eventMsg);
+                    } else if (result == -2) {
+                        dialogMessage(eventMsg);
+                    }
+                },
+                "json"
+            );
+        }
+
+        function dialogMessage(message) {
+            $("#lay_warning").html(dialogMessageBox(message));
+            $("#lay_warning").css('display', 'block');
+        }
+
+        function dialogMessageDown() {
+            $("#lay_warning").css('display', 'none');
+        }
+
+        function dialogMessageBox(message) {
+            var strHTML;
+            strHTML = "";
+            strHTML += "<p>" + message + "</p>";
+            strHTML += "<span><a href=\"javascript:dialogMessageDown();\"><img src=\"https://tr-image.game.onstove.com/event/202003/04_ingame_bbs/img/btn_confirm.png\" alt=\"확인\" /></a></span>";
+
+            return strHTML;
+        }
+    </script>
+    <title>감정의 제도 게시판 | 테일즈런너</title>
+</head>
+
+<body scroll="no">
+<!--6월26일    form 부분에
+  data-type = "bau" 이면 1차 이미지
+  data-type = "navi" 2차 이미지
+  data-type = "error" 에러페이지가 출력됩니다
+-->
+<form id="frmWeb" name="frmWeb"  data-type="bau">
+    <input type="hidden" id="teamCod" name="teamCod" value="14"/>
+    <input type="hidden" id="seq" name="seq"/>
+
+    <!-- 컨텐츠 -->
+    <div class="cont cont_style1">감정의 제도 게시판</div>
+    <!-- //컨텐츠 -->
+
+    <!-- 글쓰기 -->
+    <div class="bbs_write write_style1 ">
+        <div class="icon"></div>
+        <strong>닉네임6글자</strong>
+        <span><input type="text" id="txtMessage" name="txtMessage" class="message" maxlength="30" value=""
+                     onkeypress="if(event.keyCode == 13){return false;}" onfocus="this.className='input_focus'"
+                     onblur="if ( this.value == '' ) { this.className='text_celebration' }" title="글쓰기"/></span>
+        <em><a href="javascript:messageWrite();">등록하기</a></em>
+    </div>
+    <!-- //글쓰기 -->
+
+    <!-- 목록 -->
+    <div class="bbs_list list_style1">
+        <ul>
+            <li>
+                <div class="icon"></div>
+                <strong>닉네임6글자</strong>
+                <span class="date">2020-07-04 오후 3:30:01</span>
+                <p>테스트</p>
+                <button class="close">x</button>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <strong>SGI12</strong>
+                <span class="date">2018-07-04 오후 4:58:15</span>
+                <p>ㅇㄻㄴㅇㄻㄴㄹㅇㄹ</p>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <strong>SGI12</strong>
+                <span class="date">2018-07-04 오후 4:46:52</span>
+                <p>ㅁㄴㅇㄻㄴㄻㄴㅇㄹ</p>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <strong>SGI12</strong>
+                <span class="date">2018-07-04 오후 4:45:29</span>
+                <p>ㅁㄴㅇㄻㄴㄹㄴㄹㄴ</p>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <strong>SGI12</strong>
+                <span class="date">2018-07-04 오후 3:14:18</span>
+                <p>22222222222222</p>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <strong>SGI12</strong>
+                <span class="date">2018-07-04 오후 2:55:19</span>
+                <p>11111111111111111111111111</p>
+            </li>
+        </ul>
+
+    </div>
+    <!-- //목록 -->
+
+    <!-- 페이지 -->
+    <div class="bbs_page">
+        <a href="#"><img src="https://tr-image.game.onstove.com/event/202003/04_ingame_bbs/img/page_prev.png" alt="이전"/></a>
+        <a class="on" href="#">1</a> / <a href="#"> 2</a> / <a href="#"> 3</a> / <a href="#"> 4</a> / <a href="#"> 5</a>
+        / <a href="#"> 6</a> /
+        <a href="#"> 7</a> / <a href="#"> 8</a> / <a href="#"> 9</a> / <a href="#"> 10</a>
+        <a href="#"><img src="https://tr-image.game.onstove.com/event/202003/04_ingame_bbs/img/page_next.png" alt="다음"/></a>
+    </div>
+
+
+    <!-- //페이지 -->
+
+    <!-- 레이어_경고_2줄인경우  -->
+    <div class="lay lay_line2" id="lay_warning" style="display: none ;">
+        <p>욕설이 포함되어 있어<br/>글이 등록되지 않았습니다.</p>
+        <span><a href="#n"><img src="https://tr-image.game.onstove.com/event/202003/04_ingame_bbs/img/btn_confirm.png"
+                                alt="확인"/></a></span>
+    </div>
+    <!-- 레이어_경고 -->
+
+    <!-- 레이어_경고_1줄인경우 -->
+    <div class="lay lay_line1" id="lay_30s" style="display: none;">
+        <p>30초 후 글 쓰기가 가능합니다.</p>
+        <span><a href="#n"><img src="https://tr-image.game.onstove.com/event/202003/04_ingame_bbs/img/btn_confirm.png"
+                                alt="확인"/></a></span>
+    </div>
+    <!-- 레이어_경고 -->
+</form>
+<iframe id="frmHidden" name="frmHidden" frameborder="0" width="0" height="0"></iframe>
+
+
+</body>
+</html>

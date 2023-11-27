@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="keyword" content="스마일게이트 메가포트,게임,테일즈런너"/>
+  <meta name="description" content="스마일게이트 메가포트 게임 테일즈런너입니다"/>
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/style.css"><!-- 2019-08-01 추가 -->
+  <link rel="stylesheet" href="./assets/css/board.css">
+  <link rel="stylesheet" href="./assets/css/discussion_board.css"> <!--2023-05-24 추가-->
+  <script type="text/javascript" charset="utf-8" src="./assets/js/plugins.js"></script>
+  <!-- 20190905 charset 추가 -->
+  <script type="text/javascript" charset="utf-8" src="./assets/js/board.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/js/ui.js"></script><!-- 20190905 charset 추가 -->
+  <!-- 20190905 charset 추가 -->
+
+</head>
+<body>
+<!-- contents -->
+<div class="contents discussion"><!-- 20230609 수정 / discussion 클래스 추가 -->
+  <div class="inner">
+    <!-- 내용 -->
+    <h3 class="title">토론게시판</h3>
+
+    <div id="board"><!-- 20230609 수정 / div#board 구조 추가 (공통 구조 통일) -->
+      <!-- 탭 -->
+      <div class="tab-area min-215"><!-- 20230609 수정 / min-215 클래스 추가 -->
+        <ul>
+          <li class=""><a href="#">토론</a></li>
+          <li class="active"><a href="#">통계</a></li>
+        </ul>
+      </div>
+
+      <!-- 차트 리스트 (토론 게시판)-->
+      <div class="board-list-discussion">
+        <div class="chart-list-header">
+          <div class="board-sub-title">
+            <h3><span class="date-year-month point-name">#$해당년월$#</span> 베스트 게시물 <span class="point-name">%후보 리스트%</span>
+            </h3>
+            <p>매월 1일, 이전 월의 베스트 게시물이 확정 선정됩니다.</p>
+          </div>
+          <div class="selectbox">
+            <button type="button" class="bt-select"><span>년월 검색</span><i class="ico"></i></button>
+            <ul>
+              <li><a href="#">년월 검색</a></li>
+              <li><a href="#">23.07</a></li>
+              <li><a href="#">23.06</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="chart-list-body">
+          <!--
+         <div class="data-list-content chart-list-content no-data ">
+          1. data-list-content : 공통
+          2. chart-list-content : 차트리스트
+
+          no-data : 데이터 없을때, 클래스 추가
+          -->
+          <div class="data-list-content chart-list-content ">
+            <!--차트-->
+            <!--
+            discussion-chart-data
+            no-discussion-chart-data 로 나눠 구분
+            -->
+            <div class="discussion-chart-data">
+              <!--차트-->
+              <div class="donut-chart">
+                <canvas id="doughnutChart"></canvas>
+              </div>
+              <div class="status-board">
+                <!--
+                + 길이조정
+                complete : 완료 -> width 길이가 늘어남
+                + 색상조정
+                시스템: system #d7ba38
+                팜: farm #3ad146
+                콘텐츠: contents-item #38e49a
+                편의성: convenience #39c2d4
+                아이템: item #2e75df
+                맵: map #796df3
+                캐릭터: character #8c3bc6
+                길드: guild #c23bb3
+                버그: bug #a73e67
+                신규제안: new #d44839
+                기타: etc #d59639
+                -->
+                <!--2023-06-19 앵커태그 추가-->
+                <div class="status-board-item contents-item complete">
+                  <span class=" status-bar">23.05.17 완료</span>
+                  <a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용</p></a>
+                  <ul class="recommend-comment">
+                    <li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+                    <li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+                    <li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+                  </ul>
+                </div>
+                <div class="status-board-item etc ">
+                  <span class=" status-bar">검토</span>
+                  <a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용</p></a>
+                  <ul class="recommend-comment">
+                    <li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+                    <li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+                    <li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+                  </ul>
+                </div>
+                <div class="status-board-item map">
+                  <span class=" status-bar">불가</span>
+                  <a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용</p></a>
+
+                  <ul class="recommend-comment">
+                    <li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+                    <li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+                    <li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+                  </ul>
+                </div>
+                <div class="status-board-item map complete">
+                  <span class=" status-bar">23.05.17 완료</span>
+                  <a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용</p></a>
+                  <ul class="recommend-comment">
+                    <li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+                    <li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+                    <li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+                  </ul>
+                </div>
+                <div class="status-board-item bug ">
+                  <span class=" status-bar">검토</span>
+                  <a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용</p></a>
+
+                  <ul class="recommend-comment">
+                    <li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+                    <li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+                    <li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+                  </ul>
+                </div>
+                <div class="status-board-item map">
+                  <span class=" status-bar">불가</span>
+                  <a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용</p></a>
+                  <ul class="recommend-comment">
+                    <li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+                    <li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+                    <li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="no-discussion-chart-data">
+              <span class="no-data-icon"></span>
+              <p class="no-data-text">건의 진행 현황은 토론 게시판을 통해 런너 여러분이 직접 선별해 주신 건의사항 및 신규 제안의<br/>
+                처리 현황을 보다 직관적으로 확인하실 수 있도록 데이터를 제공하는 콘텐츠 구간입니다.
+              </p>
+            </div>
+          </div>
+          <!--
+          <div class="data-list-content discussion-list no-data">
+          1. data-list-content : 공통
+          2. discussion-list : 베스트 게시물 리스트
+
+          no-data : 데이터 없을때, 클래스 추가
+          -->
+          <div class="data-list-content discussion-list no-data">
+            <!--리스트-->
+            <!--
+            discussion-chart-data
+            no-discussion-chart-data 로 나눠 구분
+            -->
+            <div class="discussion-board-data">
+              <div class="board-sub-title">
+                <h4>· <span class="date-year-month point-name">#$해당년월$#</span> 반영 현황</h4>
+                <p>해당 월에 반영 완료된 베스트 게시물의 리스트입니다.</p>
+              </div>
+              <div class="board-list-content">
+                <div class="discussion-list-header">
+                  <ul>
+                    <li class="b-update">반영 일자</li>
+                    <li class="b-best-date">베스트 선정 년월</li>
+                    <li class="b-category">카테고리</li>
+                    <li class="b-title">제목</li>
+                    <li class="b-recommend">추천/비추천</li>
+                    <li class="b-comments">댓글</li>
+                  </ul>
+                </div>
+                <ul>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+                    <div class="b-category">신규제안</div>
+                    <div class="b-title">
+                      <a href="#">
+                        제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>123,456
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>123,456
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+                  </li>
+                  <!-- 결과 없을 시  -->
+                  <li class="no-result">
+                    <p>등록된 게시물이 없습니다.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="no-discussion-board-data">
+              <div class="board-sub-title">
+                <h4>· <span class="date-year-month point-name">#$해당년월$#</span> 반영 현황</h4>
+                <p>해당 월에 반영 완료된 베스트 게시물의 리스트입니다.</p>
+              </div>
+              <div class="board-list-content">
+                <div class="discussion-list-header">
+                  <ul>
+                    <li class="b-update">반영 일자</li>
+                    <li class="b-best-date">베스트 선정 년월</li>
+                    <li class="b-category">카테고리</li>
+                    <li class="b-title">제목</li>
+                    <li class="b-recommend">추천/비추천</li>
+                    <li class="b-comments">댓글</li>
+                  </ul>
+                </div>
+                <ul>
+                  <li>
+                    <div class="b-update"><i class="ico ico-time"></i>-</div>
+                    <div class="b-best-date"><i class="ico ico-datepicker"></i>-</div>
+                    <div class="b-category">-</div>
+                    <div class="b-title">
+                      <a href="#">
+                        -
+                      </a>
+                    </div>
+                    <div class="b-recommend">
+                      <i class="ico ico-like-two"></i>-
+                      <span>/</span>
+                      <i class="ico ico-dislike"></i>-
+                    </div>
+                    <div class="b-comments"><i class="ico ico-keyword"></i>-</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="board-list-discussion board-list-meeting-proposal ">
+        <div class="chart-list-header">
+          <div class="board-sub-title">
+            <h3>간담회 / 건의 진행 현황</h3>
+            <div class="sub-title-right">
+              <p class="point-name">건의게시판은 더 이상 작성하실 수 없으며 신규 건의함인 토론게시판을 이용 부탁드립니다.</p>
+              <ul class="meeting-proposal-board-button">
+                <li><a href="/news/SuggestionBoard/List.asp"><i class="ico ico-status-board"></i>건의현황판</a></li>
+                <li><a href="/community2/#suggest/list"><i class="ico ico-bulletin-board"></i>건의게시판</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="chart-list-body">
+          <div class="chart-list-content">
+            <!--차트-->
+            <div class="pie-chart chart-content">
+              <div class="chart-sub-title">
+                <h4>· 총 등록 건수 </h4>
+              </div>
+              <div class="chart-content">
+                <canvas id="pieChart"></canvas>
+              </div>
+              <!--
+              total-number : 총 등록 건수
+              total-percent : 처리 완료 %
+              -->
+              <ul class="chart-total">
+                <li>총 등록 건수 <span class="total-number">123,456</span></li>
+                <li>처리 완료 <span class="total-percent">nn%</span></li>
+              </ul>
+            </div>
+            <div class="bar-chart chart-content">
+              <div class="chart-sub-title">
+                <h4>· 반영 완료 / 예정 현황 </h4>
+                <p>월별 반영 완료 &amp 예정인 건의 게시물 건수입니다.</p>
+              </div>
+
+              <div class="chart-content">
+                <canvas id="barChart"></canvas>
+              </div>
+              <div class="bar-chart-button">
+                <button disabled="disabled" id="bar-chart-prev-button"><i
+                    class="ico ico-prev-btn ico-prev-disable-btn"></i></button>
+                <button id="bar-chart-next-button"><i class="ico ico-next-btn"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="discussion-list">
+            <!--리스트-->
+            <div class="board-header">
+              <div class="board-sub-title">
+                <h4>· 월별 진행 현황</h4>
+                <p>해당 월에 반영 완료된 건의 게시물의 리스트입니다.</p>
+              </div>
+              <div class="selectbox">
+                <button type="button" class="bt-select"><span>년월 검색</span><i class="ico"></i></button>
+                <ul>
+                  <li><a href="#">년월 검색</a></li>
+                  <li><a href="#">23.07</a></li>
+                  <li><a href="#">23.06</a></li>
+                  <li><a href="#">23.05</a></li>
+                  <li><a href="#">23.04</a></li>
+                  <li><a href="#">23.03</a></li>
+                  <li><a href="#">23.02</a></li>
+                  <li><a href="#">23.01</a></li>
+                  <li><a href="#">22.12</a></li>
+                  <li><a href="#">23.11</a></li>
+                  <li><a href="#">23.10</a></li>
+                  <li><a href="#">23.09</a></li>
+                  <li><a href="#">23.08</a></li>
+                  <li><a href="#">23.07</a></li>
+                  <li><a href="#">23.06</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="board-list-content meeting-proposal">
+              <div class="discussion-list-header">
+                <ul>
+                  <li class="b-update">반영 일자</li>
+                  <li class="b-category">카테고리</li>
+                  <li class="b-title">제목</li>
+                </ul>
+              </div>
+              <ul>
+                <li>
+                  <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                  <div class="b-category">신규제안</div>
+                  <div class="b-title">
+                    <a href="#">
+                      제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                      제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                  <div class="b-category">신규제안</div>
+                  <div class="b-title">
+                    <a href="#">
+                      제목제목제목제목제목제목제목제목제목제
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+                  <div class="b-category">신규제안</div>
+                  <div class="b-title">
+                    <a href="#">
+                      제목
+                    </a>
+                  </div>
+                </li>
+                <!-- 결과 없을 시  -->
+                <li class="no-result">
+                  <p>등록된 게시물이 없습니다.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--#board-->
+    <!--// 내용 -->
+  </div>
+</div>
+
+<!--// contents -->
+
+<!--chart js v4.3.0 & chartjs-plugin-datalabels js v2.2.0 라이브러리 2023.05.23 추가-->
+<script src="./assets/js/chart.js"></script>
+<script src="./assets/js/chartjs-plugin-datalabels.js"></script>
+
+<!--chart ui js 2023.05.23 추가-->
+<script src="./assets/js/chart-ui.js"></script>
+</body>
+</html>

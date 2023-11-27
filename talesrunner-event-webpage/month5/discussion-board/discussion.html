@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="keyword" content="스마일게이트 메가포트,게임,테일즈런너" />
+	<meta name="description" content="스마일게이트 메가포트 게임 테일즈런너입니다" />
+
+	<!-- 2023-05-24 추가 -->
+	<!-- og tag 정책 (facebook, kakaotalk) -->
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="스마일게이트 메가포트 게임 테일즈런너입니다">
+	<meta property="og:image" content="./assets/images/img_share_800.jpg">
+	<!--// og tag 정책 (facebook, kakaotalk) -->
+	<!-- twitter tag 정책 -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:description" content="스마일게이트 메가포트 게임 테일즈런너입니다">
+	<meta name="twitter:image" content="./assets/images/img_share_800.jpg">
+	<!--// twitter tag 정책 -->
+	<!-- 2023-05-24 추가 -->
+
+	<link rel="stylesheet" href="./assets/css/common.css">
+	<link rel="stylesheet" href="./assets/css/style.css"><!-- 2019-08-01 추가 -->
+	<link rel="stylesheet" href="./assets/css/board.css">
+	<link rel="stylesheet" href="./assets/css/discussion_board.css"><!--2023-05-24 추가-->
+	<script type="text/javascript" charset="utf-8" src="./assets/js/plugins.js"></script><!-- 20190905 charset 추가 -->
+	<script type="text/javascript" charset="utf-8" src="./assets/js/ui.js"></script><!-- 20190905 charset 추가 -->
+	<script type="text/javascript" charset="utf-8" src="./assets/js/board.js"></script><!-- 20190905 charset 추가 -->
+</head>
+<body>
+<div id="wrapper" class="sub forum"><!-- 게시판 별 이중 클래스 적용 -->
+	<!-- header -->
+	<header id="header">
+		<div class="inner"><span class="logo"><a href="/index.asp">테일즈런너</a></span></div>
+		<div class="lnb_wrap">
+			<nav class="lnb inner">
+				<ul>
+					<li class="depth01"><a href="/news/notice.asp">새소식</a>
+						<ul class="depth02">
+							<li><a href="/news/notice.asp">공지사항</a></li>
+							<li><a href="/news/update.asp">업데이트</a></li>
+							<li><a href="/news/event.asp">이벤트</a></li>
+							<li><a href="/news/piero.asp">삐에로 놀이터</a></li>
+							<li><a href="/news/develop.asp">개발 핫이슈</a></li>
+							<li><a href="#n">리그소식</a></li><!-- 20200929 추가 -->
+						</ul>
+					</li>
+					<li class="depth01"><a href="/guide/introduce.asp?page=1">게임소개</a>
+						<!-- 20221006 수정 -->
+						<ul class="depth02">
+							<li><a href="/gameInfo">테일즈런너 소개</a></li>
+							<li><a href="" target="_blank">캐릭터 소개 <i></i></a></li>
+							<li><a href="" target="_blank">테런 스토리 <i></i></a></li>
+							<li><a href="" target="_blank">게임 가이드 <i></i></a></li>
+							<li><a href="" target="_blank">업데이트 맵 <i></i></a></li><!-- 20221201 추가 -->
+							<li><a href="" target="_blank">런너의 옷장 <i></i></a></li>
+						</ul>
+						<!-- 20221006 수정 -->
+					</li>
+					<li class="depth01"><a href="/community/Main.asp">커뮤니티</a>
+						<ul class="depth02">
+							<li><a href="/community2#runner/list">런너게시판 </a></li>
+							<li><a href="/community2#ucc/list">창작게시판 </a></li>
+							<li><a href="/community2#Tip/list">공략게시판</a></li>
+							<li><a href="/community2#guild/list?category=search">길드게시판</a></li>
+							<li><a href="/community2#suggest/list">건의게시판</a></li>
+							<li><a href="/community2#trcreator/list">TR크리에이터</a></li>
+							<li><a href="/community2#league/list">리그게시판</a></li>
+						</ul>
+					</li>
+					<li class="depth01"><a href="/rank/main.asp">랭킹</a>
+						<ul class="depth02">
+							<li><a href="/rank/rankTotal.asp">종합랭킹</a></li>
+							<li><a href="/rank/rankDay.asp">일일랭킹</a></li>
+							<li><a href="/rank/rankWeek.asp">주간랭킹</a></li>
+							<li><a href="/rank/rankMonth.asp">월간랭킹</a></li>
+							<li><a href="/rank/rankFriend.asp">친구랭킹</a></li>
+							<li><a href="/rank/rankCouple.asp">커플월간랭킹</a></li>
+						</ul>
+					</li>
+					<!-- TR기록 보관소
+<li class="depth01"><a href="#n">TR기록 보관소 <i></i></a>
+</li>
+-->
+					<!-- 20200929 주석처리 -->
+					<!-- <li class="depth01"><a href="/league/main.asp?seq=2">리그</a>
+						<ul class="depth02">
+							<li><a href="/league/leagueNotice.asp">리그소식</a></li>
+							<li><a href="/league/aboutrunners.asp">런너보기</a></li>
+							<li><a href="/league/starRunners.asp">스타런너소개</a></li>
+							<li><a href="/league/ranking.asp">리그랭킹</a></li>
+							<li><a href="/league/video.asp">생생리그영상</a></li>
+							<li><a href="/league/broadCasting.asp?seq=1">리그방송</a></li>
+							<li><a href="/league/champion.asp">명예의전당</a></li>
+							<li><a href="/league/leagueGuide.asp?page=1">리그가이드</a></li>
+						</ul>
+					</li> -->
+					<!-- <li class="depth01"><a href="/download/download.asp">자료실</a>
+						<ul class="depth02">
+							<li><a href="/download/download.asp">다운로드</a></li>
+							<li><a href="/download/movie.asp">동영상</a></li>
+							<li><a href="/download/wallPaper.asp">월페이퍼</a></li>
+						</ul>
+					</li> -->
+					<!-- //20200929 주석처리 -->
+					<li class="depth01"><a href="/customer/Policy.asp">고객지원</a>
+						<ul class="depth02">
+							<li><a href="https://help.onstove.com/web/faq/serviceMain/page?game_nm=TR&game=2017090030&channel=stove" target="_blank">도움말/문의하기</a></li>
+							<li><a href="/customer/second.asp">2차비밀번호초기화</a></li>
+							<li><a href="/download/download.asp">다운로드</a></li><!-- 20200929 추가 -->
+							<li><a href="" target="_blank">확률형 아이템 <i></i></a></li><!-- 20221006 수정 -->
+						</ul>
+					</li>
+				</ul>
+				<span class="lnb_line"></span>
+			</nav>
+		</div>
+	</header>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container">
+		<div class="container-header">
+			<div class="visual-wrap">
+				<!-- 20201012 수정 -->
+				<!-- login wrap -->
+				<div class="login_wrap">
+					<div class="game_start">
+						<a href="javascript:launcherLayerShow();" onclick="fnmainGameStart(); fnGenesistTrackingTag('5'); return false;" class="btn_gameStart">
+							<em>게임시작</em>
+						</a>
+						<a href="http://help.onstove.com/web/faq/faqDetail/page?search_key=%EA%B2%8C%EC%9E%84&amp;service_no=2017090030&amp;parent_classification_no=2017090030&amp;category=&amp;section=&amp;live_yn=Y&amp;current_page=1&amp;list_size=10&amp;pathname=%2Fweb%2Ffaq%2FfaqSvcList%2Fpage&amp;seq_no=1803280008&amp;faq_dtl_no=1803280015" class="game_startGuide" target="_blank" title="새창">게임을 시작할 수 없나요?</a>
+
+						<!-- 런처설치 레이어 -->
+						<div id="TRWSLInstall" tabindex="0">
+							<a href="#" onclick="fnGameDown()" class="btnInstall">STOVE<br>클라이언트 설치</a>
+							<p>게임을 시작하기 위해선<br>먼저 <span>STOVE 클라이언트 설치</span>가<br> 되어있어야 합니다.</p>
+							<a href="javascript:launcherLayerHide();" class="btnClose">닫기</a>
+						</div>
+						<!-- //런처설치 레이어 -->
+
+					</div>
+
+					<div class="login_area">
+						<!-- 로그인 전 -->
+						<div class="login_before" style="display:none">
+							<div class="btn-area">
+								<!-- 서비스 로그인 -->
+								<a href="javascript:void(0);" class="btn_login" onclick="fnStoveLogClick('MAIN', 'MAIN_LOGIN_BTN', this.href, window.event);">로그인</a>
+								<!-- 서비스 이용동의 -->
+								<!-- <button type="button" class="btn-agree">이용약관 동의하기</button> -->
+								<!-- <button type="button" class="btn-self">본인 인증하기</button> -->
+							</div>
+						</div>
+						<!--  //로그인 전 -->
+
+						<!--  로그인 후 -->
+						<div class="login_after">
+							<div class="my_info">
+								<span class="icon_level" data-img="http://tr-image.game.onstove.com/web/Common/Levels/Lv01.gif" style="background-image: url(&quot;http://tr-image.game.onstove.com/web/Common/Levels/Lv01.gif&quot;);">레벨 아이콘</span>
+								<span class="my_nick">
+									<span class="my_id">아이디아이디</span>
+								</span>
+								<!-- 20210226 추가 -->
+								<button type="button" class="button bt-square"><i class="ico ico-square"></i><span>광장</span></button>
+							</div>
+
+						</div>
+						<!--  //로그인 후 -->
+					</div>
+					<!-- 다이어리 --><!-- 2019-08-01 추가 -->
+					<div class="layer_diary" id="layer_diary" style="display:none;">
+						<h4>다이어리</h4>
+						<div class="diary_cont" id="diary_cont">
+							<span id="levelInfo"><div class="next_level">다음 레벨까지 000,000,000 EXP</div></span>
+							<a href="/guide/information.asp?page=4" class="btn_reward">레벨 업 보상 보기</a>
+							<!-- <div class="next_level">
+								<span class="banner_event" id="loginBoxNewMemLevelEvtArea" style="">빨간 슬리퍼가 되면 <a href="/news/event.asp?seq=894">추가선물</a> 증정!</span>
+							</div> -->
+						</div>
+						<a href="#" class="btn_close" onclick="closeLayer('layer_diary'); return false;">닫기</a>
+					</div>
+					<!-- //다이어리 -->
+				</div>
+				<!--// login wrap -->
+				<!--// 20201012 수정 -->
+			</div>
+		</div>
+		<div class="container-body">
+			<!-- snb wrap -->
+			<div class="snb-wrap">
+				<nav class="snb">
+					<!-- 20201012 수정 -->
+					<ul>
+						<li><a href="/community">런너게시판</a></li>
+						<li><a href="/community">창작게시판</a></li>
+						<li><a href="/community">공략게시판</a></li>
+						<li><a href="/community">길드게시판</a></li>
+						<li class="current"><a href="/community">토론게시판</a></li><!-- 20230609 수정 -->
+						<li class="flag"><a href="/community">TR크리에이터</a></li>
+						<li><a href="/community">리그게시판</a></li><!-- 항상 마지막순서 유지 --><!-- 20220420 추가-->
+					</ul>
+					<!--// 20201012 수정 -->
+					<span class="snb-line"></span>
+				</nav>
+			</div>
+			<!--// snb wrap -->
+			<!-- contents -->
+			<div class="contents discussion"><!-- 20230609 수정 / discussion 클래스 추가 -->
+				<div class="inner">
+					<!-- 내용 -->
+					<h3 class="title">토론게시판</h3>
+
+					<div id="board"><!-- 20230609 수정 / div#board 구조 추가 (공통 구조 통일) -->
+						<!-- 탭 -->
+						<div class="tab-area min-215"><!-- 20230609 수정 / min-215 클래스 추가 -->
+							<ul>
+								<li class=""><a href="#">토론</a></li>
+								<li class="active"><a href="#">통계</a></li>
+							</ul>
+						</div>
+
+						<!-- 차트 리스트 (토론 게시판)-->
+						<div class="board-list-discussion">
+							<div class="chart-list-header">
+								<div class="board-sub-title">
+									<h3><span class="date-year-month point-name">#$해당년월$#</span> 베스트 게시물 <span class="point-name">%후보 리스트%</span>
+									</h3>
+									<p>매월 1일, 이전 월의 베스트 게시물이 확정 선정됩니다.</p>
+								</div>
+								<div class="selectbox">
+									<button type="button" class="bt-select"><span>년월 검색</span><i class="ico"></i></button>
+									<ul>
+										<li><a href="#">년월 검색</a></li>
+										<li><a href="#">23.07</a></li>
+										<li><a href="#">23.06</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="chart-list-body">
+								<!--
+               <div class="data-list-content chart-list-content no-data ">
+                1. data-list-content : 공통
+                2. chart-list-content : 차트리스트
+
+                no-data : 데이터 없을때, 클래스 추가
+                -->
+								<div class="data-list-content chart-list-content ">
+									<!--차트-->
+									<!--
+                  discussion-chart-data
+                  no-discussion-chart-data 로 나눠 구분
+                  -->
+									<div class="discussion-chart-data">
+										<!--차트-->
+										<div class="donut-chart">
+											<canvas id="doughnutChart"></canvas>
+										</div>
+										<div class="status-board">
+											<!--
+                      + 길이조정
+                      complete : 완료 -> width 길이가 늘어남
+                      + 색상조정
+                      시스템: system #d7ba38
+                      팜: farm #3ad146
+                      콘텐츠: contents-item #38e49a
+                      편의성: convenience #39c2d4
+                      아이템: item #2e75df
+                      맵: map #796df3
+                      캐릭터: character #8c3bc6
+                      길드: guild #c23bb3
+                      버그: bug #a73e67
+                      신규제안: new #d44839
+                      기타: etc #d59639
+                      -->
+											<!--2023-06-19 앵커태그 추가-->
+											<div class="status-board-item contents-item complete">
+												<span class=" status-bar">23.05.17 완료</span>
+												<a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용
+												</p></a>
+												<ul class="recommend-comment">
+													<li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+													<li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+													<li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+												</ul>
+											</div>
+											<div class="status-board-item etc ">
+												<span class=" status-bar">검토</span>
+												<a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용
+												</p></a>
+												<ul class="recommend-comment">
+													<li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+													<li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+													<li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+												</ul>
+											</div>
+											<div class="status-board-item map">
+												<span class=" status-bar">불가</span>
+												<a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용
+												</p></a>
+
+												<ul class="recommend-comment">
+													<li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+													<li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+													<li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+												</ul>
+											</div>
+											<div class="status-board-item map complete">
+												<span class=" status-bar">23.05.17 완료</span>
+												<a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용
+												</p></a>
+												<ul class="recommend-comment">
+													<li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+													<li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+													<li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+												</ul>
+											</div>
+											<div class="status-board-item bug ">
+												<span class=" status-bar">검토</span>
+												<a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용
+												</p></a>
+
+												<ul class="recommend-comment">
+													<li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+													<li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+													<li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+												</ul>
+											</div>
+											<div class="status-board-item map">
+												<span class=" status-bar">불가</span>
+												<a href="#"><p class="status-content">내용내용내용내용내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용내용내용내용내용
+												</p></a>
+												<ul class="recommend-comment">
+													<li class="b-like"><i class="ico ico-like-two"></i> 추천 123,456</li>
+													<li class="b-dislike"><i class="ico ico-dislike"></i> 비추천 123,456</li>
+													<li class="b-comments"><i class="ico ico-keyword"></i> 댓글 123,456</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="no-discussion-chart-data">
+										<span class="no-data-icon"></span>
+										<p class="no-data-text">건의 진행 현황은 토론 게시판을 통해 런너 여러분이 직접 선별해 주신 건의사항 및 신규 제안의<br/>
+											처리 현황을 보다 직관적으로 확인하실 수 있도록 데이터를 제공하는 콘텐츠 구간입니다.
+										</p>
+									</div>
+								</div>
+								<!--
+                <div class="data-list-content discussion-list no-data">
+                1. data-list-content : 공통
+                2. discussion-list : 베스트 게시물 리스트
+
+                no-data : 데이터 없을때, 클래스 추가
+                -->
+								<div class="data-list-content discussion-list no-data">
+									<!--리스트-->
+									<!--
+                  discussion-chart-data
+                  no-discussion-chart-data 로 나눠 구분
+                  -->
+									<div class="discussion-board-data">
+										<div class="board-sub-title">
+											<h4>· <span class="date-year-month point-name">#$해당년월$#</span> 반영 현황</h4>
+											<p>해당 월에 반영 완료된 베스트 게시물의 리스트입니다.</p>
+										</div>
+										<div class="board-list-content">
+											<div class="discussion-list-header">
+												<ul>
+													<li class="b-update">반영 일자</li>
+													<li class="b-best-date">베스트 선정 년월</li>
+													<li class="b-category">카테고리</li>
+													<li class="b-title">제목</li>
+													<li class="b-recommend">추천/비추천</li>
+													<li class="b-comments">댓글</li>
+												</ul>
+											</div>
+											<ul>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>2023.09</div>
+													<div class="b-category">신규제안</div>
+													<div class="b-title">
+														<a href="#">
+															제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>123,456
+														<span>/</span>
+														<i class="ico ico-dislike"></i>123,456
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>123,456</div>
+												</li>
+												<!-- 결과 없을 시  -->
+												<li class="no-result">
+													<p>등록된 게시물이 없습니다.</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="no-discussion-board-data">
+										<div class="board-sub-title">
+											<h4>· <span class="date-year-month point-name">#$해당년월$#</span> 반영 현황</h4>
+											<p>해당 월에 반영 완료된 베스트 게시물의 리스트입니다.</p>
+										</div>
+										<div class="board-list-content">
+											<div class="discussion-list-header">
+												<ul>
+													<li class="b-update">반영 일자</li>
+													<li class="b-best-date">베스트 선정 년월</li>
+													<li class="b-category">카테고리</li>
+													<li class="b-title">제목</li>
+													<li class="b-recommend">추천/비추천</li>
+													<li class="b-comments">댓글</li>
+												</ul>
+											</div>
+											<ul>
+												<li>
+													<div class="b-update"><i class="ico ico-time"></i>-</div>
+													<div class="b-best-date"><i class="ico ico-datepicker"></i>-</div>
+													<div class="b-category">-</div>
+													<div class="b-title">
+														<a href="#">
+															-
+														</a>
+													</div>
+													<div class="b-recommend">
+														<i class="ico ico-like-two"></i>-
+														<span>/</span>
+														<i class="ico ico-dislike"></i>-
+													</div>
+													<div class="b-comments"><i class="ico ico-keyword"></i>-</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="board-list-discussion board-list-meeting-proposal ">
+							<div class="chart-list-header">
+								<div class="board-sub-title">
+									<h3>간담회 / 건의 진행 현황</h3>
+									<div class="sub-title-right">
+										<p class="point-name">건의게시판은 더 이상 작성하실 수 없으며 신규 건의함인 토론게시판을 이용 부탁드립니다.</p>
+										<ul class="meeting-proposal-board-button">
+											<li><a href="/news/SuggestionBoard/List.asp"><i class="ico ico-status-board"></i>건의현황판</a></li>
+											<li><a href="/community2/#suggest/list"><i class="ico ico-bulletin-board"></i>건의게시판</a></li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<div class="chart-list-body">
+								<div class="chart-list-content">
+									<!--차트-->
+									<div class="pie-chart chart-content">
+										<div class="chart-sub-title">
+											<h4>· 총 등록 건수 </h4>
+										</div>
+										<div class="chart-content">
+											<canvas id="pieChart"></canvas>
+										</div>
+										<!--
+                    total-number : 총 등록 건수
+                    total-percent : 처리 완료 %
+                    -->
+										<ul class="chart-total">
+											<li>총 등록 건수 <span class="total-number">123,456</span></li>
+											<li>처리 완료 <span class="total-percent">nn%</span></li>
+										</ul>
+									</div>
+									<div class="bar-chart chart-content">
+										<div class="chart-sub-title">
+											<h4>· 반영 완료 / 예정 현황 </h4>
+											<p>월별 반영 완료 &amp 예정인 건의 게시물 건수입니다.</p>
+										</div>
+
+										<div class="chart-content">
+											<canvas id="barChart"></canvas>
+										</div>
+										<div class="bar-chart-button">
+											<button disabled="disabled" id="bar-chart-prev-button"><i
+													class="ico ico-prev-btn ico-prev-disable-btn"></i></button>
+											<button id="bar-chart-next-button"><i class="ico ico-next-btn"></i></button>
+										</div>
+									</div>
+								</div>
+								<div class="discussion-list">
+									<!--리스트-->
+									<div class="board-header">
+										<div class="board-sub-title">
+											<h4>· 월별 진행 현황</h4>
+											<p>해당 월에 반영 완료된 건의 게시물의 리스트입니다.</p>
+										</div>
+										<div class="selectbox">
+											<button type="button" class="bt-select"><span>년월 검색</span><i class="ico"></i></button>
+											<ul>
+												<li><a href="#">년월 검색</a></li>
+												<li><a href="#">23.07</a></li>
+												<li><a href="#">23.06</a></li>
+												<li><a href="#">23.05</a></li>
+												<li><a href="#">23.04</a></li>
+												<li><a href="#">23.03</a></li>
+												<li><a href="#">23.02</a></li>
+												<li><a href="#">23.01</a></li>
+												<li><a href="#">22.12</a></li>
+												<li><a href="#">23.11</a></li>
+												<li><a href="#">23.10</a></li>
+												<li><a href="#">23.09</a></li>
+												<li><a href="#">23.08</a></li>
+												<li><a href="#">23.07</a></li>
+												<li><a href="#">23.06</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="board-list-content meeting-proposal">
+										<div class="discussion-list-header">
+											<ul>
+												<li class="b-update">반영 일자</li>
+												<li class="b-category">카테고리</li>
+												<li class="b-title">제목</li>
+											</ul>
+										</div>
+										<ul>
+											<li>
+												<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+												<div class="b-category">신규제안</div>
+												<div class="b-title">
+													<a href="#">
+														제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+														제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+												<div class="b-category">신규제안</div>
+												<div class="b-title">
+													<a href="#">
+														제목제목제목제목제목제목제목제목제목제
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="b-update"><i class="ico ico-time"></i>2023.05.19</div>
+												<div class="b-category">신규제안</div>
+												<div class="b-title">
+													<a href="#">
+														제목
+													</a>
+												</div>
+											</li>
+											<!-- 결과 없을 시  -->
+											<li class="no-result">
+												<p>등록된 게시물이 없습니다.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--#board-->
+					<!--// 내용 -->
+				</div>
+			</div>
+
+
+			<!--// contents -->
+
+			<!-- quick menu -->
+			<div class="quick_menu">
+				<!-- [D] 새 컨텐츠 있는 경우 li에 'new' 클래스 추가 --><!-- 20221125 추가 -->
+				<ul class="link">
+					<li class="item09"><a href="#">테런 라이브러리</a></li><!-- 20221006 추가 -->
+					<li class="item08 new"><a href="#">MUSIC</a></li><!-- 20210225 추가 -->
+					<li class="item01"><a href="#">테일즈샵</a></li>
+					<li class="item02"><a href="#">캐시 충전</a></li>
+					<li class="item03"><a href="#">쿠폰 등록</a></li>
+					<li class="item04"><a href="#">테런 출석부</a></li>
+					<li class="item05"><a href="#">게임 가이드</a></li>
+					<!-- <li class="item06"><a href="#">업데이트</a></li> -->
+					<li class="item07"><a href="#">이벤트</a></li>
+				</ul>
+				<ul class="quick_evt">
+					<li><a href="#"><img src="https://tr-image.game.onstove.com/webapp/pc/assets/images/banner/20230426_quick_banner.png" alt="@2023 SANRIO (Appl.No.KHK2300253)"></a></li><!-- 20230417 수정 -->
+				</ul>
+
+			</div>
+			<!--// quick menu -->
+		</div>
+	</div>
+	<!--// container -->
+	<!-- footer --><!-- 20221227 수정 --><!-- 법인명 및 푸터 정보 수정 -->
+	<footer id="footer">
+		<div class="footer_logo">
+			<div class="inner">
+				<a href="http://www.smilegate.com" target="_blank" title="새창"><img src="https://tr-image.game.onstove.com/webapp/pc/assets/images/common/ci_smilegate.png" alt="Smilegate"></a>
+				<!-- <a href="http://www.smilegate.com" target="_blank" title="새창"><img src="https://tr-image.game.onstove.com/web2016/common/ci_sgp.jpg" alt="Smilegate Megaport"></a> -->
+				<!-- <a href="http://www.smilegate.com" target="_blank" title="새창"><img src="https://tr-image.game.onstove.com/web2016/common/ci_sgs.jpg" alt="Smilegate Stove"></a> -->
+				<a href="http://www.rhaon.co.kr" target="_blank" title="새창"><img src="https://tr-image.game.onstove.com/web2016/common/ci_rhaon.jpg" alt="RHAON"></a>
+			</div>
+		</div>
+		<div class="footer_info">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="http://www.smilegate.com" target="_blank" title="새창">회사소개</a></li>
+						<li><a href="https://www.smilegatemegaport.com/terms/index?gameType=ONLINE&termsType=1&langCode=ko" target="_blank" title="새창">이용약관</a></li><!-- 20211015 수정 -->
+						<li class="point"><a href="https://clause.onstove.com/stove/terms?category=privacy" target="_blank" title="새창">개인정보처리방침</a></li>
+						<li><a href="https://www.smilegatemegaport.com/terms/index?gameType=TR&termsType=3" target="_blank" title="새창">운영정책</a></li>
+						<li><a href="https://www.smilegatemegaport.com/terms/index?gameType=TR&termsType=4" target="_blank" title="새창">청소년보호정책</a></li>
+						<li><a href="https://member.onstove.com/game/block" target="_blank" title="새창">게임시간선택제</a></li>
+						<li><a href="https://pcbang.smilegatemegaport.com/main.do" target="_blank" title="새창">테일즈런너PC방</a></li>
+					</ul>
+				</nav>
+				<address>
+					<p><strong>㈜스마일게이트홀딩스 메가포트 지점</strong> <span>대표이사: 성준호</span> <span>통신판매업 신고번호: 제2023-성남분당A-0091호</span></p><!-- 20230116 수정 -->
+					<p><span>주소: 경기도 성남시 분당구 판교로 344, 스마일게이트 캠퍼스 9층</span> <span>사업자등록번호: 758-85-01992</span></p><!-- 20230116 수정 -->
+					<p><span>E-MAIL: <a href="mailto:help@smilegate.com">help@smilegate.com</a></span> <span>TEL: 1833-7462</span></p>
+				</address>
+				<p class="copyright">&copy; Smilegate. All Rights Reserved. RHAON Entertainment. All Rights Reserved.</p>
+				<span class="f_game_info"><img src="https://tr-image.game.onstove.com/web2014/global/f_game_info.gif" alt="제명: 테일즈런너 | 이용등급: 전체이용가 | 제작년월일: 2005.07.29 | 상호: ㈜ 라온 엔터테인먼트 | 등릅분류번호: CC-NP-100616-004 | 신고(등록)번호: DG-NP-10-00491"></span>
+			</div>
+		</div>
+	</footer>
+	<!--// footer -->
+
+
+	<!--chart js v4.3.0 & chartjs-plugin-datalabels js v2.2.0 라이브러리 2023.05.23 추가-->
+	<script src="./assets/js/chart.js"></script>
+	<script src="./assets/js/chartjs-plugin-datalabels.js"></script>
+
+	<!--chart ui js 2023.05.23 추가-->
+	<script src="./assets/js/chart-ui.js"></script>
+</div>
+</body>
+</html>

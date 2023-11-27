@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+html,body{background: #0852d0;height: 100%}
+#evt_wrap{min-height: 4426px;margin: 0 auto; }
+
+#evt_wrap #evt-inner{height: 3806px;}
+
+/* board, footer */
+.evt_comment {background:#fdfdfd;height: 560px}
+.evt_comment_title{width:100%;height:150px;background:#fdfdfd url('../images/bbs_title.png') no-repeat center center}
+.evt_comment_in {width:980px;margin:0 auto}
+.evt_comment_background_block{
+    background: #f3f3f3;
+    border-radius: 10px;
+    display: block;
+    width: 980px;
+    height: 58px;
+    position: absolute;
+    top: -5px;
+    z-index: 0;
+}
+
+
+.footer {position:relative;height:60px;background:#fdfdfd;line-height:60px;}
+.footer_copyright {width:100%;color:#666;text-align:center;font-family:'Tahoma','Geneva','sans-serif';font-size:12px;letter-spacing:0;}
+
+
+/* buttons */
+/*.ico, .btn {display:inline-block;background:url('../images/ico_spr.png') no-repeat -9999em 0;text-indent:-9999em;}*/
+.ico, .btn {display:inline-block;text-indent:-9999em;}
+.btn-caution {width:200px;height:50px;background-color:#fff;text-indent:0;}
+
+/* content layout */
+.evt-header {position:relative;height:750px;}
+.content-body .section01 {position:relative;height:450px;box-sizing: border-box;}
+.content-body .section02 {position:relative;height:1390px;box-sizing: border-box;}
+.content-body .section03 {position:relative;height:956px;}
+.content-body .section04 {position:relative;height:300px;}
+
+/* contents */
+
+/*.content-body > div {border: 1px solid red}*/
+
+/*common*/
+.item-content .item-title{
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+/*header 신규 레전드리 sss 등급 첫 번째!*/
+.evt-header{
+    background: url("../images/header/main-header.jpg") no-repeat top center;
+}
+
+/*section01 해원의 수호자 시리즈 첫번째*/
+.content-body .section01{background: url("../images/section01/section01-bg.jpg") no-repeat top center}
+.section01 .item-content .item-title{
+    width: 100%;
+    height: 157px;
+    background-image: url("../images/section01/section01-title.png");
+}
+.section01 .item-content .item-text-box{
+    height: 227px;
+    width: 100%;
+    background: url("../images/section01/section01-item.png") no-repeat center center;
+}
+
+/*section02 해원의 수호자 첫번째 파츠*/
+.content-body .section02{background: url("../images/section02/section02-bg.jpg") no-repeat bottom center}
+.section02 .item-content > .item-title{
+    width: 100%;
+    height: 178px;
+    background-image: url("../images/section02/section02-title.png");
+    margin-top: -40px;
+}
+.section02 .item-content .item-text-box .item-title{
+    background-image: url("../images/section02/section02-item-title.png");
+    height: 101px;
+    margin-top: 10px;
+}
+
+/*section02 item-list*/
+.section02 .item-content .item-text-box .item-list{
+    display: flex;
+    align-items: center;
+}
+.section02 .item-content .item-text-box .item-list li{
+    background: url("../images/section02/section02-frame.png") no-repeat center center;
+    height: 210px;
+    width: 200px;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    position: relative;
+}
+.section02 .item-content .item-text-box .item-list li.active{
+    background: url("../images/section02/section02-frame-active.png") no-repeat center center;
+}
+.section02 .item-content .item-text-box .item-list li.active:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 332px;
+    height: 221px;
+    background: url("../images/section02/section02-frame-active-light.png") no-repeat center center;
+    mix-blend-mode: screen;
+    transform: translate(-65px, -10px);
+    z-index: 1;
+}
+.section02 .item-content .item-text-box .item-list li .item-box{
+    width: 200px;
+    height: 210px;
+}
+.section02 .item-content .item-text-box .item-list li .item-tab{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+}
+.section02 .item-content .item-text-box .item-list li .tab-item{
+    position: absolute;
+    width: 142px;
+    height: 140px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+.section02 .item-content .item-text-box .item-list li .item-box-shadow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background: rgba(0,0,0,0.6);
+    filter: blur(35px);
+}
+.section02 .item-content .item-text-box .item-list li .item-name {
+    background-image: url("../images/section02/section02-item-name.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 200px;
+    height: 60px;
+}
+
+.section02 .item-content .item-text-box .item-list .active .item-name {
+    position: relative;
+    background-image: url("../images/section02/section02-item-name-active.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 200px;
+    height: 60px;
+    z-index: 2;
+}
+.section02 .item-content .item-text-box .item-list .active .item-name:before{
+    position: absolute;
+    content: "";
+    height: 40px;
+    background: #00e4ff;
+    opacity: 0.2;
+    filter: blur(20px);
+    z-index: 1;
+}
+/*section02 coming soon*/
+.section02 .item-content .item-text-box .item-list .coming-soon .tab-item{
+    background: url("../images/section02/section02-item-coming-soon.png") no-repeat center center;
+}
+.section02 .item-content .item-text-box .item-list .coming-soon .item-tab{
+    cursor: none;
+    pointer-events: none;
+}
+
+.section02 .item-content .item-text-box .item-list .active .item-tab{
+    cursor: none;
+    pointer-events: none;
+}
+
+/*내비치는 해중*/
+.item-list [data-tab="underwater"] .item-name{
+    background-position-x: 43px;
+}
+.item-list [data-tab="underwater"].active .item-name{
+    background-position-x: 42px;
+}
+.item-list [data-tab="underwater"].active .item-name:before{
+    width: 140px;
+    transform: translate(-68px,10px);
+}
+/*꿰뚫어보는 심해*/
+.item-list [data-tab="sea-deeps"] .item-name{
+    background-position-x: -178px
+}
+.item-list [data-tab="sea-deeps"].active .item-name{
+    background-position-x: -179px
+}
+.item-list [data-tab="sea-deeps"].active .item-name:before{
+    width: 200px;
+    transform: translate(-100px,10px);
+}
+/*끝없는 대양*/
+.item-list [data-tab="sea"] .item-name{
+    background-position-x: -397px;
+}
+.item-list [data-tab="sea"].active .item-name{
+    background-position-x: -398px;
+}
+.item-list [data-tab="sea"].active .item-name:before{
+    width: 140px;
+    transform: translate(-68px,10px);
+}
+
+/*몰아치는 해일*/
+.item-list [data-tab='sea-wave'] .tab-item{
+    background: url("../images/section02/section02-item-sea-wave.png") no-repeat 22px center;
+}
+.item-list [data-tab='sea-wave'] .item-box-shadow{
+    width: 82px;
+    height: 130px;
+    transform: translate(-35%, -40%);
+}
+.item-list [data-tab="sea-wave"] .item-name{
+    background-position-x: -614px;
+}
+.item-list [data-tab="sea-wave"].active .item-name{
+    background-position-x: -615px;
+}
+.item-list [data-tab="sea-wave"].active .item-name:before{
+    width: 160px;
+    transform: translate(-75px,10px);
+}
+/*뒤흔드는 해류 (신발)*/
+.item-list [data-tab='sea-currents'] .item-name{
+    background-position-x: -832px;
+}
+.item-list [data-tab="sea-currents"].active .item-name:before{
+    width: 160px;
+    transform: translate(-75px,10px);
+}
+/*격동하는 물결 (부스터)*/
+.item-list [data-tab='sea-king'] .item-name{
+    background-position-x: -1042px;
+}
+.item-list [data-tab='sea-king'].active .item-name{
+    background-position-x: -10px;
+}
+.item-list [data-tab="sea-king"].active .item-name:before{
+    width: 160px;
+    transform: translate(-75px,10px);
+}
+
+/*item-details-view*/
+.section02 .item-content .item-text-box .item-details-view{
+    margin-top: 100px;
+    height: 730px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section02 .item-content .item-text-box .item-details-view .details-layout{
+    width: 420px;
+    height: 730px;
+}
+
+/*section02 item-parts*/
+.section02 .item-content .item-text-box .item-details-view .item-parts{
+    position: relative;
+    width: 420px;
+    height: 100%;
+}
+.section02 .item-content .item-text-box .item-details-view .item-parts .item-img-wrap{
+    position: relative;
+    height: 506px;
+    width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section02 .item-content .item-text-box .item-details-view .item-parts .item-img-wrap .shadow{
+    position: absolute;
+    display: block;
+    filter:blur(60px);
+    background: #176bba;
+    z-index: 1;
+    opacity: 0.8;
+}
+.section02 .item-content .item-parts .item-parts-title{
+    width: 100%;
+    height: 88px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 15px;
+}
+.section02 .item-content .item-parts .item-parts-button{
+    width: 285px;
+    height: 75px;
+    background-image: url("../images/section02/section02-item-parts-button.png");
+    background-repeat: no-repeat;
+    background-position: -252px center;
+    background-color: transparent;
+}
+.section02 .item-content .item-parts .item-parts-button:hover{
+    background-repeat: no-repeat;
+    background-position: 19px center;
+}
+.section02 .item-content .item-parts .item-parts-button.active{
+    background-repeat: no-repeat;
+    background-position: 19px center;
+}
+/*팝업 영역*/
+.section02 .item-content .item-parts .item-parts-button.active .item-parts-popup{
+    display: block;
+}
+.section02 .item-content .item-text-box .item-parts-popup{
+    position: absolute;
+    width: 414px;
+    height: 544px;
+    top: -695px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: none;
+}
+.section02 .item-content .item-text-box .item-parts-popup{
+    cursor: default;
+}
+.section02 .item-content .item-text-box .item-parts-popup .item-parts-popup-button{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*section02 item-pose*/
+.section02 .item-content .item-text-box .item-pose {
+    position: relative;
+    width: 420px;
+    height: 100%;
+}
+.section02 .item-content .item-text-box .item-video-wrap{
+    position: relative;
+    width: 420px;
+    height: 506px;
+}
+
+.item-video{
+    width: 354px;
+    height:466px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.item-video:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1px rgba(85,245,252,1);
+}
+.section02 .item-content .item-text-box .item-pose .item-pose-title{
+    width: 100%;
+    height: 88px;
+    background-image: url("../images/section02/section02-item-pose-title.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 15px;
+    position: relative;
+}
+.section02 .item-content .item-text-box .item-pose .item-pose-title span{
+    display: block;
+    background:url("../images/section02/section02-item-pose-speech-bubble.png") no-repeat center center;
+    width: 186px;
+    height: 88px;
+    position: absolute;
+    transform: translate(245px ,45px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+/*몰아치는 해일*/
+.section02 .item-content .item-text-box [data-tab="sea-wave"] .item-img{
+    background: url("../images/section02/seciton02-item-wear gloves.png") no-repeat center center;
+    height: 466px;
+    width: 354px;
+    z-index: 2;
+    position: absolute;
+}
+.section02 .item-content .item-text-box [data-tab="sea-wave"] .item-img-wrap .shadow{
+    width:280px;
+    height: 442px;
+    transform: translate(30px, 50px);
+}
+.section02 .item-content .item-text-box [data-tab="sea-wave"] .item-parts-title{
+    background-image: url("../images/section02/section02-item-sea-wave-parts-title.png");
+}
+.section02 .item-content .item-text-box [data-tab="sea-wave"] .item-parts-popup{
+    background: url("../images/section02/section02-item-sea-wave-popup.png") no-repeat top center;
+}
+
+
+
+/*section03*/
+.content-body .section03{background: url("../images/section03/section03-bg.jpg") no-repeat top center}
+.section03 .item-content .item-title{
+    width: 100%;
+    height: 214px;
+}
+.section03 .item-content .item-box{
+    width: 100%;
+    height: 725px;
+}
+/*section04 업데이트 공지 바로가기*/
+.content-body .section04 {background: rgba(0,0,0,15%) url("../images/section04/section04-bg.jpg") no-repeat top center}
+.section04 .item-content{padding-top: 80px;}
+.section04 .item-content .item-title{
+    width: 100%;
+    height: 54px;
+    background-image: url("../images/section04/section04-title.png")
+}
+.section04-button{
+    background: url("../images/section04/section04-button.png") no-repeat top center;
+    width: 567px;
+    height: 133px;
+    margin:  0 auto;
+    position: relative;
+}
+.section04-button a{
+    display: inline-block;
+    width: 567px;
+    height: 84px;
+    transform: translateY(12%);
+}

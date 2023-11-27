@@ -1,0 +1,98 @@
+
+
+.floating-button {
+    height: 537px;
+    width: 260px;
+    position: absolute;
+    transform: translateY(120px);
+    left: 50px;
+    z-index: 99;
+    background: url("../images/floating/floating_bg.png") no-repeat;
+}
+
+.floating-button li {
+    margin-top: 12px;
+    width: 142px;
+    height: 36px;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    position: absolute;
+    background-size: cover;
+}
+
+.floating-button li.active:before {
+    content: "";
+    width: 127px;
+    height: 21px;
+    position: absolute;
+    right: -5px;
+    bottom: 4px;
+    background: url("../images/floating/over.png");
+    z-index: 0;
+}
+
+
+.floating-button li:not(:nth-last-child(1)) {
+
+    left: 50%;
+    transform: translateX(-49%);
+    z-index: 99;
+
+}
+
+.floating-button li:nth-child(1) {
+    background-position-y: 0;
+    bottom: 223px;
+}
+
+.floating-button li:nth-child(2) {
+    background-position-y: -45px;
+    bottom: 179px;
+}
+
+.floating-button li:nth-child(3) {
+    background-position-y: -90px;
+    bottom: 134px;
+}
+
+.floating-button li:not(:nth-last-child(1)) a {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    left: 0;
+    background-image: url("../images/floating/floating_title.png");
+    top: 0;
+    z-index: 10;
+}
+
+.floating-button li:nth-child(1) a {
+    background-position-y: 0;
+}
+
+.floating-button li:nth-child(2) a {
+    background-position-y: -45px;
+}
+
+.floating-button li:nth-child(3) a {
+    background-position-y: -90px;
+}
+
+
+.floating-button li.floating-top {
+    display: block;
+    width: 49px;
+    height: 23px;
+    position: absolute;
+    bottom: 55px !important;
+    right: 45px !important;
+    background-image: url("../images/floating/top.png");
+
+}
+
+.floating-button li.floating-top a{
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+

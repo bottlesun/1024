@@ -1,0 +1,17 @@
+@use 'variable' as *;
+
+@function get-match-value-of-keys($values, $keys) {
+	$value: null;
+
+	@each $key in $keys {
+		$value: if($value, $value, get-value-after-key($values, $key));
+	}
+	@return $value;
+}
+@function get-value-after-key($key-value-list, $key) {
+	$key-index: index($key-value-list, $key);
+	@return if($key-index, nth($key-value-list, $key-index + 1), null);
+}
+@function unitless-px($value) {
+	@return if(unitless($value), if($value != 0, $value * 1px, $value), $value);
+}

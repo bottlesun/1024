@@ -1,0 +1,136 @@
+/* 리스트 (토론) */
+.board-list-discussion {border-collapse:separate;text-align:center;font-size:15px;color:#444;}
+.board-list-discussion .board-sub-title{display: flex;align-items: center; justify-content: start;height: 74px}
+.board-list-discussion .board-sub-title h4{font-weight:500;font-size:15px;color:#444;text-align: left;margin-right: 10px}
+.board-list-discussion .board-sub-title h3{font-weight:500;font-size:20px;color:#444;text-align: left;margin-right: 10px}
+.board-list-discussion .board-sub-title .point-name{color:#16880f}
+.board-list-discussion .board-sub-title p{color:#888888;font-size: 13px}
+.board-list-discussion .chart-list-header{display: flex;justify-content: space-between;align-items: center}
+
+/*차트리스트(토론) body*/
+.board-list-discussion .chart-list-body{border: 1px solid #d2d2d2;border-radius:5px;padding: 0 20px 30px;position: relative;min-width: 1000px}
+.board-list-discussion .chart-list-body:before{content:"";position: absolute;width: 100%;height: 359px;border-bottom:1px solid #d2d2d2;background: #f9f9f9;z-index: -1;top: 0;left: 0}
+.board-list-discussion .chart-list-content .discussion-chart-data {display: flex;gap:15px;width: 100%;align-items: center;height: 358px;}
+.board-list-discussion .chart-list-content .donut-chart{flex-basis: 296px;flex-shrink: 0;width: 296px;height: 296px;}
+.board-list-discussion .chart-list-content .status-board{flex-wrap: wrap;width:651px;flex-shrink: 0;flex-basis: 651px;display: flex;gap: 5px}
+.board-list-discussion .chart-list-content .status-board .status-board-item{width:212px;height: 150px;border:1px solid #d2d2d2;border-radius: 5px;background: #fff;padding:
+        16px 8px;text-align: left;margin-bottom: 1px;position: relative}
+.board-list-discussion .chart-list-content .status-board .status-board-item:before{content:"";position: absolute;width: 100%;height: 27px;border-radius: 5px  5px 0 0;top: 0;left: 0;z-index: 0}
+.board-list-discussion .chart-list-content .status-board .status-board-item .status-bar{width: 78px;height: 24px;border: 1px solid #d2d2d2;display: block;line-height: 22px;text-align: center;font-size: 13px;color: #000;margin-bottom: 10px;background: #fff;position:relative;
+;z-index: 1}
+.board-list-discussion .chart-list-content .status-board .status-board-item.complete .status-bar{width:98px}
+.board-list-discussion .chart-list-content .status-board .status-content{margin-bottom: 12px;font-size: 15px;color:#000;width: 169px;height: 36px;overflow : hidden;
+    /*text-overflow : ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}*/}
+.board-list-discussion .chart-list-content .status-board .recommend-comment{color: #a0a0a0;font-size: 13px;display: flex;flex-wrap: wrap;gap: 5px}
+.recommend-comment .b-like i,.recommend-comment .b-dislike i,.recommend-comment .b-comments i{margin: 0}
+
+/*토론 차트 컬러 종류*/
+.board-list-discussion .chart-list-content .status-board .status-board-item.system:before{background:#d7ba38 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.farm:before{background:#3ad146 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.contents-item:before{background:#38e49a }
+.board-list-discussion .chart-list-content .status-board .status-board-item.convenience:before{background:#39c2d4 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.item:before{background:#2e75df }
+.board-list-discussion .chart-list-content .status-board .status-board-item.map:before{background:#796df3 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.character:before{background:#8c3bc6 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.guild:before{background:#c23bb3 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.bug:before{background:#a73e67 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.new:before{background:#d44839 }
+.board-list-discussion .chart-list-content .status-board .status-board-item.etc:before{background:#d59639 }
+
+
+/*리스트(토론) header*/
+.discussion-list .discussion-list-header {height:36px;background:#fafafa;}
+.discussion-list .discussion-list-header ul {display:table;width:100%;height:100%;}
+.discussion-list .discussion-list-header li {display:table-cell;vertical-align:middle;color:#444;text-align: center;font-size: 13px}
+
+/*리스트(토론) body*/
+
+.discussion-list .board-list-content{max-height: 372px;overflow: auto;}
+.discussion-list .board-list-content >ul {border-bottom:1px solid #d2d2d2;}
+.discussion-list .board-list-content >ul>li {display:table;width:100%;min-height:54px;height:55px;border:solid #e8e8e8;border-width:1px 0 0;}
+.discussion-list .board-list-content >ul>li:first-of-type {border-top:0;}
+.discussion-list .board-list-content >ul>li:after {content:'';clear:both;display:block;}
+.discussion-list .board-list-content >ul>li:not(.no-result) {cursor:default;}
+.discussion-list .board-list-content >ul>li:hover:not(.no-result) {background:#fafafa;}
+.discussion-list .board-list-content >ul>li>div {display:table-cell;text-align:center;vertical-align:middle;font-size:13px;color: #a0a0a0;height: 55px}
+.discussion-list .board-list-content > ul > li > div >i {margin-right:5px;}
+/*리스트가 없을경우*/
+.discussion-list .board-list-content >ul>li.no-result {height:240px;text-align:center;font-size:15px;line-height:1.5;}
+.discussion-list .board-list-content >ul>li.no-result p {display:table-cell;vertical-align:middle;}
+/*리스트 내용*/
+.discussion-list .board-list-content .b-update {width:110px;}
+.discussion-list .board-list-content .b-best-date {width:116px;}
+.discussion-list .board-list-content .b-title {text-align: left;}
+.discussion-list .discussion-list-header .b-title {text-align:center;}
+
+.discussion-list .board-list-content .b-title a {padding: 0 20px;color:#444;display: block;max-width:333px;white-space : nowrap;overflow : hidden;text-overflow : ellipsis;}
+.discussion-list .board-list-content .b-category {width:105px;font-size: 15px;color:#444;}
+.discussion-list .discussion-list-header .b-category {font-size: 13px;}
+.discussion-list .board-list-content .b-recommend {width:143px;}
+.discussion-list .board-list-content .b-recommend i{margin-right:3px;}
+.discussion-list .board-list-content .b-recommend span{padding: 2px}
+.discussion-list .board-list-content .b-comments {width:143px;}
+
+/*meeting-proposal 건의사항*/
+
+/*리스트(건의사항) header*/
+.board-list-meeting-proposal .board-header{display: flex;align-items: center;justify-content: space-between;gap: 10px}
+.board-list-meeting-proposal .board-sub-title{justify-content: space-between;width: 100%}
+.board-list-meeting-proposal .board-sub-title .sub-title-right{display: flex;gap: 10px;align-items: end}
+.board-list-meeting-proposal .board-sub-title .sub-title-right .meeting-proposal-board-button{display: flex;gap: 5px}
+.board-list-meeting-proposal .board-sub-title .sub-title-right .meeting-proposal-board-button li{width: 92px;height: 23px;border: 1px solid #13630e;
+    background: #16880f}
+.board-list-meeting-proposal .board-sub-title .sub-title-right .meeting-proposal-board-button li i{margin-right: 5px}
+.board-list-meeting-proposal .board-sub-title .sub-title-right .meeting-proposal-board-button li a{color: #fff;font-size: 13px}
+
+/*차트리스트(건의사항) body*/
+.board-list-meeting-proposal .chart-list-content {display: flex;gap:35px;width: 100%;align-items: center;height: 358px;}
+
+.board-list-meeting-proposal .chart-list-body:before{width: 450px;height: 441px;border-right: 1px solid #d2d2d2}
+.board-list-meeting-proposal .chart-list-content {height: 441px;padding: 30px 0}
+.board-list-meeting-proposal .chart-list-content .chart-content .chart-sub-title{display: flex;gap: 10px}
+.board-list-meeting-proposal .chart-list-content .chart-content h4{font-size: 15px;color:#444;font-weight: normal}
+.board-list-meeting-proposal .chart-list-content .chart-content p{font-size: 13px;color:#888888}
+.board-list-meeting-proposal .chart-list-content .pie-chart{flex-basis: 410px;flex-shrink: 0;height: 100%;background: transparent;position: relative}
+.board-list-meeting-proposal .chart-list-content .pie-chart .chart-content{width: 296px;height: 296px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-55%)}
+.board-list-meeting-proposal .chart-list-content .bar-chart{width: 100%;height: 100%;position: relative}
+.board-list-meeting-proposal .chart-list-content .bar-chart:before{content: '';position: absolute;top: 30px;left: 0;width: 100%;height: 100%;border-bottom: 1px solid #d2d2d2;}
+.bar-chart .chart-content{height:300px ;margin-top: 20px;position: relative;z-index: 2}
+/*차트리스트(건의사항) footer*/
+.chart-total{display: flex;align-items: center;justify-content: space-between;padding: 0 30px ;gap: 10px;width: 295px;height: 25px;background: #fff;border-radius: 9999px;font-size: 13px;color:#888888;position: absolute;left: 50%;
+    transform: translate(-50%,330px)}
+.chart-total .total-number{font-size: 13px;color:#444;font-weight: bold}
+
+.board-list-meeting-proposal .bar-chart-button{position: relative;display:flex;justify-content: space-between; align-items: start;z-index: 1;padding: 0 0 0 30px}
+.board-list-meeting-proposal .bar-chart-button button {width: 45px;height: 30px;border: 1px solid #d2d2d2;border-radius: 5px;display: flex;align-items: center;justify-content: center }
+.board-list-meeting-proposal .bar-chart-button button:disabled{background: #f9f9f9;cursor: unset}
+/*리스트(건의사항) 컨텐츠*/
+.board-list-meeting-proposal .board-list-content .b-update {width:150px;}
+.board-list-meeting-proposal .board-list-content .b-category {width:150px;}
+.board-list-meeting-proposal .discussion-list .board-list-content .b-title a {padding: 0;max-width: 600px;margin: 0 auto;}
+
+.discussion .board-list .b-user {width:126px;}
+.discussion .board-list .b-title {width:490px;}
+
+/*차트 데이터가 없는 경우*/
+.no-discussion-chart-data{display: none;}
+.no-discussion-chart-data .no-data-icon{
+    display: block;background: url("../images/board/no-data-icon.png") no-repeat;
+    width: 156px;height: 156px;
+}
+.no-discussion-chart-data .no-data-text{font-size: 15px;line-height: 26px;color: #444444}
+
+.no-data.chart-list-content .discussion-chart-data{display: none}
+.no-data.chart-list-content .no-discussion-chart-data{
+    display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 20px;
+    height: 358px;
+}
+/*테이블 데이터가 없는 경우*/
+.no-discussion-board-data{display: none;}
+.no-data.discussion-list .discussion-board-data{display: none}
+.no-data.discussion-list .no-discussion-board-data{display: block;}
+
+
+/*border-header*/
+.board-header ul{max-height:246px;position: relative;overflow-y: scroll; -ms-overflow-y: scroll; }
+.board-header ul li{min-height:16px;line-height: 16px }

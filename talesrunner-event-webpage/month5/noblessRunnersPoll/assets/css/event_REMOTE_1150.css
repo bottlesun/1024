@@ -1,0 +1,102 @@
+@charset "euc-kr";
+@import url('https://tr-image.game.onstove.com/event/fonts/NotoSansKR/NotoSansKR.css');
+@import url('https://tr-image.game.onstove.com/event/fonts/NanumSquare/NanumSquare.css');
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url('../css/fonts/woff2/Pretendard-Regular.woff2') format('woff2'), url('../css/fonts/woff/Pretendard-Regular.woff') format('woff');
+}
+/*<!-- 2023-05-23 수정 -->*/
+/* reset */
+*, *:before, *:after {margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;word-break:break-word;outline:0;}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, button {margin:0;padding:0; font-family: 'Pretendard';}
+body, h1, h2, h3, h4, input, button {font-family:'malgun gothic','dotum',sans-serif;}
+body {background-color:#fff;word-break:break-all;-ms-word-break:break-all;}
+img, iframe {border:0 none;}
+li {list-style:none;}
+input, select, button {vertical-align:middle;}
+img {vertical-align:top;}
+i, em, address {font-style:normal;}
+label, button {cursor:pointer;}
+button {margin:0;padding:0;border:0;outline:none;}
+a {color:#333;text-decoration:none;}
+a:hover {color:#333;text-decoration:none;}
+button * {position:relative;}
+hr {display:none;}
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+input::-ms-clear {display:none;}
+ caption {overflow:hidden;height:0;text-indent:-9999em;font-size:0;line-height:0;}
+.hide {height:0;text-indent:-9999em;font-size:0;line-height:0;}
+fieldset legend {display: block; font-size: 16px; font-weight: bold; color:#333333;}
+
+ input[type=radio] {
+    accent-color:#000000;
+    width: 20px;
+    height: 12px;
+    vertical-align: inherit;
+    cursor: pointer;
+}
+
+.chk_box { display: block; position: relative; padding-left: 20px;cursor: pointer; font-size: 14px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+/* 기본 체크박스 숨기기 */
+.chk_box input[type="checkbox"] { display: none; }
+
+/* 선택되지 않은 체크박스 스타일 꾸미기 */
+.on { width: 12px; height: 12px; background: #ffffff; border:1px solid #666666; position: absolute; top: 50%; left: 2px;  transform: translateY(-50%) }
+
+/* 선택된 체크박스 스타일 꾸미기 */
+
+.on:after { content: ""; position: absolute; display: none; top:0; }
+.chk_box input[type="checkbox"]:checked + .on:after { display: block; }
+.on:after { width: 4px; height: 8px; border: solid #000000; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; left: 3px; top: 0; }
+/*input[type=checkbox]{*/
+/*    accent-color:#000000;*/
+/*    width: 20px;*/
+/*    height: 12px;*/
+/*    vertical-align: inherit;*/
+/*}*/
+
+#evt_wrap {position: relative; height: auto}
+.blue{color:#0076e4; position: relative; left:-5px;}
+/*팝업 css*/
+/*fixed 고정 absolute 위치 조정 필요 */
+/*position: absolute; top:50%;left:50%; transform: translate(-50%,-50%);*/
+.popup {  width:100%;  margin: 0 auto ;height: auto; background:#050b27; z-index: 100;  box-sizing: border-box; padding-bottom: 40px;}
+.popup h1 {margin:0 auto; width: 830px;}
+.popup .page { width:830px; margin:15px auto 0;  font-size: 14px;   box-sizing: border-box;}
+.popup .page ul {display: flex; justify-content: end; gap:3px}
+.popup .page ul .currentPage { color:#ffffff;  font-family: 'Malgun Gothic' !important;font-weight: 500; }
+.popup .page ul .totalPage { font-family: 'Malgun Gothic' !important; font-weight: 500; }
+
+
+/*설문조사1 css*/
+.poll1 {margin-top:10px; padding:0 40px; box-sizing: border-box; }
+.poll1 .bgTop {height: 6px; width: 830px;margin:0 auto;}
+.poll1 .bgTop img {width: 100%; object-fit: contain;}
+.poll1 .contents {width:830px; margin:0 auto ;background:#ffffff;  padding:50px 30px ; box-sizing:border-box;text-align: center;line-height: 1.3;}
+.poll1 .contents .title {font-size: 30px; color:#111111;}
+.poll1 .contents strong {color:#9c7500;}
+.poll1 .contents .subTitle {padding-top:10px;font-size: 20px; color:#333333;}
+.poll1 .contents .success {width: 690px; margin:35px auto; height: 345px;}
+.poll1 .contents .success img {width: 100%; height: 100%; object-fit: contain;}
+.poll1 .contents .btn {width: 280px; height: 70px; background:#000000;  color:#ffffff; font-size: 30px; font-weight: bold;     font-family: 'Pretendard';}
+.poll1 .contents .btn img {vertical-align: initial;}
+
+/*설문조가2*/
+.poll2 { margin-top:10px; padding:0 40px; box-sizing: border-box;display:none;}
+.poll2 .bgTop  {height: 6px; width: 830px;margin:0 auto;}
+.poll2 .bgTop img {width: 100%; object-fit: contain;}
+.poll2 .contents { width:830px; margin:0 auto ;background:#ffffff;  padding:20px 30px  40px; box-sizing:border-box;text-align: center;line-height: 1.3; min-height: 820px;}
+.poll2 .contents form {text-align: left;}
+.poll2 .contents form h5 {font-size: 24px; font-weight:bold; color:#333333; padding:30px 0 10px; border-bottom: 1px solid #cccccc;}
+.poll2 .contents form fieldset {display:block; margin:15px 5px; line-height: 1.6;}
+.poll2 .contents form fieldset legend {padding-bottom: 5px;}
+.poll2 .contents form textarea  { width:665px; height:50px;padding:10px;margin-top:8px; box-sizing: content-box; font-size: 12px;   font-family: 'Pretendard';}
+.poll2 .contents form textarea::placeholder { color:#b9b9b9; line-height: 1.2;}
+.poll2 .contents form fieldset label {font-size: 16px;color:#333333;}
+.poll2 .contents form fieldset .start { position:relative; left:-2px;color:#cc0000;}
+.poll2 .contents form .lastText {margin:25px 0 15px;text-align:center ;font-size:16px; color:#5d5d5d;}
+.poll2 .contents .btn { display:flex; justify-content:center; align-items:center;margin:0 auto; width: 280px; height: 70px; background:#000000;  color:#ffffff; font-size: 30px; font-weight: bold; font-family: 'Pretendard';}

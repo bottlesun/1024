@@ -1,0 +1,771 @@
+@charset "UTF-8";
+
+/* common */
+body {
+  min-height: auto !important;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Malgun Gothic", "���� ���", "����", "dotum", sans-serif;
+  background-color: #ffffff;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+p {
+  font-family: "Malgun Gothic", "���� ���", "����", "dotum", sans-serif;
+}
+
+select {
+  font-family: "Malgun Gothic", "���� ���", "����", "dotum", sans-serif;
+}
+
+iframe,
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+caption,
+.hide {
+  font-size: 0;
+  text-indent: -9999em;
+  height: 0;
+  line-height: 0;
+}
+
+.inner {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Malgun Gothic", "dotum", "돋움", sans-serif;
+  outline: 0;
+}
+
+#evt_wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  max-width: 2560px;
+  box-sizing: border-box;
+  height: 1230px;
+  background: url("../images/background.png") no-repeat center 0;
+}
+
+#evt_wrap * {
+  box-sizing: border-box;
+}
+
+.evt-content {
+  width: 100%;
+  height: 100%;
+}
+
+.update {
+  width: 104px;
+  height: 34px;
+  background: url("../images/update.png") no-repeat center 0;
+  position: absolute;
+  text-indent: -9999em;
+  z-index: 0;
+}
+
+/*header*/
+.evt-header {
+  width: 100%;
+}
+
+.evt-header * {
+  text-indent: -9999em;
+  z-index: 1;
+}
+
+.evt-header .logo {
+  position: absolute;
+  top: 19px;
+  left: 0;
+  z-index: 100;
+}
+
+.evt-header .logo a {
+  display: block;
+  width: 123px;
+  height: 78px;
+  background: url("../images/logo.png") no-repeat;
+  text-indent: -9999em;
+}
+
+.evt-header .buttons {
+  position: absolute;
+  top: 34px;
+  right: 13px;
+  display: flex;
+}
+
+.evt-header .buttons .close-again {
+  width: 134px;
+  height: 44px;
+  background: url("../images/btn_close.png") no-repeat;
+  background-size: contain;
+  margin-right: 4px;
+}
+
+.evt-header .buttons .home {
+  width: 43px;
+  height: 44px;
+  background: url("../images/btn_home.png") no-repeat;
+  background-size: contain;
+}
+
+/*content 영역*/
+
+.content-body {
+  width: 100%;
+  height: inherit;
+}
+
+.content-body .section1 {
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/*item*/
+
+.content-body .section1 .item1 {
+  width: 287px;
+  height: 220px;
+  position: absolute;
+  left: -64px;
+  top: 494px;
+  transition: background 0.2s;
+  background: inherit;
+  z-index: 50;
+}
+
+.content-body .section1 .item1:hover {
+  background: url("../images/bau_house.png") no-repeat center 0;
+  transition: background 0.2s;
+}
+
+.content-body .section1 .item2 {
+  width: 383px;
+  height: 223px;
+  position: absolute;
+  left: 193px;
+  top: 375px;
+  transition: background 0.2s;
+  z-index: 50;
+  background: inherit;
+}
+
+.content-body .section1 .item2:hover {
+  background: url("../images/navi_train.png") no-repeat center 0;
+  transition: background 0.2s;
+}
+
+.content-body .section1 .item3 {
+  width: 376px;
+  height: 242px;
+  position: absolute;
+  left: 128px;
+  top: 461px;
+  transition: background 0.2s;
+  z-index: 50;
+  background: inherit;
+}
+
+.content-body .section1 .item3 .update {
+  top: 139px;
+  left: 211px;
+}
+
+.content-body .section1 .item3:hover {
+  background: url("../images/island_info.png") no-repeat center 0;
+  transition: background 0.2s;
+}
+
+.content-body .section1 .item4 {
+  width: 361px;
+  height: 370px;
+  position: relative;
+  left: 458px;
+  top: 428px;
+  transition: background 0.2s;
+  z-index: 50;
+  background: inherit;
+}
+
+.content-body .section1 .item4 .update {
+  right: 48px;
+  bottom: 69px;
+}
+
+.content-body .section1 .item4:hover {
+  transition: background 0.2s;
+  background: url("../images/attraction.png") no-repeat center 0;
+}
+
+.content-body .section1 .item5 {
+  width: 468px;
+  height: 346px;
+  position: absolute;
+  right: -54px;
+  top: 311px;
+  transition: background 0.2s;
+  background: inherit;
+  z-index: 50;
+}
+
+.content-body .section1 .item5:hover {
+  background: url("../images/memorial_station.png") no-repeat center 0;
+  transition: background 0.2s;
+}
+
+.content-body .section1 .item6 {
+  width: 206px;
+  height: 191px;
+  position: absolute;
+  right: 0px;
+  top: 578px;
+  transition: background 0.2s;
+  z-index: 50;
+  background: inherit;
+}
+
+.content-body .section1 .item6:hover {
+  transition: background 0.2s;
+  background: url("../images/play.png") no-repeat center 0;
+}
+
+/*popup*/
+.popup {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  position: fixed;
+  top: 1280px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: -110000000;
+  height: 0;
+}
+
+.popup,
+.popup * {
+  box-sizing: border-box;
+  font-family: Pretendard, malgun gothic, dotum, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.popup.show {
+  z-index: 110000000;
+  opacity: 1;
+  height: auto;
+  top: 0;
+}
+
+.popup .popup-inner {
+  text-align: center;
+  margin: 0 auto 0;
+  position: relative;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: all 0.2s ease;
+  width: 1200px;
+}
+
+.popup.show .popup-inner {
+  transform: scale(1);
+  flex-shrink: 0;
+}
+
+.popup .popup-close {
+  width: 145px;
+  height: 39px;
+  position: absolute;
+  top: 76px;
+  right: 16px;
+  background: url("../images/btn_back.png") no-repeat center 0;
+  z-index: 1;
+}
+
+/*item1  바우 하우스*/
+
+[data-popup-id="item1"] .popup-image {
+  width: 100%;
+  height: 753px;
+  position: absolute;
+  top: 77px;
+  left: 0;
+  right: 0;
+  background: url("../images/popup_item1.png") no-repeat;
+  background-size: cover;
+}
+
+[data-popup-id="item1"] .iframe {
+  width: 512px;
+  height: 288px;
+  position: absolute;
+  top: 336px;
+  left: 35px;
+}
+
+[data-popup-id="item1"] .iframe iframe {
+  width: 100%;
+  height: inherit;
+}
+
+/*item2  나비 기차 */
+
+[data-popup-id="item2"] .popup-image {
+  width: 100%;
+  height: 753px;
+  position: absolute;
+  top: 77px;
+  left: 0;
+  right: 0;
+  background: url("../images/popup_item2.png") no-repeat;
+  background-size: cover;
+}
+
+[data-popup-id="item2"] .iframe {
+  width: 512px;
+  height: 288px;
+  position: absolute;
+  top: 336px;
+  left: 35px;
+}
+
+[data-popup-id="item2"] .iframe iframe {
+  width: 100%;
+  height: inherit;
+}
+
+/*item3  아일랜드 인포메이션 */
+
+[data-popup-id="item3"] .popup-image {
+  width: 1167px;
+  height: 774px;
+  position: absolute;
+  top: 77px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  background: url("../images/popup_item3.png") no-repeat center 0;
+  background-size: cover;
+}
+
+[data-popup-id="item3"] .item-btn {
+  width: 92px;
+  height: 31px;
+  position: absolute;
+  text-indent: -9999em;
+}
+
+[data-popup-id="item3"] .item-btn-1 {
+  left: 200px;
+  top: 448px;
+}
+
+[data-popup-id="item3"] .item-btn-2 {
+  top: 446px;
+  left: 453px;
+}
+
+/*item4 바우나비 어트렉션*/
+[data-popup-id="item4"] .popup-image {
+  width: 1167px;
+  height: 750px;
+  position: absolute;
+  top: 63px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  background: url("../images/item4/item4_image.png") no-repeat center 0;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container {
+  width: 716px;
+  height: 191px;
+  position: absolute;
+  bottom: 18px;
+  right: 0;
+}
+
+[data-popup-id="item4"] .popup-image .txt {
+  position: absolute;
+  text-indent: -99999em;
+  width: 647px;
+  height: 158px;
+  right: 33px;
+  top: 279px;
+  object-fit: contain;
+  object-position: left;
+}
+
+[data-popup-id="item4"] .popup-image .item-btn {
+  width: 268px;
+  height: 52px;
+  position: absolute;
+  right: 236px;
+  bottom: 250px;
+  text-indent: -9999em;
+}
+
+[data-popup-id="item4"] .popup-image .item-btn:before,
+[data-popup-id="item4"] .popup-image .item-btn:after {
+  content: "";
+  width: 268px;
+  height: 52px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+[data-popup-id="item4"] .popup-image .item-btn:before {
+  background: url("../images/item4/item4_btn.png") no-repeat center 0;
+  opacity: 1;
+}
+
+[data-popup-id="item4"] .popup-image .item-btn:after {
+  background: url("../images/item4/item4_btn_over.png") no-repeat center 0;
+  opacity: 0;
+}
+
+[data-popup-id="item4"] .popup-image .item-btn:hover:before {
+  opacity: 0;
+}
+
+[data-popup-id="item4"] .popup-image .item-btn:hover:after {
+  opacity: 1;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .control-btn {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-indent: -9999em;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .control-btn.left-btn {
+  background: url("../images/item4/left-btn.png") no-repeat center 0;
+  left: 0;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .control-btn.right-btn {
+  background: url("../images/item4/right-btn.png") no-repeat center 0;
+  right: 0;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .content-container {
+  width: 630px;
+  height: 191px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .content-item {
+  width: 200px;
+  height: inherit;
+  text-indent: -9999em;
+  background: url("../images/item4/content_group.png") no-repeat center 0;
+  background-size: cover;
+  position: relative;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .content-item.active {
+  background: url("../images/item4/content_group_over.png") no-repeat center 0;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .content-item.coming_soon {
+  background: url("../images/item4/coming_soon.png") no-repeat center 0 !important;
+  cursor: default;
+}
+
+[data-popup-id="item4"] .popup-image .menu-container .content-item.new:before {
+  content: "";
+  width: 90px;
+  height: 21px;
+  height: 21px;
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  transform: translateX(-50%);
+  background: url("../images/item4/icon_new.png") no-repeat;
+}
+
+[data-popup-id="item4"]
+  .popup-image
+  .menu-container
+  .content-item.content-item_1 {
+  background-position: 0 0;
+}
+
+[data-popup-id="item4"] .menu-container .content-item.content-item_2 {
+  background-position: -210px 0;
+}
+
+[data-popup-id="item4"] .menu-container .content-item.content-item_3 {
+  background-position: -419px 0 !important;
+}
+
+[data-popup-id="item4"] .popup-image .img {
+  width: 423px;
+  height: 216px;
+  position: absolute;
+  left: 24px;
+}
+
+[data-popup-id="item4"] .popup-image .img1 {
+  bottom: 272px;
+}
+
+[data-popup-id="item4"] .popup-image .img2 {
+  bottom: 28px;
+}
+
+[data-popup-id="item4"] .popup-image .img img {
+  width: 100%;
+  height: inherit;
+}
+
+/*item5 메모리얼 스테이션*/
+[data-popup-id="item5"] .popup-image {
+  width: 1179px;
+  height: 767px;
+  position: absolute;
+  top: 63px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  background: url("../images/item5/popup_item5.png") no-repeat center 0;
+  background-size: cover;
+}
+
+[data-popup-id="item5"] .item-btn {
+  width: 266px;
+  height: 51px;
+  position: absolute;
+  text-indent: -9999em;
+  right: 145px;
+  top: 688px;
+}
+
+[data-popup-id="item5"] .popup-image .item-btn:before,
+[data-popup-id="item5"] .popup-image .item-btn:after {
+  content: "";
+  width: 266px;
+  height: 51px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+[data-popup-id="item5"] .popup-image .item-btn:before {
+  background: url("../images/item5/item5_btn.png") no-repeat center 0;
+  opacity: 1;
+}
+
+[data-popup-id="item5"] .popup-image .item-btn:after {
+  background: url("../images/item5/item5_btn_over.png") no-repeat center 0;
+  opacity: 0;
+}
+
+[data-popup-id="item5"] .item-btn:hover:before {
+  opacity: 0;
+}
+
+[data-popup-id="item5"] .item-btn:hover:after {
+  opacity: 1;
+}
+
+[data-popup-id="item5"] .item5-webtoon {
+  width: 611px;
+  height: 467px;
+  position: absolute;
+  left: 32px;
+  bottom: 14px;
+  background: url("../images/item5/item5_webtoon.png") no-repeat center 0;
+  display: none;
+}
+
+[data-popup-id="item5"] .item5-webtoon .webtoon-container {
+  width: 570px;
+  height: 430px;
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  overflow-y: auto;
+}
+
+[data-popup-id="item5"] .item5-webtoon .webtoon-container:after {
+  content: "";
+  width: 226px;
+  height: 50px;
+  background: url("../images/item5/item5_txt.png") no-repeat center 0;
+  position: absolute;
+  top: 12px;
+  right: 6px;
+}
+
+[data-popup-id="item5"] .item5-webtoon .webtoon-container img {
+  width: 100%;
+  height: auto;
+}
+
+[data-popup-id="item5"] .item5-movie {
+  width: 611px;
+  height: 467px;
+  position: absolute;
+  left: 32px;
+  bottom: 14px;
+  background: url("../images/item5/item5_movie.png") no-repeat center 0;
+  display: none;
+}
+
+[data-popup-id="item5"] .item5-movie .movie-iframe {
+  width: 560px;
+  height: 315px;
+  position: absolute;
+  left: 26px;
+  bottom: 78px;
+}
+
+[data-popup-id="item5"] .item5-movie .movie-iframe iframe {
+  width: 100%;
+  height: inherit;
+}
+
+[data-popup-id="item5"] .item5-menu {
+  width: 475px;
+  height: 360px;
+  position: absolute;
+  right: 42px;
+  bottom: 104px;
+  overflow-y: scroll;
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container {
+  width: 100%;
+  height: auto;
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container button {
+  width: 437px;
+  height: 66px;
+  margin-bottom: 7px;
+  background: url("../images/item5/item5_menu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container .menu-button.active {
+  background: url("../images/item5/item5_menu_active.png");
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container .menu-button:nth-child(1) {
+  background-position: 0px 0px;
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container .menu-button:nth-child(2) {
+  background-position: 0px -73px;
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container .menu-button:nth-child(3) {
+  background-position: 0px -144px;
+}
+
+[data-popup-id="item5"] .item5-menu .menu-container .menu-coming-soon {
+  width: 437px;
+  height: 142px;
+  background: url("../images/item5/item5_comming_soon.png") no-repeat;
+  background-size: cover;
+  transform: translateX(12px);
+}
+
+/*item6 영상 다시보기 */
+[data-popup-id="item6"] {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+[data-popup-id="item6"] .play-close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  text-indent: -9999em;
+  top: 236px;
+  right: 225px;
+  background: url("../images/play_close.png") no-repeat center 0;
+}
+
+[data-popup-id="item6"] .play-again {
+  width: 186px;
+  height: 29px;
+  position: absolute;
+  text-indent: -9999em;
+  top: 786px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/play_again.png") no-repeat center 0;
+}
+
+[data-popup-id="item6"] .iframe {
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  top: 294px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+iframe {
+  width: 100%;
+  height: inherit;
+}
+
+@media (max-width: 1200px) {
+  body.active {
+    overflow: hidden;
+  }
+}

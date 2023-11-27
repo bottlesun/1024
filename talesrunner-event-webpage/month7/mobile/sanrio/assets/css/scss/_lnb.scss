@@ -1,0 +1,133 @@
+@use 'abstracts/variable' as *;
+
+.lnb-wrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #946bf3;
+	z-index: 100;
+	&.open {
+		display: block;
+	}
+	.lnb-data {
+		display: flex;
+		flex-direction: column;
+		max-width: 720px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	.lnb-link {
+		display: flex;
+		padding: toVw(45) toVw(40) toVw(60);
+		column-gap: toVw(20);
+		.link {
+			width: toVw(74);
+			height: toVw(74);
+			background: url('../images/lnb/btn_lnb.png?ver=#{$ver}') no-repeat 0 0;
+			background-size: auto  toVw(74);
+			&:nth-child(2) {
+				background-position-x: 33%;
+			}
+			&:nth-child(3) {
+				background-position-x: 67%;
+			}
+			&:nth-child(4) {
+				margin-left: auto;
+				background-position-x: 100%;
+			}
+		}
+	}
+	.lnb-list {
+		overflow-y: overlay;
+		padding: toVw(20);
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			height: toVw(1020);
+			padding: toVw(20) toVw(19) 0;
+			gap: toVw(40) toVw(40);
+			background: url('../images/lnb/img_lnb_default.png?ver=#{$ver}') no-repeat 50% toVw(11)/contain;
+		}
+		li {
+			position: relative;
+			width: toVw(300);
+			height: toVw(300);
+			&.active {
+				&::before {
+					content: '';
+					position: absolute;
+					top: toVw(-20);
+					left: toVw(-20);
+					right: toVw(-20);
+					bottom: toVw(-20);
+					background: url('../images/lnb/img_lnb_active.png?ver=#{$ver}') no-repeat 0 0;
+					background-size: 200% auto;
+				}
+			}
+			&:nth-of-type(2).active::before {
+				background-position: 100% 0;
+			}
+			&:nth-of-type(3).active::before {
+				background-position: 0 50%;
+			}
+			&:nth-of-type(4).active::before {
+				background-position: 100% 50%;
+			}
+			&:nth-of-type(5).active::before {
+				background-position: 0 100%;
+			}
+			&:nth-of-type(6).active::before {
+				display: none;
+			}
+			a {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: toVw(50);
+				z-index: 5;
+			}
+		}
+	}
+}
+
+@media screen and (min-width:720px) {
+	.lnb-wrap {
+		.lnb-link {
+			padding: 45px 40px 60px;
+			column-gap: 20px;
+			.link {
+				width: 74px;
+				height: 74px;
+				background-size: auto  74px;
+			}
+		}
+		.lnb-list {
+			padding: 20px;
+			ul {
+				height: 1020px;
+				padding: 20px 19px 0;
+				gap: 40px 40px;
+				background-position-y: 11px;
+			}
+			li {
+				width: 300px;
+				height: 300px;
+				&.active {
+					&::before { 
+						top: -20px;
+						left: -20px;
+						right: -20px;
+						bottom: -20px;
+					}
+				}
+				a {
+					border-radius: 50px;
+				}
+			}
+		}
+	}
+}

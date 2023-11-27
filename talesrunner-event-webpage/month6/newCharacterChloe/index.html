@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <meta name="keywords" content="클로에, 테일즈런너, 신캐, 그림자, 도우">
+  <meta name="description" content="사라진 부모님의 흔적을 쫓고 있는 그림자 소녀 클로에">
+
+
+  <link rel="apple-touch-icon" href="https://tr-image.game.onstove.com/mobile/g/favicon.png"/>
+  <link rel="shortcut icon" href="https://tr-image.game.onstove.com/web2012/global/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="https://tr.game.onstove.com/Common/Css/common.css"/>
+  <script type="text/javascript" src="https://tr.game.onstove.com/Common/Js/common.js"></script>
+  <script type="text/javascript" charset="utf-8" src="https://tr.game.onstove.com/common/js/jquery-1.7.2.js"></script>
+
+
+  <!-- og tag 정책 (facebook, kakaotalk) -->
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="클로에, 테일즈런너, 신캐, 그림자, 도우">
+  <meta property="og:description" content="사라진 부모님의 흔적을 쫓고 있는 그림자 소녀 클로에.">
+  <meta property="og:image" content="./assets/images/img_share_800.jpg">
+  <!--// og tag 정책 (facebook, kakaotalk) -->
+  <!-- twitter tag 정책 -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="클로에, 테일즈런너, 신캐, 그림자, 도우">
+  <meta name="twitter:description" content="사라진 부모님의 흔적을 쫓고 있는 그림자 소녀 클로에">
+  <meta name="twitter:image" content="./assets/images/img_share_800.jpg">
+  <!--// twitter tag 정책 -->
+
+  <title>그림자소녀 클로에 | 뛰어놀자 테일즈런너</title>
+
+  <!-- 이벤트용 https://tr-image.game.onstove.com/event/yyyymm/dd_이벤트명 -->
+  <link rel="stylesheet" type="text/css" href="https://tr-image.game.onstove.com/event/fonts/Pretendard/Pretendard.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/event.css"/>
+
+  <script type="text/javascript" src="https://tr-image.game.onstove.com/event/common/js/librarys.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./assets/js/ui.js"></script>
+  <script type="text/javascript" src="assets/js/gsap/gsap.min.js"></script>
+  <script type="text/javascript" src="assets/js/gsap/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="assets/js/gsap/ScrollToPlugin.min.js"></script>
+
+</head>
+<body>
+<!-- 2023-06-26 제작-->
+
+<div id="evt_wrap">
+
+  <div id="evt-inner-wrap">
+    <ul class="floating-button">
+      <!--
+      2023-06-12 수정
+     floating-button.js onFloatingButtonClicked() 함수 추가
+      -->
+      <li class="floating-section01 active"><a onclick="onFloatingButtonClicked(1)" href="javascript:void(0)"></a></li>
+      <li class="floating-section02"><a onclick="onFloatingButtonClicked(2)" href="javascript:void(0)"></a></li>
+      <li class="floating-section03"><a onclick="onFloatingButtonClicked(3)" href="javascript:void(0)"></a></li>
+      <li class="floating-section04"><a onclick="onFloatingButtonClicked(4)" href="javascript:void(0)"></a></li>
+      <li class="floating-section05"><a onclick="onFloatingButtonClicked(5)" href="javascript:void(0)"></a></li>
+      <li class="floating-top"><a onclick="onFloatingButtonClicked(6)" href="javascript:void(0)"></a></li>
+    </ul>
+    <div id="evt-inner"><!-- 2023-06-02 추가-->
+      <div class="evt-header">
+        <div class="inner">
+          <div class="logo"><a href="/index.asp" title="테일즈런너 홈으로">테일즈런너</a></div>
+
+          <ul class="header-top-button">
+            <li class="show-again"><a href="javascript:void(0)" title="다시 보지 않기"></a></li>
+            <li class="home"><a href="/index.asp" title="테일즈런너 홈으로"></a></li>
+          </ul>
+          <!--내용 삽입-->
+          <div class="header-top-character">
+            <div class="character">
+              <span class="lantern"></span>
+            </div>
+          </div>
+
+
+          <div class="header-title">
+            <span class="hide">신규 캐릭터 등장</span>
+            <h1 class="hide">클로에 흔적을 쫓는 그림자 소녀</h1>
+            <span class="hide">예약판매기간 7월 1일 ~ 7월 18일</span>
+          </div>
+          <ul class="motion-img">
+            <li class="motion-item01"></li>
+            <li class="motion-item02"></li>
+            <li class="motion-item03"></li>
+            <li class="motion-item04"></li>
+            <li class="motion-item05"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="evt-content">
+        <div class="content-body">
+
+          <div class="section01">
+            <div class="inner ">
+              <div class="item-content">
+                <h2 class="item-title">
+                  <span class="hide">클로에 캐릭터 소개</span>
+                  <span class="hide">나에 대해서 궁금하다고? 그건 도우와 나의 비밀이야~ 헤헷</span>
+                </h2>
+                <div class="item-video-area">
+                  <div class="item-video">
+                    <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/xZ3igwZcipI"
+                            title="신캐릭터 클로에 소개 영상"
+                            frameborder="0"
+                            allow="accelerometer; autoplay;
+                            clipboard-write; encrypted-media;
+                             gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+                    </iframe>
+                  </div>
+                </div>
+                <h3 class="item-title02">
+                  <span class="hide">클로에</span>
+                  <span class="hide">사라진 부모님의 행방을 찾기 위해 도우와 함께 차원 여행 중인 그림자 소녀.</span>
+                </h3>
+                <div class="item-character-profile"></div>
+                <button class="common-button" onclick="popup('[data-popup-id = image]')"><span class="hide">일러스트 크게보기</span></button>
+              </div>
+              <!-- 이벤트 내용 삽입 -->
+
+            </div>
+          </div>
+          <div class="section02">
+            <div class="inner">
+              <div class="item-content">
+                <h2 class="item-title">
+                  <span class="hide">패키지 판매 일정 안내</span>
+                  <span class="hide">도우, 미리알려줬어야지~!</span>
+                </h2>
+                <div class="item-character"></div>
+                <ul class="item-box ">
+                  <li class="item-box01">
+                    <h4 class="hide">예약 판매</h4>
+                    <span class="hide">7월 1일 ~ 7월 18일</span>
+
+                    <div class="text-wrap">
+                      <div class="text-left text-content">
+                        <p>클로에 캐릭터<br/>사전 패키지</p>
+                        <span class="hide">8,900 cash</span>
+                      </div>
+
+                      <div class="text-right text-content">
+                        <p>클로에 에클레시아<br/>사전 패키지</p>
+                        <span class="hide">31,900 cash</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-box02">
+                    <h4 class="hide">정식 판매</h4>
+                    <span class="hide">7월 19일 점검 후 ~ 2023년 10월 18일</span>
+
+                    <div class="text-wrap">
+                      <div class="text-left text-content">
+                        <p>클로에 캐릭터<br/>정식 패키지</p>
+                        <span class="hide">8,900 cash</span>
+                      </div>
+
+                      <div class="text-right text-content">
+                        <p>클로에 에클레시아<br/>정식 패키지</p>
+                        <span class="hide">31,900 cash</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-box03">
+                    <h4 class="hide">일반 판매</h4>
+                    <span class="hide">2023년 10월 19일 점검 후~</span>
+
+                    <div class="text-wrap">
+
+                      <div class=" text-content">
+                        <p>클로에 캐릭터 (영구제) + 그림자 심볼 (내구도)<br/> + 도우 (내구도)</p>
+                        <span class="hide">169,900 TR</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="item-notice">
+                  <span class="item-ico"></span>
+                  <p>
+                    클로에 캐릭터 패키지 및 클로에 에클레시아 패키지는 중복 구매가 어렵습니다. 구매 시 유의해 주세요.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section03">
+            <div class="inner">
+              <div class="item-content">
+                <h2 class="item-title">
+                  <span class="hide">사전 패키지 구성품 안내</span>
+                  <span class="hide">빛나는 너와 함께면 그림자가 더 강해질 것 같아! 헤헤</span>
+                </h2>
+                <div class="item-character"></div>
+
+                <div class="item-box">
+                  <div class="item-box01 ">
+                    <span class="hide">클로에 캐릭터 사전 패키지</span>
+                    <span class="hide">캐릭터 + 전용 심볼 , 세린 헤어 , 도우 , 클로에 구매 버프</span>
+                    <ul class="item-box-content-wrap">
+                      <li class="item-box-content item-character-proof">
+                        <div class="item-box-img">
+                          <span class="item-plus-icon"></span>
+                          <!--캐릭터 구매 증표 팝업 item-character-proof-popup-->
+                          <div class="item-box-popup item-character-proof-popup">
+                            <div class="item-box-popup-content-wrap">
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-01"></div>
+                                <p class="item-box-popup-text">클로에 캐릭터<br/> (영구제)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-02"></div>
+                                <p class="item-box-popup-text">그림자 심볼<br/> (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-03"></div>
+                                <p class="item-box-popup-text">세린 헤어<br/> (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-04"></div>
+                                <p class="item-box-popup-text">도우<br/> (내구도)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="item-box-text">클로에<br/>구매 증표</p>
+                      </li>
+                      <li class="item-box-content item-buy-buff">
+                        <div class="item-box-img">
+                          <span class="item-plus-icon"></span>
+                          <!--클로에 구매 버프 팝업 item-buy-buff-popup-->
+                          <div class="item-box-popup item-buy-buff-popup">
+                            <div class="item-box-popup-content-wrap">
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-01"></div>
+                                <p class="item-box-popup-text">도우의 선물상자<br/>1개</p>
+                              </div>
+                              <div class="item-box-popup-list-wrap">
+                                <ul class="item-list">
+                                  <li><span class="item-img"></span><p>바우나비 메달 1개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 상자 1개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 카드키 1개</p></li>
+                                  <li><span class="item-img"></span><p>잠겨진 바우나비 상자 1개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 코인 10개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 코인 5개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 코인 3개</p></li>
+                                </ul>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <p class="item-box-text">클로에 구매<br/>버프</p>
+
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item-box02 ">
+                    <span class="hide">클로에 캐릭터 사전 패키지</span>
+                    <span class="hide">에클레시아 복장 세트 , 바우나비 아이템 ,캐릭터 + 전용 심볼 , 세린 헤어 , 도우 , 클로에 구매 버프</span>
+                    <ul class="item-box-content-wrap">
+                      <li class="item-box-content item-ecclesia">
+                        <div class="item-box-img ">
+                          <span class="item-plus-icon"></span>
+                          <!--에클레시아 상자 팝업 item-ecclesia-popup-->
+                          <div class="item-box-popup item-ecclesia-popup">
+                            <div class="item-box-popup-content-wrap">
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-01"></div>
+                                <p class="item-box-popup-text width-93">에클레시아<br/> 머리띠 (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-02"></div>
+                                <p class="item-box-popup-text">에클레시아<br/> 헤어 (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-03"></div>
+                                <p class="item-box-popup-text">에클레시아<br/> 복장 (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-04"></div>
+                                <p class="item-box-popup-text">에클레시아<br/> 슈즈 (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-05"></div>
+                                <p class="item-box-popup-text width-93">에클레시아<br/> 글러브 (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-06"></div>
+                                <p class="item-box-popup-text width-105">에클레시아<br/> 랜턴 (내구도)(공용)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-07"></div>
+                                <p class="item-box-popup-text">칸타빌레<br/> 포즈 (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-08"></div>
+                                <p class="item-box-popup-text">셀피타임<br/> 포즈 (내구도)</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <p class="item-box-text">클로에 에클레시아<br/>상자 1개</p>
+                      </li>
+                      <li class="item-box-content item-welcome-box">
+                        <div class="item-box-img">
+                          <span class="item-plus-icon"></span>
+                          <!--웰컴 상자 팝업 item-welcome-box-popup-->
+                          <div class="item-box-popup item-welcome-box-popup">
+                            <div class="item-box-popup-content-wrap">
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-01"></div>
+                                <p class="item-box-popup-text">바우나비 코인<br/> 500개</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-02"></div>
+                                <p class="item-box-popup-text">바우나비 상자<br/> 10개</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-03"></div>
+                                <p class="item-box-popup-text">바우나비 메달<br/> 5개</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-04"></div>
+                                <p class="item-box-popup-text">도리스의 심연<br/> 상자 1개</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="item-box-text">바우나비 웰컴<br/>박스 1개</p>
+                      </li>
+                      <li class="item-box-content item-character-proof">
+                        <div class="item-box-img">
+                          <span class="item-plus-icon"></span>
+                          <!--캐릭터 구매 증표 팝업 item-character-proof-popup-->
+                          <div class="item-box-popup item-character-proof-popup">
+                            <div class="item-box-popup-content-wrap">
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-01"></div>
+                                <p class="item-box-popup-text">클로에 캐릭터<br/> (영구제)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-02"></div>
+                                <p class="item-box-popup-text">그림자 심볼<br/> (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-03"></div>
+                                <p class="item-box-popup-text">세린 헤어<br/> (내구도)</p>
+                              </div>
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-04"></div>
+                                <p class="item-box-popup-text">도우<br/> (내구도)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="item-box-text">클로에<br/>구매 증표</p>
+                      </li>
+                      <li class="item-box-content item-buy-buff">
+                        <div class="item-box-img">
+                          <span class="item-plus-icon"></span>
+                          <!--클로에 구매 버프 팝업 item-buy-buff-popup-->
+                          <div class="item-box-popup item-buy-buff-popup">
+                            <div class="item-box-popup-content-wrap">
+                              <div class="item-box-popup-content">
+                                <div class="item-box-popup-img item-01"></div>
+                                <p class="item-box-popup-text">도우의 선물상자<br/>1개</p>
+                              </div>
+                              <div class="item-box-popup-list-wrap">
+                                <ul class="item-list">
+                                  <li><span class="item-img"></span><p>바우나비 메달 1개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 상자 1개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 카드키 1개</p></li>
+                                  <li><span class="item-img"></span><p>잠겨진 바우나비 상자 1개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 코인 10개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 코인 5개</p></li>
+                                  <li><span class="item-img"></span><p>바우나비 코인 3개</p></li>
+                                </ul>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <p class="item-box-text">클로에 구매<br/>버프</p>
+
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section04">
+            <div class="inner">
+              <div class="item-content">
+                <h2 class="item-title">
+                  <span class="hide">복장 미리 보기</span>
+                  <span class="hide">앗 너무 눈부셔. 그림자가 다 사라질만큼--! 대단해!</span>
+                </h2>
+
+                <span class="item-character"></span>
+
+                <div class="item-box">
+                  <div class="item-button-wrap">
+                    <h3 class="item-box01-title"></h3>
+                    <ul class="item-button01">
+                      <!--
+                       <li id="cantabile" class="item-button active"><button></button></li>
+                      .active 클래스 추가 시 버튼 활성화
+                      -->
+                      <li id="cantabile" class="item-button active">
+                        <button  data-tab="cantabile">
+                          <span class="hide">칸타빌레 포즈</span>
+                        </button>
+                      </li>
+                      <li id="selfie" class="item-button">
+                        <button  data-tab="selfie">
+                          <span class="hide">셀피타임 포즈</span>
+                        </button>
+                      </li>
+                      <li id="shadow" class="item-button">
+                        <button data-tab="shadow">
+                          <span class="hide">그림자 심볼</span>
+                        </button>
+                      </li>
+                    </ul>
+                    <h3 class="item-box02-title"></h3>
+                    <ul class="item-button02">
+                      <li id="basics" class="item-button">
+                        <button data-tab="basics">
+                          <span class="hide">기본 복장</span>
+                        </button>
+                      </li>
+                      <li id="ecclesia" class="item-button">
+                        <button data-tab="ecclesia">
+                          <span class="hide">에클레시아 세트</span>
+                        </button>
+                      </li>
+                      <li id="serin" class="item-button ">
+                        <button data-tab="serin">
+                          <span class="hide">세린 헤어</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item-video-area">
+                    <div data-tab="cantabile" class="item-video active">
+                      <video autoplay loop muted="muted" volume="0" playsinline webkit-playsinline>
+                        <!--  동영상 링크 바꿔주세요~  -->
+                        <source src="assets/images/video/Ecclesia_cantabile.mp4" type="">
+                      </video>
+                    </div>
+                    <div data-tab="selfie" class="item-video">
+                      <video autoplay loop muted="muted" volume="0" playsinline webkit-playsinline>
+                        <!--  동영상 링크 바꿔주세요~  -->
+                        <source src="assets/images/video/Ecclesia_selfie_time.mp4" type="">
+                      </video>
+                    </div>
+                    <div data-tab="shadow" class="item-video">
+                      <video autoplay loop muted="muted" volume="0" playsinline webkit-playsinline>
+                        <!--  동영상 링크 바꿔주세요~  -->
+                        <source src="assets/images/video/Chloe_symbol_effect.mp4" type="">
+                      </video>
+                    </div>
+                    <div data-tab="basics" class="item-video"></div>
+                    <div data-tab="ecclesia" class="item-video"></div>
+                    <div data-tab="serin" class="item-video"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section05">
+            <div class="inner">
+              <div class="item-content">
+                <h2 class="item-title">
+                  <span class="hide">사전 패키지 구매 혜택 안내</span>
+                  <span class="hide">너도 도우를 갖고 싶다고? 안되지 안돼 ~</span>
+                </h2>
+                <div class="item-box">
+                  <div class="hide">
+                    <span class="hide">예판특전 포토카드 포함</span>
+                    <span class="hide">100명 추첨</span>
+                    <h5>클로에 장마우스 패드 1개 + 클로에 포토 카드(랜덤 1장)</h5>
+                  </div>
+                  <div class="hide">
+                    <span class="hide">예판특전 포토카드 포함</span>
+                    <span class="hide">100명 추첨</span>
+                    <h5>도우 쿠션 1개 + 클로에 포토 카드(랜덤 1장)</h5>
+                  </div>
+                </div>
+                <div class="item-notice-wrap">
+                  <div class="item-notice notice-accent">
+                    <span class="item-ico"></span>
+                    <p>
+                      구매 혜택 추첨은 예약 판매 기간(~7/18 23:59) 내 클로에 에클레시아 패키지를 구입하신 분을 대상으로 추첨이 진행됩니다.
+                    </p>
+                  </div>
+                  <div class="item-notice notice-accent">
+                    <span class="item-ico"></span>
+                    <p>
+                      당첨자 발표는 7/24(월) 공지사항을 통해 안내되며, 공지사항을 통해 개인 정보 수집 및 배송에 대한 개별 안내가 진행될 예정입니다.
+                    </p>
+                  </div>
+                  <div class="item-notice">
+                    <span class="item-ico"></span>
+                    <p>
+                      구매 확정 완료를 기준으로 추첨 대상이 정해지며, 청약 철회 시 추첨 대상에서 제외됩니다.
+                    </p>
+                  </div>
+                  <div class="item-notice">
+                    <span class="item-ico"></span>
+                    <p>
+                      본 경품 이미지는 실제와 다를 수 있으며, 당사 사정에 의해 사전 고지 없이 다른 경품으로 대체될 수 있습니다.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 덧글 -->
+      <div class="event_comment">
+        <div class="event_comment_in">
+          <!-- 댓글 본문 글씨 색 - color:#000 -->
+          <!-- 간격 Line 색상  Const TABLELINGCOLOR = "#e3e3e3" -->
+          <!-- 댓글남기기 버튼경로 - //tr-image.game.onstove.com/web/Common/btn_reply_181004.jpg -->
+          <iframe src="https://tr.game.onstove.com/event/2020/09/04_ThanksMau/Comment/evtCmtConf.asp" width="980"
+                  height="371" frameborder="0" allowTransparency="true" title="덧글게시판"></iframe>
+        </div>
+      </div>
+      <!--// 덧글 -->
+
+      <!-- 푸터 -->
+      <div class="footer">
+        <p class="footer_copyright">&copy; Smilegate. All Rights Reserved. RHAON Entertainment. All Rights Reserved.</p>
+      </div>
+      <!--// 푸터 -->
+    </div>
+  </div>
+</div>
+
+<!-- popup -->
+<div class="popup" data-popup-id="image">
+  <div class="popup-inner">
+    <div class="popup-item">
+      <div class="popup-img"></div>
+    </div>
+    <div class="popup-bottom">
+      <!--
+      forceDownload(this) 함수에 따른 이미지 다운로드
+      data-href 속성에 이미지 경로를 입력
+      -->
+        <button type="button"
+                class="common-button popup-img-download"
+                data-href="assets/images/popup/popup-character-img.jpg"
+                onclick="forceDownload(this)">
+          <span class="hide">이미지 내려받기</span>
+        </button>
+
+
+    </div>
+    <button type="button" class="btn btn-close" onclick="popupClose($(this))">닫기</button>
+    <!-- //popup -->
+  </div>
+</div>
+
+<script type="text/javascript" src="assets/js/floating-button.js"></script>
+<script type="text/javascript" src="assets/js/main-motion.js"></script>
+</body>
+</html>

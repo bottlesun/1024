@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- OG TAG -->
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="18주년 기념! 런너와 함께하면 매일매일 추억이 된다."/>
+    <meta property="og:description" content="18주년 기념! 매일매일 18분 출석 이벤트와 함께 다양한 경품에 응모까지! 추억의 사진첩도 잊지 마세요!"/>
+    <meta property="og:image" content="./assets/images/img_share_800.png"/>
+    <!--OG TAG - SNS -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="18주년 기념! 런너와 함께하면 매일매일 추억이 된다."/>
+    <meta name="twitter:description" content="18주년 기념! 매일매일 18분 출석 이벤트와 함께 다양한 경품에 응모까지! 추억의 사진첩도 잊지 마세요!"/>
+    <meta name="twitter:image" content="./assets/images/img_share_800.png"/>
+    <!--TITLE-->
+    <title>18주년 기념! 런너와 함께하면 매일매일 추억이 된다.</title>
+    <!--LINK-->
+    <link rel="apple-touch-icon" href="https://tr-image.game.onstove.com/mobile/g/favicon.png"/>
+    <link rel="shortcut icon" href="https://tr-image.game.onstove.com/web2012/global/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://tr.game.onstove.com/Common/Css/common.css"/>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/event.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/floating.css"/>
+    <!--    FONT-->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet"/>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!--LIBRARY JS-->
+    <script type="text/javascript" src="https://tr.game.onstove.com/Common/Js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://tr.game.onstove.com/common/js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" charset="utf-8" src="assets/js/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+
+<div id="evt_wrap">
+    <ul class="floating-button">
+        <li class="active">
+            <a onclick="onFloatingButtonClicked('.section2')" href="javascript:void(0)"><span class="hide">추억사진첩</span></a>
+        </li>
+        <li>
+            <a onclick="onFloatingButtonClicked('.part2')" href="javascript:void(0)"><span class="hide">추억교환소</span></a>
+        </li>
+        <li>
+            <a onclick="onFloatingButtonClicked('.part3')" href="javascript:void(0)"><span class="hide">컴플리트 보상</span></a>
+        </li>
+        <li class="floating-top">
+            <a onclick="onFloatingButtonClicked(0)" href="javascript:void(0)"></a>
+        </li>
+    </ul>
+    <div class="evt-header">
+        <div class="inner">
+            <div class="logo"><a href="/index.asp" title="테일즈런너 홈으로"><span class="hide">홈으로</span></a></div>
+            <div class="header-top-button">
+                <a class="show-again" href="#" title="다시 보지 않기"></a>
+                <a class="home" href="/index.asp" title="테일즈런너 홈으로"></a>
+            </div>
+        </div>
+    </div>
+    <div class="evt-content">
+        <div class="content-body">
+            <section class="section1">
+                <div class="inner">
+                    <!--action: animation , active:1번만-->
+                    <div class="hand">
+
+                    </div>
+
+                    <div class="camera">
+
+                    </div>
+                    <!--login || user || character || completed-->
+                    <div class="picture user">
+                        <img src="assets/images/section1/login.png" class="login-img" alt="">
+                        <img src="assets/images/section1/character.png" class="character-img" alt="">
+                        <img src="assets/images/section1/user.png" class="user-img" alt="">
+                        <img src="assets/images/section1/completed.png" class="completed-img" alt="">
+                        <p>0</p>
+
+                    </div>
+                    <div class="flash">
+
+                    </div>
+                    <!--class: end:출석완료(animate완료) completed : 출석완료(ui변경)-->
+                    <div class="check-btn ">
+                        <!--<button onclick="flash(  createPhoto($('[data-photo-index=01]'),true))">출석하기</button>-->
+                    </div>
+                    <!--<button class="check" onclick="flash(  createPhoto($('[data-photo-index=01]'),true))">출석하기</button>-->
+                    <button class="check" onclick="flash()"><span class="hide">출석하기</span></button>
+                    <button class="youtube_btn" onclick="popup('[data-popup-id=youtube]')"><span class="hide">영상팝업</span></button>
+                    <!--파일 다운로드-->
+                    <a class="file_btn" href="#"><span class="hide">파일다운로드</span></a>
+                    <div class="tool_tip"></div>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="part1 inner" id="part1">
+                    <button class="left"></button>
+                    <button class="right"></button>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide item1" data-index="0">
+                                <div class="photo1 " data-photo-name="1-1" data-photo-index="01">
+                                </div>
+                                <div class="photo2 " data-photo-name="1-2" data-photo-index="02">
+                                </div>
+                                <div class="photo3 " data-photo-name="1-3" data-photo-index="03">
+                                </div>
+                            </div>
+                            <div class="swiper-slide item2" data-index="1">
+                                <div class="photo1 " data-photo-name="2-1" data-photo-index="04">
+                                </div>
+                                <div class="photo2 " data-photo-name="2-2" data-photo-index="05">
+                                </div>
+                                <div class="photo3 " data-photo-name="2-3" data-photo-index="06">
+                                </div>
+                            </div>
+                            <div class="swiper-slide item3" data-index="2">
+                                <div class="photo1 " data-photo-name="3-1" data-photo-index="07">
+                                </div>
+                                <div class="photo2 " data-photo-name="3-2" data-photo-index="08">
+                                </div>
+                                <div class="photo3 " data-photo-name="3-3" data-photo-index="09">
+                                </div>
+                            </div>
+                            <div class="swiper-slide item4" data-index="3">
+                                <div class="photo1 " data-photo-name="4-1" data-photo-index="10">
+                                </div>
+                                <div class="photo2 " data-photo-name="4-2" data-photo-index="11">
+                                </div>
+                                <div class="photo3 " data-photo-name="4-3" data-photo-index="12">
+                                </div>
+                            </div>
+                            <div class="swiper-slide item5" data-index="4">
+                                <div class="photo1 " data-photo-name="5-1" data-photo-index="13">
+                                </div>
+                                <div class="photo2 " data-photo-name="5-2" data-photo-index="14">
+                                </div>
+                                <div class="photo3 " data-photo-name="5-3" data-photo-index="15">
+                                </div>
+                            </div>
+                            <div class="swiper-slide item6" data-index="5">
+                                <div class="photo1 " data-photo-name="6-1" data-photo-index="16">
+                                </div>
+                                <div class="photo2 " data-photo-name="6-2" data-photo-index="17">
+                                </div>
+                                <div class="photo3 " data-photo-name="6-3" data-photo-index="18">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner part2" id="part2">
+                    <div class="contents-box">
+                        <!--                    login || user || character-->
+                        <p class="login-tag login">
+                            <span class="login"><a style="color:#00853f;text-decoration: underline " href="#">로그인</a>후 참여해 주세요.</span>
+                            <span class="character">캐릭터를 생성해 주세요.</span>
+                            <span class="user"><em style="color:#00853f ">&&유저닉네임12자&&</em> 님</span>
+                        </p>
+                        <p class="point-tag">
+                            <span>사용 가능한 추억포인트 : <em class="usable-point">-</em></span>
+                            <span>누적 획득한 추억포인트 : <em class="earned-point">-</em></span>
+                        </p>
+                        <div class="contents-container">
+                            <ul class="row row1">
+                                <li class="point-item point-1">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button disabled><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-2">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-3">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-4">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-5">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-6">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                            </ul>
+                            <ul class="row row2">
+                                <li class="point-item point-7">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-8">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-9">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-10">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                            </ul>
+                            <ul class="row row3">
+                                <li class="point-item point-11">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item point-12">
+                                    <div class="text">
+                                        <p class="total">전체 응모 횟수 : <em>123</em></p>
+                                        <p class="my-count">나의 응모 횟수 : <span>-</span></p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item limit-item limit-point-1">
+                                    <div class="text">
+                                        <p class="my-count">나의 응모 횟수 : <span>n</span>/1</p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item limit-item limit-point-2">
+                                    <div class="text">
+                                        <p class="my-count">나의 응모 횟수 : <span>n</span>/2</p>
+                                    </div>
+                                    <button disabled><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item limit-item limit-point-3">
+                                    <div class="text">
+                                        <p class="my-count">나의 응모 횟수 : <span>n</span>/2</p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                                <li class="point-item limit-item limit-point-4">
+                                    <div class="text">
+                                        <p class="my-count">나의 응모 횟수 : <span>n</span>/10</p>
+                                    </div>
+                                    <button><span class="hide">응모하기</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="part3" id="part3">
+                    <div class="inner">
+                        <!--완료 : disabled 추가-->
+                        <button class="complete-reward">
+                            <span class="hide">보상받기</span>
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="section3">
+                <div class="evt_comment">
+                    <div class="evt_comment_title">
+                        <span class="hide">타이틀</span>
+                    </div>
+                    <!-- 댓글 본문 글씨 색 - color:#000 -->
+                    <!-- 간격 Line 색상  Const TABLELINGCOLOR = "#e3e3e3" -->
+                    <!-- 댓글남기기 버튼경로 - //tr-image.game.onstove.com/web/Common/btn_reply_181004.jpg -->
+                    <iframe src="https://tr.game.onstove.com/event/2021/09/05_timemachine/Comment/evtCmtConf.asp"
+                            width="980"
+                            height="371" frameborder="0" allowTransparency="true" title="덧글게시판"></iframe>
+
+                </div>
+        </div>
+        </section>
+        <div class="popup" data-popup-id="youtube">
+            <div class="popup-inner">
+                <h3 class="popup-title">
+                    <span class="hide">런너들에게 드리는 작은 선물</span>
+                </h3>
+                <div class="iframe">
+
+                </div>
+                <button onclick="popupClose(this)" class="popup-close"><span class="hide">닫기</span></button>
+                <button class="popup-close-again"><span class="hide">다시보기않기</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="footer_copyright">&copy; Smilegate. All Rights Reserved. RHAON Entertainment. All Rights
+            Reserved.</p>
+    </div>
+    <!--마우스 오버 시 블러효과 나타날때만 삽입-->
+</div>
+
+</div>
+<!--SCRIPT-->
+<script type="text/javascript" language="JavaScript" src="assets/js/ui.js"></script>
+<script type="text/javascript" src="assets/js/floating.js"></script>
+<script>
+    $(document).ready(function () {
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            loopedSlides: 2,
+            navigation: {
+                nextEl: '.right',
+                prevEl: '.left',
+            },
+            touchRatio: 0,
+            on: {
+                slideChange: function () {
+                    const currentIndex = this.realIndex;
+                    $(".swiper-slide").css("transform", "translateX(0px)");
+                    if (currentIndex === 0 && this.previousIndex) $(".item6").addClass("hide")
+                    else $(".item6").removeClass("hide")
+                    if (currentIndex === $(".swiper-slide").length - 1) {
+                        $(".item5").css("transform", "translateX(113px)");
+                        $(".item1").addClass("hide")
+                    } else $(".item1").removeClass("hide")
+                    if (currentIndex === 1) {
+                        $(".item1").css("transform", "translateX(113px)");
+                        $(".item2").css("transform", "translateX(10px)");
+                        $(".item3").css("transform", "translateX(-113px)");
+                    }
+                    if (currentIndex === 2) {
+                        $(".item2").css("transform", "translateX(113px)");
+                        $(".item4").css("transform", "translateX(-94px)");
+                    }
+                    if (currentIndex === 3) {
+                        $(".item3").css("transform", "translateX(132px)");
+                        $(".item4").css("transform", "translateX(27px)");
+                        $(".item5").css("transform", "translateX(-98px)");
+                    }
+                    if (currentIndex === 4) {
+                        $(".item4").css("transform", "translateX(132px)");
+                        $(".item5").css("transform", "translateX(13px)");
+                        $(".item6").css("transform", "translateX(-98px)");
+                    }
+                },
+            }
+            // And if we need scrollbar
+
+        });
+        //  슬라이드 이동
+        const test_index = 0;
+        swiper.slideTo(test_index);
+    });
+</script>
+</body>
+</html>
