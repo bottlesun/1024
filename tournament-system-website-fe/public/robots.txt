@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: >https://ops.hcompany.com/sitemap.xml
